@@ -24,9 +24,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "New action",
+                    "name": "Attack",
                     "type": "Button",
                     "id": "eac75de6-a5c3-4dd0-b8c7-d39bd2c3b520",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interaction",
+                    "type": "Button",
+                    "id": "2bf5af48-b09d-4042-9a81-019bdc13af4d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -146,12 +155,23 @@
                 },
                 {
                     "name": "",
-                    "id": "ef48a712-e7ea-401b-8959-91d82e7a42ec",
-                    "path": "",
+                    "id": "0dde8e59-4932-4f79-be6b-285fdc7a6325",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fdc2a8fc-3b5f-435a-90af-c390dc8e244f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
