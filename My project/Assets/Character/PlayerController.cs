@@ -13,4 +13,13 @@ public class PlayerController : MonoBehaviour
             _playerMovement.SetDirection(context.ReadValue<Vector2>());
         }
     }
+
+    public void OnRotate(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            _playerRotation.SetDirection((int)context.ReadValue<Vector2>().x);
+        }
+        
+    }
 }
