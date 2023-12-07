@@ -37,4 +37,6 @@ public class PlayerRotation : MonoBehaviour
         _bIsRotating = false;
         yield return null;
     }
+
+    public bool IsRotating { get { return _bIsRotating; } }
 }

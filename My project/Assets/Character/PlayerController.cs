@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && !_playerRotation.IsRotating)
         {
             _playerMovement.SetDirection(context.ReadValue<Vector2>());
         }
@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnRotate(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && !_playerMovement.IsMoving)
         {
             _playerRotation.SetDirection((int)context.ReadValue<Vector2>().x);
         }
