@@ -22,4 +22,20 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            
+        }
+    }
+
+    public void OnInteraction(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+
+        }
+    }
 }
