@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _direction;
     private bool _bIsMoving = false;
     private LayerMask _layerWall;
-    private LayerMask _layerEnenmy;
+    private LayerMask _layerEnemy;
 
     const float c_tileSize = 10;
 
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _transform = transform;
         _layerWall = LayerMask.NameToLayer("Wall");
-        _layerEnenmy = LayerMask.NameToLayer("Enemy");
+        _layerEnemy = LayerMask.NameToLayer("Enemy");
     }
 
     public void SetDirection(Vector2 direction)
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CanMoveTo(Vector3 target)
     {
-        return (!Physics.Raycast(_transform.position, (target - _transform.position).normalized, c_tileSize));
+        return (!Physics.Raycast(_transform.position, (target - _transform.position).normalized, c_tileSize, 1 << _layerWall | 1 << _layerEnemy));
     }
     private IEnumerator Move(Vector3 _targetPos)
     {
