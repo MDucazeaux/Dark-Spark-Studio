@@ -139,6 +139,10 @@ public class NarratifManager : MonoBehaviour
                         _text.text = _badEndTexts[_index++];
                     }
                     break;
+
+                default:
+                    Debug.Log("Error Phase");
+                    break;
             }
         }
 
@@ -182,6 +186,10 @@ public class NarratifManager : MonoBehaviour
             case Phase.BadEnd:
                 _text.enabled = true;
                 _text.text = _badEndTexts[_index++];
+                break;
+
+            default:
+                Debug.Log("Error Phase");
                 break;
         }
     }
