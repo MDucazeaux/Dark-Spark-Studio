@@ -58,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
         _transform.position = _targetPos;
         //set camera local pos to 0
         _bIsMoving = false;
-        yield return null;
     }
 
     public bool IsMoving { get { return _bIsMoving; } }

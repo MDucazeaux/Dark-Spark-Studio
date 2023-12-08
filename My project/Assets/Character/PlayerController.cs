@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private PlayerRotation _playerRotation;
+    [SerializeField] private PlayerInteraction _playerInteraction;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
-
+            _playerInteraction.Interact();
         }
     }
 }
