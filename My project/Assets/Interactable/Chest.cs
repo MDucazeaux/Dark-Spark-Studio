@@ -22,5 +22,10 @@ public class Chest : Interactable
         yield return null;
     }
 
+    public override bool CanInteract()
+    {
+        return !_bIsOpened;
+    }
+
     public bool IsLocked { get { return _bIsLocked; } set { _bIsLocked = value; } }
 }

@@ -15,6 +15,11 @@ public class Door : Interactable
         }
     }
 
+    public override bool CanInteract()
+    {
+        return !_bIsOpened;
+    }
+
     private IEnumerator Open()
     {
         _bIsOpened = true;

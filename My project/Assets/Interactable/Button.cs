@@ -20,12 +20,9 @@ public class Button : Interactable
         }
     }
 
-    private void Update()
+    public override bool CanInteract()
     {
-        if (!_bIsHidden && !_bIsActivated)
-        {
-            StartCoroutine(Activate());
-        }
+        return !_bIsActivated;
     }
     private IEnumerator Activate()
     {

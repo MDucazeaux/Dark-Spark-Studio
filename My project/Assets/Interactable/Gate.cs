@@ -19,6 +19,11 @@ public class Gate : Interactable
             StartCoroutine(Open());
         }
     }
+
+    public override bool CanInteract()
+    {
+        return !_bIsOpened;
+    }
     private IEnumerator Open()
     {
         _bIsOpened = true;
