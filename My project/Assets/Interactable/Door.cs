@@ -9,26 +9,12 @@ public class Door : Interactable
 
     public override void Interaction()
     {
-        if (!_bIsLocked)
-        {
-            if (!_bIsOpened)
-            {
-                StartCoroutine(Open());
-            }
+        if (!_bIsLocked && !_bIsOpened)
+        { 
+            StartCoroutine(Open());
         }
     }
 
-
-    private void Update()
-    {
-        if (!_bIsLocked)
-        {
-            if (!_bIsOpened)
-            {
-                StartCoroutine(Open());
-            }
-        }
-    }
     private IEnumerator Open()
     {
         _bIsOpened = true;
