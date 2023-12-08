@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public abstract class Character : MonoBehaviour
+public abstract class Character
 {
+    protected float MaxLife;
     protected float Life;
+    protected float MaxStamina;
     protected float Stamina;
     protected string Name;
     protected string Forename;
@@ -10,6 +12,8 @@ public abstract class Character : MonoBehaviour
     protected float StrengthMultiplier;
     protected float MagicalMultiplier;
     protected float HealMultiplier;
+
+    public abstract void Awake();
 
     public void Attack()
     {
@@ -25,14 +29,15 @@ public abstract class Character : MonoBehaviour
         return Stamina;
     }
 
-    public void Heal(float heal)
+    public void Heal(float heal, float healMult)
     {
-        Life += heal * HealMultiplier;
+        
+        Life = Mathf.Clamp(Life + heal * healMult, 0, MaxLife);
     }
 
     public void RecoverStamina(float stamina)
     {
-        Stamina += stamina;
+        Stamina = Mathf.Clamp(Stamina + stamina, 0, MaxStamina);
     }
 
     public void TakeDamage(float damage)
@@ -44,4 +49,7 @@ public abstract class Character : MonoBehaviour
     {
         Stamina -= stamina;
     }
+
+    public float GetHealMultiplier { get { return HealMultiplier; } }
+    public float GetLifeMax { get { return MaxLife;  } }
 }

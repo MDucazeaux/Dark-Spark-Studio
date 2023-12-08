@@ -1,9 +1,11 @@
 public class Ruffian : Character
 {
-    private void Awake()
+    public override void Awake()
     {
-        Life = 125;
+        MaxLife = 125;
+        Life = MaxLife;
         ArmorMultiplier = 1.25f;
+        MaxStamina = 100;
         Stamina = 100;
         StrengthMultiplier = 1.25f;
         MagicalMultiplier = 0;

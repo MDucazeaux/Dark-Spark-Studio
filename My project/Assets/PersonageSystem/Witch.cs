@@ -1,9 +1,11 @@
 public class Witch : Character
 {
-    private void Awake()
+    public override void Awake()
     {
-        Life = 75;
+        MaxLife = 75;
+        Life = MaxLife;
         ArmorMultiplier = 1f;
+        MaxStamina = 100;
         Stamina = 100;
         StrengthMultiplier = 0.75f;
         MagicalMultiplier = 1.25f;
