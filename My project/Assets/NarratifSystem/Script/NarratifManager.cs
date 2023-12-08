@@ -1,11 +1,13 @@
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NarratifManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
-    [SerializeField] private TextMeshProUGUI _name;
+    [SerializeField] private Image _face;
     [SerializeField] private TextMeshProUGUI _dialogue;
 
     private int _index = 0;
@@ -58,9 +60,15 @@ public class NarratifManager : MonoBehaviour
         "Vas-y viens tenter ta chance !"
     };
     private List<string> _goodEndTexts = new List<string>()
-    { "fvlbjs"};
+    {
+        "Malgré la redoutable puissance de leur antagoniste, les intrépides aventuriers sortirent triomphants de ce combat ardu. " +
+        "Une fois guéris de leurs blessures, ils décidèrent de détruire l'artefact maudit et de sceller l'entrée du donjon, " +
+        "veillant ainsi à ce qu'aucun autre être humain ne puisse pénétrer en ces lieux mystérieux.\r\n"
+    };
     private List<string> _badEndTexts = new List<string>()
-    { "skdjvlsihp"};
+    { "Malgré leurs efforts et leurs ténacités, les aventuriers ne parvinrent pas à surpasser la puissance de l’homme mystérieux."};
+
+    [SerializeField] private List<Sprite> _faces = new List<Sprite>(); //warrior, thief, witch, alchimist, 
 
     public enum Phase
     {
@@ -69,14 +77,9 @@ public class NarratifManager : MonoBehaviour
 
     public Phase _phase = Phase.Intro;
 
-    private bool _bInIntro = true;
-    private bool _bInBeforeBossFight = false;
-    private bool _bInGoodEnd = false;
-    private bool _bInBadEnd = false;
-
     private void Start()
     {
-        _name.enabled = false;
+        _face.enabled = false;
 
         _text.text = _introTexts[_index++];
     }
@@ -90,7 +93,6 @@ public class NarratifManager : MonoBehaviour
                 case Phase.Intro:
                     if (_index == _introTexts.Count)
                     {
-                        _bInIntro = false;
                         //gamemanager launch game
                         Debug.Log("end intro");
                     }
@@ -103,15 +105,14 @@ public class NarratifManager : MonoBehaviour
                 case Phase.BeforeBossFight:
                     if (_index == _gameTexts.Count)
                     {
-                        _bInBeforeBossFight = false;
-                        _name.enabled = false;
                         _dialogue.enabled = false;
+                        _face.enabled = false;
                         //gamemanager launch boss fight
                         Debug.Log("end boss fight");
                     }
                     else
                     {
-                        _name.text = _gameTexts[_index++];
+                        SwitchFace();
                         _dialogue.text = _gameTexts[_index++];
                     }
                     break;
@@ -170,11 +171,11 @@ public class NarratifManager : MonoBehaviour
         switch (_phase)
         {
             case Phase.BeforeBossFight:
-                _name.enabled = true; 
                 _dialogue.enabled = true;
-                _text.enabled = false;
+                _face.enabled = true;
 
-                _name.text = _gameTexts[_index++]; 
+                _text.enabled = false;
+                SwitchFace();
                 _dialogue.text = _gameTexts[_index++];
                 break;
 
@@ -190,6 +191,36 @@ public class NarratifManager : MonoBehaviour
 
             default:
                 Debug.Log("Error Phase");
+                break;
+        }
+    }
+
+    private void SwitchFace()
+    {
+        switch (_gameTexts[_index++])
+        {
+            case "Homme mystérieux :":
+                _face.sprite = _faces[4];
+                break;
+
+            case "Magnus Stormblade :":
+                _face.sprite = _faces[0];
+                break;
+
+            case "Lila Nightshade :":
+                _face.sprite = _faces[1];
+                break;
+
+            case "Elara Moonfire :":
+                _face.sprite = _faces[2];
+                break;
+
+            case "Thaddeus Emberstone":
+                _face.sprite = _faces[3];
+                break;
+
+            default:
+                Debug.Log("Error wrong name");
                 break;
         }
     }
