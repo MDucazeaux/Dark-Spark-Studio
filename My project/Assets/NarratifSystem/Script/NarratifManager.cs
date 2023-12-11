@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class NarratifManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _text;
-    [SerializeField] private Image _face;
-    [SerializeField] private TextMeshProUGUI _dialogue;
+    private TextMeshProUGUI _text;
+    private TextMeshProUGUI _dialogue;
+    private Image _face;
 
     private int _index = 0;
 
@@ -77,10 +77,17 @@ public class NarratifManager : MonoBehaviour
 
     public Phase _phase = Phase.Intro;
 
+    private void Awake()
+    {
+        Transform[] children = GetComponentsInChildren<Transform>(true);
+
+        _text = children[0].GetComponent<TextMeshProUGUI>();
+        _dialogue = children[1].GetComponent<TextMeshProUGUI>();
+        _face = children[2].GetComponent<Image>();
+    }
+
     private void Start()
     {
-        _face.enabled = false;
-
         _text.text = _introTexts[_index++];
     }
 
