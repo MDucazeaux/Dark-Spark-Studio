@@ -4,40 +4,46 @@ using UnityEngine.UI;
 
 public class PortraitScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    private bool _mouseOnPortrait = false;
-    private bool _isClicked = false;
+    private SelectionUICharacter _SelectionUICharacter;
 
-    [SerializeField] Image _highlight;
+    private bool _mouseOnPortrait = false;
+
+    [SerializeField] private Image _highlight;
+    [SerializeField] private Image _hover;
+    [SerializeField] private int _portraitID = 0;
 
     private void Awake()
     {
         _highlight.gameObject.SetActive(false);
+        _hover.gameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        _SelectionUICharacter = SelectionUICharacter.Instance;
     }
 
     private void Update()
     {
-        if (_isClicked)
-        {
-            _highlight.gameObject.SetActive(true);
-        }
+        _highlight.gameObject.SetActive(_SelectionUICharacter.IsSelected(_portraitID));
     }
     public void OnPointerClick(PointerEventData eventData)
     {
         if (_mouseOnPortrait)
         {
-            _isClicked = !_isClicked;
+            _SelectionUICharacter.SelectPortrait(_portraitID);
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         _mouseOnPortrait = true;
-        _highlight.gameObject.SetActive(true);
+        _hover.gameObject.SetActive(true);
 
     }
     public void OnPointerExit(PointerEventData eventData)
     {
         _mouseOnPortrait = false ;
-        _highlight.gameObject.SetActive(false);
+        _hover.gameObject.SetActive(false);
     }
 }
