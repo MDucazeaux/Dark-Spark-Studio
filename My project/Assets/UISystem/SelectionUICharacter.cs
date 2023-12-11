@@ -25,6 +25,7 @@ public class SelectionUICharacter : MonoBehaviour
         if (_select1 == -1)
         {
             _select1 = portraitID;
+            _characterSelection.SelectCharacter(_select1);
         }
         else
         {
@@ -35,6 +36,7 @@ public class SelectionUICharacter : MonoBehaviour
             }
             _select2 = portraitID;
             _characterSelection.SwitchCharacters(_select1, _select2);
+            _characterSelection.SelectCharacter(_select2);
             UnselectAll();
         }
         
