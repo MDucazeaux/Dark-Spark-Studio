@@ -52,4 +52,6 @@ public abstract class Character
 
     public float GetHealMultiplier { get { return HealMultiplier; } }
     public float GetLifeMax { get { return MaxLife;  } }
+
+    public float GetStaminaMax { get { return MaxStamina; } }
 }
