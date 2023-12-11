@@ -41,4 +41,9 @@ public class CharacterSelection : MonoBehaviour
 
     public Dictionary<string, Character> Characters { get { return _characters; } }
     public List<string> CharactersPlacement { get { return _placement; } }
+
+    public bool IsSelected(int characterIndexCheck)
+    {
+        return (characterIndexCheck == _characterIndex);
+    }
 }

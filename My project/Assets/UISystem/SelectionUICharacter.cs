@@ -24,6 +24,11 @@ public class SelectionUICharacter : MonoBehaviour
     {
         if (_select1 == -1)
         {
+            if (!_characterSelection.IsSelected(portraitID))
+            {
+                _characterSelection.SelectCharacter(portraitID);
+                return;
+            }
             _select1 = portraitID;
             _characterSelection.SelectCharacter(_select1);
         }
@@ -48,7 +53,7 @@ public class SelectionUICharacter : MonoBehaviour
         _select2 = -1;
     }
 
-    public bool IsSelected(int portraitID)
+    public bool IsSelectedPlacement(int portraitID)
     {
         return (_select1 == portraitID || _select2 == portraitID);
     }
