@@ -10,6 +10,7 @@ public class NarratifManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private TextMeshProUGUI _dialogue;
+    [SerializeField] private TextMeshProUGUI _character;
     [SerializeField] private Image _face;
     [SerializeField] private Image _background;
 
@@ -182,6 +183,7 @@ public class NarratifManager : MonoBehaviour
                     }
                     else
                     {
+                        ChangeCharacter();
                         SwitchFace();
                         _dialogue.text = _gameTexts[_index++];
                     }
@@ -235,10 +237,8 @@ public class NarratifManager : MonoBehaviour
         switch (_phase)
         {
             case Phase.BeforeBossFight:
-                _dialogue.enabled = true;
-                _face.enabled = true;
-
-                _text.enabled = false;
+                EnableDialogue();
+                ChangeCharacter();
                 SwitchFace();
                 _dialogue.text = _gameTexts[_index++];
                 break;
@@ -246,14 +246,12 @@ public class NarratifManager : MonoBehaviour
             case Phase.GoodEnd:
                 EnableNarratif();
 
-                _text.enabled = true;
                 _text.text = _goodEndTexts[_index++];
                 break;
 
             case Phase.BadEnd:
                 EnableNarratif();
 
-                _text.enabled = true;
                 _text.text = _badEndTexts[_index++];
                 break;
 
@@ -263,9 +261,14 @@ public class NarratifManager : MonoBehaviour
         }
     }
 
+    private void ChangeCharacter()
+    {
+        _character.text = _gameTexts[_index++];
+    }
+
     private void SwitchFace()
     {
-        switch (_gameTexts[_index++])
+        switch (_character.text)
         {
             case "Mysterious Being :":
                 _face.sprite = _faces[4];
@@ -310,16 +313,28 @@ public class NarratifManager : MonoBehaviour
             _time += Time.deltaTime;
             yield return null;
         }
+
+        _text.enabled = false;
+    }
+
+    private void EnableDialogue()
+    {
+        _dialogue.enabled = true;
+        _face.enabled = true;
+        _character.enabled = true;
     }
 
     private void DesableDialogue()
     {
         _face.enabled = false;
         _dialogue.enabled = false;
+        _character.enabled = false;
     }
 
     private void EnableNarratif()
     {
+        _text.enabled = true;
+
         _background.color = Color.black; 
         _text.color = Color.white;
     }
