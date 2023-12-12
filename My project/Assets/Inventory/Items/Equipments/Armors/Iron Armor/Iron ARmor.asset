@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
   m_Name: Iron ARmor
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  icon: {fileID: 0}
-  prefab: {fileID: 0}
+  name: Iron Armor
+  description: Very sturdy, protects the torso quite well
+  icon: {fileID: 21300000, guid: fcffa0a1340b2e141aa8d18eea2ef966, type: 3}
+  prefab: {fileID: 277415171007647499, guid: 6626facb4c28a234ba832a256076a016, type: 3}
   itemType: 0
   healing: 0
   stamina: 0
-  armor: 0
+  armor: 0.5
   physicalStrength: 0
   magicalStrength: 0

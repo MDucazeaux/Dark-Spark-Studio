@@ -2858,7 +2858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 586.6753, y: -62.14721}
+  m_AnchoredPosition: {x: 729, y: -165.92}
   m_SizeDelta: {x: 152.822, y: 157.956}
   m_Pivot: {x: 1.2, y: 0.3}
 --- !u!114 &1568759276
@@ -3460,7 +3460,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _content:
   - {fileID: 11400000, guid: 341ef44215e70294aa80bc6030436f11, type: 2}
+  - {fileID: 11400000, guid: 382653950885afe44839ec8ac70489dd, type: 2}
   - {fileID: 11400000, guid: b66d8c2228ebf1b4cabc20c5d287e7ed, type: 2}
+  - {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+  - {fileID: 11400000, guid: e2828e7c796489b45b7e82dac0dac337, type: 2}
+  - {fileID: 11400000, guid: 11a14232def57a3428f6970769dbcebc, type: 2}
+  - {fileID: 11400000, guid: 02f98349104aa674bb68c92c343c0e9b, type: 2}
+  - {fileID: 11400000, guid: 5daee3494e02a504f8850d9086966178, type: 2}
+  - {fileID: 11400000, guid: d68da164b9aaa9743aaec64ed0be71e6, type: 2}
+  - {fileID: 11400000, guid: 393a205467cc4544893836303de7ed9e, type: 2}
+  - {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
+  - {fileID: 11400000, guid: 9df32270c842dea4a8ef850c28c4e222, type: 2}
+  - {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+  - {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
   _itemActionSystem: {fileID: 268578081}
   _inventoryBackground: {fileID: 289955716}
   _inventorySlotsParent: {fileID: 1399940690}
@@ -3777,7 +3789,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1947187370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 268578081}
+        m_TargetAssemblyTypeName: ItemActionSystem, Assembly-CSharp
+        m_MethodName: CloseActionPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1947187370
 MonoBehaviour:
   m_ObjectHideFlags: 0

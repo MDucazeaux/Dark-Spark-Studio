@@ -19,3 +19,6 @@ MonoBehaviour:
   itemType: 0
   healing: 0
   stamina: 0
+  armor: 0
+  physicalStrength: 0.5
+  magicalStrength: 0
