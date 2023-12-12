@@ -10,6 +10,9 @@ public class ItemData : ScriptableObject
     public ItemType itemType;
     public int healing;
     public int stamina;
+    public float armor;
+    public float physicalStrength;
+    public float magicalStrength;
 }
 
 public enum ItemType
