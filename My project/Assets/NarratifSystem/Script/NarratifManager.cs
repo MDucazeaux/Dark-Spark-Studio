@@ -14,9 +14,9 @@ public class NarratifManager : MonoBehaviour
     [SerializeField] private Image _face;
     [SerializeField] private Image _background;
 
-    [SerializeField] private float _time = 0;
-    [SerializeField] private int _waitTime = 2;
-    [SerializeField] private int _speed = 1;
+    private float _time = 0;
+    private int _waitTime = 2;
+    private int _speed = 1;
 
     private bool _canPassText = true;
     private int _index = 0;
