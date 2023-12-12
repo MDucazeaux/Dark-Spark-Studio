@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PortraitScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
@@ -44,10 +45,7 @@ public class PortraitScript : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (_mouseOnPortrait)
-        {
-            _SelectionUICharacter.SelectPortrait(_portraitID);
-        }
+        _SelectionUICharacter.SelectPortrait(_portraitID);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
