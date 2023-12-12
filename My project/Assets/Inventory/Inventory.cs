@@ -7,6 +7,9 @@ public class Inventory : MonoBehaviour
     private List<ItemData> _content = new List<ItemData>();
 
     [SerializeField]
+    private ItemActionSystem _itemActionSystem;
+
+    [SerializeField]
     private GameObject _inventoryBackground;
 
     [SerializeField]
@@ -49,6 +52,7 @@ public class Inventory : MonoBehaviour
     public void OpenInventory()
     {
         _inventoryBackground.SetActive(true);
+        _itemActionSystem.GetActionPanel().SetActive(false);
         RefreshContent();
 
     }
@@ -56,6 +60,7 @@ public class Inventory : MonoBehaviour
     public void CloseInventory()
     {
         _inventoryBackground.SetActive(false);
+        _itemActionSystem.GetActionPanel().SetActive(false);
     }
 
     public void SetActive() 
@@ -110,4 +115,6 @@ public class Inventory : MonoBehaviour
     {
         return _content;
     }
+
+    public Sprite GetTransparentSlot() { return _transparentSlot; }
 }

@@ -10,9 +10,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField]
     private Image _itemIcon;
 
-
-    //[SerializeField]
-    //private ItemActionsSystem itemActionsSystem;
+    [SerializeField]
+    private ItemActionSystem _itemActionsSystem;
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (_item != null)
@@ -35,8 +34,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         _itemIcon.sprite = itemIcon;
     }
 
-    //public void ClickOnSlot()
-    //{
-    //    itemActionsSystem.OpenActionPanel(_item, transform.position);
-    //}
+    public void ClickOnSlot()
+    {
+        _itemActionsSystem.OpenActionPanel(_item);
+    }
 }
