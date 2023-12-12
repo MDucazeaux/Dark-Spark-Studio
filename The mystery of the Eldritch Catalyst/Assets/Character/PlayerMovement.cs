@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
+
     private Transform _transform;
-    private Vector2 _direction;
+    private int _direction;
     private bool _bIsMoving = false;
     private LayerMask _layerWall;
     private LayerMask _layerEnemy;
@@ -13,29 +15,34 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+
         _transform = transform;
         _layerWall = LayerMask.NameToLayer("Wall");
         _layerEnemy = LayerMask.NameToLayer("Enemy");
     }
 
-    public void SetDirection(Vector2 direction)
+    public void SetMovementDirection(int direction)
     {
         _direction = direction;
     }
 
     public void Update()
     {
-        if (_direction != Vector2.zero && !_bIsMoving)
+        if (_direction != 0 && !_bIsMoving)
         {
             Vector3 _targetPos = _transform.position;
-            _targetPos += _transform.forward * _direction.y * c_tileSize;
-            _targetPos += _transform.right * _direction.x * c_tileSize;
+            _targetPos += _transform.forward * _direction * c_tileSize;
+            _targetPos += _transform.right * _direction * c_tileSize;
             if (CanMoveTo(_targetPos))
             {
                 _bIsMoving = true;
                 StartCoroutine(Move(_targetPos));
             }
-            _direction = Vector2.zero;
+            _direction = 0;
         }
     }
 

@@ -3,12 +3,17 @@ using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
+    public static PlayerRotation Instance;
+
     private int _direction;
     private bool _bIsRotating = false;
 
-    public void SetDirection(int direction)
+    private void Awake()
     {
-        _direction = direction;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
     }
 
     private void Update()
@@ -19,6 +24,11 @@ public class PlayerRotation : MonoBehaviour
             StartCoroutine(Rotate());
             _direction = 0;
         }
+    }
+
+    public void SetRotationDirection(int direction)
+    {
+        _direction = direction;
     }
 
     private IEnumerator Rotate()

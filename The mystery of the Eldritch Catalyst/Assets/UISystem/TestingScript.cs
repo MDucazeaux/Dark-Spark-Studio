@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TestingScript : MonoBehaviour
 {
-    // THIS CODE IS JUST TO SHOW HOW THAT WORKS
+    // THIS CODE IS JUST TO SHOW HOW THAT WORKS //
 
     private void Start()
     {
@@ -23,12 +23,12 @@ public class TestingScript : MonoBehaviour
             MenuManager.Instance.CloseMenu(MenuManager.MenuEnum.WinMenu);
         }
 
-        // Open win menu
+        // Open lose menu
         if (Input.GetKeyDown(KeyCode.K))
         {
             MenuManager.Instance.OpenMenu(MenuManager.MenuEnum.LoseMenu);
         }
-        // Close win menu
+        // Close lose menu
         if (Input.GetKeyDown(KeyCode.L))
         {
             MenuManager.Instance.CloseMenu(MenuManager.MenuEnum.LoseMenu);
