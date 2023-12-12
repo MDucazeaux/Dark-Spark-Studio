@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:The mystery of the Eldritch Catalyst/Assets/UISystem/Prefab.meta
 guid: 148aefe3a49491d4f83431216020ba7c
+========
+guid: 9d3d70404f510c142bafcefa17870ca4
+>>>>>>>> 287441006a1ef2f958d8f179895193059f658785:The mystery of the Eldritch Catalyst/Assets/UISystem/WinMenu.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
