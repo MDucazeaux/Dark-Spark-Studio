@@ -46,4 +46,9 @@ public class CharacterSelection : MonoBehaviour
     {
         return (characterIndexCheck == _characterIndex);
     }
+
+    public Character GetSelectedCharacter()
+    {
+        return _characters[_placement[_characterIndex]];
+    }
 }

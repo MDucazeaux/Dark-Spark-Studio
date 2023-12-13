@@ -12,6 +12,8 @@ public abstract class Character
     protected float StrengthMultiplier;
     protected float MagicalMultiplier;
     protected float HealMultiplier;
+    private ItemData _weapon;
+    private ItemData _armor;
 
     public abstract void Awake();
 
@@ -54,4 +56,24 @@ public abstract class Character
     public float GetLifeMax { get { return MaxLife;  } }
 
     public float GetStaminaMax { get { return MaxStamina; } }
+    
+    public ItemData GetArmor()
+    {
+         return _armor; 
+    }
+    
+    public void SetArmor(ItemData armor) 
+    {
+        _armor = armor;
+    }
+    
+    public ItemData GetWeapon()
+    {
+        return _weapon;
+    }
+    
+    public void SetWeapon(ItemData weapon) 
+    {
+        _weapon = weapon;
+    }
 }
