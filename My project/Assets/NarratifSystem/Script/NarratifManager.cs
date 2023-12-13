@@ -15,8 +15,7 @@ public class NarratifManager : MonoBehaviour
     [SerializeField] private Image _background;
 
     private float _time = 0;
-    private int _waitTime = 2;
-    private int _speed = 1;
+    private int _waitTime = 3;
 
     private bool _canPassText = true;
     private int _index = 0;
@@ -142,7 +141,7 @@ public class NarratifManager : MonoBehaviour
 
     public enum Phase
     {
-        Intro, BeforeBossFight, GoodEnd, BadEnd
+        Intro, BeforeBossFight, GoodEnd, BadEnd, None
     }
 
     public Phase _phase = Phase.Intro;
@@ -215,6 +214,10 @@ public class NarratifManager : MonoBehaviour
                     }
                     break;
 
+                case Phase.None:
+                    Debug.Log("None Phase");
+                    break;
+
                 default:
                     Debug.Log("Error Phase");
                     break;
@@ -230,16 +233,24 @@ public class NarratifManager : MonoBehaviour
     public void NextNarratifPhase()
     {
         _phase = Enum.GetValues(typeof(Phase)).Cast<Phase>().SkipWhile(e => e != _phase).Skip(1).First();
+        _phase = _phase == Phase.None ? Phase.Intro : _phase;
 
         _canPassText = true;
         _index = 0;
 
         switch (_phase)
         {
+            case Phase.Intro:
+                EnableNarratif();
+
+                _text.text = _introTexts[_index++];
+                break;
+
             case Phase.BeforeBossFight:
                 EnableDialogue();
                 ChangeCharacter();
                 SwitchFace();
+
                 _dialogue.text = _gameTexts[_index++];
                 break;
 
@@ -253,6 +264,10 @@ public class NarratifManager : MonoBehaviour
                 EnableNarratif();
 
                 _text.text = _badEndTexts[_index++];
+                break;
+
+            case Phase.None:
+                Debug.Log("None Phase");
                 break;
 
             default:
@@ -306,7 +321,7 @@ public class NarratifManager : MonoBehaviour
 
         _time = 0;
 
-        while (_time < 2)
+        while (_time < _waitTime)
         {
             _background.color = Color.Lerp(fromBg, toBg, _time);
             _text.color = Color.Lerp(fromTxt, toTxt, _time);
