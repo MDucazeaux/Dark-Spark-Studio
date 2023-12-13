@@ -1,9 +1,11 @@
 public class Thief : Character
 {
-    private void Awake()
+    public override void Awake()
     {
-        Life = 100;
+        MaxLife = 100;
+        Life = MaxLife;
         ArmorMultiplier = 1f;
+        MaxStamina = 100;
         Stamina = 100;
         StrengthMultiplier = 1f;
         MagicalMultiplier = 0;

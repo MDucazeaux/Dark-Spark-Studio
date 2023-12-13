@@ -3,18 +3,11 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public static PlayerInteraction Instance;
-
     private Transform _transform;
     const float c_tileSize = 10;
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-
         _transform = transform;
     }
     public void Interact()
