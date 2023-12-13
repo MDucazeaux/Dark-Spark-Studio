@@ -22,65 +22,8 @@ public class NarratifManager : MonoBehaviour
     private bool _canPassText = true;
     private int _index = 0;
 
-    #region vf
-    /*private List<string> _introTexts = new List<string>()
-    {
-        "Dans un monde où la magie et les monstres sont omniprésents, un homme mystérieux cherchait à recruter de courageux aventuriers." +
-        "\n\n\rSa quête : récupérer un ancien et puissant artéfact situé dans les ruines d’une ancienne civilisation : le catalyseur d’Eldritch.",
+    private string _survivor = "survivor";
 
-        "C’est dans une taverne douteuse qu’il fit la rencontre de quatre aventuriers :" +
-        "\n\rMagnus Stormblade une brute, Lila Nightshade une voleuse," +
-        "\n\rElara Moonfire une sorcière médiocre et Thaddeus Emberstone un vieil alchimiste." +
-        "\n\n\rLes 4 aventuriers, au début réticents, acceptèrent la mission quand l’homme mystérieux leur promit argent et pouvoir.",
-
-        "En entrant dans le donjon, Thaddeus Emberstone sentit que l’air était lourd " +
-        "et tous sentirent leurs forces faiblir."
-    };
-    private List<string> _gameTexts = new List<string>()
-    {
-        "Homme mystérieux :",
-        "Bien joué aventuriers, vous avez réussi à atteindre la fin du donjon.",
-
-        "Magnus Stormblade :",
-        "Mais… qu’est-ce que tu fais ici ?",
-
-        "Thaddeus Emberstone",
-        "C’était un piège de tout évidence, n’est-ce pas ?",
-
-        "Homme mystérieux :",
-        "C’est exact.",
-
-        "Elara Moonfire :",
-        "Qu’est-ce que vous allez nous faire ?",
-
-        "Homme mystérieux :",
-        "Je vais vous voler toute votre énergie vitale. " +
-        "C’est à ça que sert cet artefact, “le catalyseur d’Eldritch”. " +
-        "Il absorbe l’énergie vitale des humains présents en ces lieux, il la transfère à son propriétaire… moi.",
-
-        "Lila Nightshade :",
-        "Mais pourquoi faites vous ça ?",
-
-        "Homme mystérieux :",
-        "Pour vivre éternellement, quelle question.",
-
-        "Magnus Stormblade :",
-        "Tu t'es servi de nous. Je vais te massacrer.",
-
-        "Homme mystérieux :",
-        "Vas-y viens tenter ta chance !"
-    };
-    private List<string> _goodEndTexts = new List<string>()
-    {
-        "Malgré la redoutable puissance de leur antagoniste, les intrépides aventuriers sortirent triomphants de ce combat ardu. " +
-        "Une fois guéris de leurs blessures, ils décidèrent de détruire l'artefact maudit et de sceller l'entrée du donjon, " +
-        "veillant ainsi à ce qu'aucun autre être humain ne puisse pénétrer en ces lieux mystérieux.\r\n"
-    };
-    private List<string> _badEndTexts = new List<string>()
-    { "Malgré leurs efforts et leurs ténacités, les aventuriers ne parvinrent pas à surpasser la puissance de l’homme mystérieux."};*/
-    #endregion
-
-    #region ve
     private List<string> _introTexts = new List<string>()
     {
         "In a world where magic and fantastic creatures are omnipresent, a mysterious being with a frail, weather-beaten physique was striving to rally intrepid adventurers to his cause. " +
@@ -93,6 +36,7 @@ public class NarratifManager : MonoBehaviour
 
         "As Thaddeus Emberstone entered the dungeon, he felt an oppressive heaviness permeate the atmosphere, draining the energy from every member of the group."
     };
+
     private List<string> _gameTexts = new List<string>()
     {
         "Mysterious Being :",
@@ -129,24 +73,43 @@ public class NarratifManager : MonoBehaviour
         "Mysterious Being :",
         "Go ahead, come and try your luck !"
     };
-    private List<string> _goodEndTexts = new List<string>()
+    
+    private List<string> _goodEndOneTexts = new List<string>()
     {
-        "Despite the formidable power of their adversary, the adventurers emerged triumphant from this arduous battle. " +
+        "Despite the fearsome power of their adversary, the adventurer emerged triumphant from this arduous battle. " +
+        "Once he had recovered from his wounds, he decided to destroy the cursed artifact and seal the entrance to the dungeon forever, " +
+        "ensuring that no other human being would be able to enter."
+    };
+    private List<string> _goodEndSeveralTexts = new List<string>()
+    {
+        "Despite the fearsome power of their adversary, the adventurers emerged triumphant from this arduous battle. " +
         "Once they had recovered from their wounds, they decided to destroy the cursed artifact and seal the entrance to the dungeon forever, " +
         "ensuring that no other human being would be able to enter."
     };
-    private List<string> _badEndTexts = new List<string>()
+
+    private List<string> _badEndDungeonTexts = new List<string>()
+    { "Despite their best efforts and unfailing tenacity, the adventurers were unable to overcome the dungeon’s."};
+    private List<string> _badEndBossTexts = new List<string>()
     { "Despite their best efforts and unfailing tenacity, the adventurers were unable to overcome the mysterious power of their opponents."};
-    #endregion
+    
+    [SerializeField] private List<Sprite> _faces = new List<Sprite>(); //warrior, thief, witch, alchimist, mysterious being 
 
-    [SerializeField] private List<Sprite> _faces = new List<Sprite>(); //warrior, thief, witch, alchimist, 
-
-    public enum Phase
+    public enum NarrativePhase
     {
-        Intro, BeforeBossFight, GoodEnd, BadEnd, None
+        Intro,
+
+        BeforeBossFight,
+        
+        GoodEndOne,
+        GoodEndSeveral,
+        
+        BadEndDungeon,
+        BadEndBoss,
+        
+        None
     }
 
-    public Phase _phase = Phase.Intro;
+    public NarrativePhase _phase = NarrativePhase.Intro;
 
     private void Awake()
     {
@@ -165,7 +128,7 @@ public class NarratifManager : MonoBehaviour
         {
             switch (_phase)
             {
-                case Phase.Intro:
+                case NarrativePhase.Intro:
                     if (_index == _introTexts.Count)
                     {
                         _canPassText = false;
@@ -180,7 +143,7 @@ public class NarratifManager : MonoBehaviour
                     }
                     break;
 
-                case Phase.BeforeBossFight:
+                case NarrativePhase.BeforeBossFight:
                     if (_index == _gameTexts.Count)
                     {
                         _canPassText = false;
@@ -196,38 +159,64 @@ public class NarratifManager : MonoBehaviour
                     }
                     break;
 
-                case Phase.GoodEnd:
-                    if (_index == _goodEndTexts.Count)
+                case NarrativePhase.GoodEndOne:
+                    if (_index == _goodEndOneTexts.Count)
                     {
                         _canPassText = false;
 
-                        Debug.Log("end good end");
+                        Debug.Log("end good end one");
                     }
                     else
                     {
-                        _text.text = _goodEndTexts[_index++];
+                        _text.text = _goodEndOneTexts[_index++];
                     }
                     break;
 
-                case Phase.BadEnd:
-                    if (_index == _badEndTexts.Count)
+                case NarrativePhase.GoodEndSeveral:
+                    if (_index == _goodEndSeveralTexts.Count)
                     {
                         _canPassText = false;
 
-                        Debug.Log("end bad end");
+                        Debug.Log("end good end several");
                     }
                     else
                     {
-                        _text.text = _badEndTexts[_index++];
+                        _text.text = _goodEndSeveralTexts[_index++];
                     }
                     break;
 
-                case Phase.None:
-                    Debug.Log("None Phase");
+                case NarrativePhase.BadEndDungeon:
+                    if (_index == _badEndDungeonTexts.Count)
+                    {
+                        _canPassText = false;
+
+                        Debug.Log("end bad end dungeon");
+                    }
+                    else
+                    {
+                        _text.text = _badEndDungeonTexts[_index++];
+                    }
+                    break;
+
+                case NarrativePhase.BadEndBoss:
+                    if (_index == _badEndBossTexts.Count)
+                    {
+                        _canPassText = false;
+
+                        Debug.Log("end bad end boss");
+                    }
+                    else
+                    {
+                        _text.text = _badEndBossTexts[_index++];
+                    }
+                    break;
+
+                case NarrativePhase.None:
+                    Debug.Log("None NarrativePhase");
                     break;
 
                 default:
-                    Debug.Log("Error Phase");
+                    Debug.Log("Error NarrativePhase");
                     break;
             }
         }
@@ -238,22 +227,22 @@ public class NarratifManager : MonoBehaviour
         }
     }
 
-    public void ChangePhase(Phase phase)
+    public void ChangePhase(NarrativePhase NarrativePhase)
     {
-        _phase = phase;
+        _phase = NarrativePhase;
 
         _canPassText = true;
         _index = 0;
 
         switch (_phase)
         {
-            case Phase.Intro:
+            case NarrativePhase.Intro:
                 EnableNarratif();
 
                 _text.text = _introTexts[_index++];
                 break;
 
-            case Phase.BeforeBossFight:
+            case NarrativePhase.BeforeBossFight:
                 EnableDialogue();
                 ChangeCharacter();
                 SwitchFace();
@@ -261,33 +250,45 @@ public class NarratifManager : MonoBehaviour
                 _dialogue.text = _gameTexts[_index++];
                 break;
 
-            case Phase.GoodEnd:
+            case NarrativePhase.GoodEndOne:
                 EnableNarratif();
 
-                _text.text = _goodEndTexts[_index++];
+                _text.text = _goodEndOneTexts[_index++];
                 break;
 
-            case Phase.BadEnd:
+            case NarrativePhase.GoodEndSeveral:
                 EnableNarratif();
 
-                _text.text = _badEndTexts[_index++];
+                _text.text = _goodEndSeveralTexts[_index++];
                 break;
 
-            case Phase.None:
-                Debug.Log("None Phase");
+            case NarrativePhase.BadEndDungeon:
+                EnableNarratif();
+
+                _text.text = _badEndDungeonTexts[_index++];
+                break;
+
+            case NarrativePhase.BadEndBoss:
+                EnableNarratif();
+
+                _text.text = _badEndBossTexts[_index++];
+                break;
+
+            case NarrativePhase.None:
+                Debug.Log("None NarrativePhase");
                 break;
 
             default:
-                Debug.Log("Error Phase");
+                Debug.Log("Error NarrativePhase");
                 break;
         }
     }
 
     private void NextNarratifPhase()
     {
-        var phase = Enum.GetValues(typeof(Phase)).Cast<Phase>().SkipWhile(e => e != _phase).Skip(1).First();
-        phase = phase == Phase.None ? Phase.Intro : phase;
-        ChangePhase(phase);
+        var NarrativePhase = Enum.GetValues(typeof(NarrativePhase)).Cast<NarrativePhase>().SkipWhile(e => e != _phase).Skip(1).First();
+        NarrativePhase = NarrativePhase == NarrativePhase.None ? NarrativePhase.Intro : NarrativePhase;
+        ChangePhase(NarrativePhase);
     }
 
     private void ChangeCharacter()
@@ -366,5 +367,33 @@ public class NarratifManager : MonoBehaviour
 
         _background.color = Color.black; 
         _text.color = Color.white;
+    }
+
+    public void SetSurvivor(string survivor)
+    { 
+        _survivor = survivor;
+
+        if (_survivor == "Magnus Stormblade" || _survivor == "Thaddeus Emberstone")
+        {
+            List<string> goodEndOneText = new List<string>()
+            {
+                "Despite the fearsome power of their adversary," + _survivor + " emerged triumphant from this arduous battle. " +
+                "Once he had recovered from his wounds, he decided to destroy the cursed artifact and seal the entrance to the dungeon forever, " +
+                "ensuring that no other human being would be able to enter."
+            };
+
+            _goodEndOneTexts = goodEndOneText;
+        }
+        else if (_survivor == "Lila Nightshade" || _survivor == "Elara Moonfire")
+        {
+            List<string> goodEndOneText = new List<string>()
+            {
+                "Despite the fearsome power of their adversary," + _survivor + " emerged triumphant from this arduous battle. " +
+                "Once she had recovered from her wounds, she decided to destroy the cursed artifact and seal the entrance to the dungeon forever, " +
+                "ensuring that no other human being would be able to enter."
+            };
+
+            _goodEndOneTexts = goodEndOneText;
+        }
     }
 }
