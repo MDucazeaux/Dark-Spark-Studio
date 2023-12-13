@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class NarratifManager : MonoBehaviour
 {
+    public static NarratifManager Instance;
+
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private TextMeshProUGUI _dialogue;
     [SerializeField] private TextMeshProUGUI _character;
@@ -146,6 +148,12 @@ public class NarratifManager : MonoBehaviour
 
     public Phase _phase = Phase.Intro;
 
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
+
     private void Start()
     {
         _text.text = _introTexts[_index++];
@@ -230,10 +238,9 @@ public class NarratifManager : MonoBehaviour
         }
     }
 
-    public void NextNarratifPhase()
+    public void ChangePhase(Phase phase)
     {
-        _phase = Enum.GetValues(typeof(Phase)).Cast<Phase>().SkipWhile(e => e != _phase).Skip(1).First();
-        _phase = _phase == Phase.None ? Phase.Intro : _phase;
+        _phase = phase;
 
         _canPassText = true;
         _index = 0;
@@ -274,6 +281,13 @@ public class NarratifManager : MonoBehaviour
                 Debug.Log("Error Phase");
                 break;
         }
+    }
+
+    private void NextNarratifPhase()
+    {
+        var phase = Enum.GetValues(typeof(Phase)).Cast<Phase>().SkipWhile(e => e != _phase).Skip(1).First();
+        phase = phase == Phase.None ? Phase.Intro : phase;
+        ChangePhase(phase);
     }
 
     private void ChangeCharacter()
