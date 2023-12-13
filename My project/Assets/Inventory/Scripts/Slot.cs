@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField]
     private ItemData _item;
 
     [SerializeField]

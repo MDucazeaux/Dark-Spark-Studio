@@ -17,6 +17,7 @@ public class ItemData : ScriptableObject
 
 public enum ItemType
 {
-    Equipment,
+    Armor,
+    Weapon,
     Consumable,
 }

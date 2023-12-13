@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
   m_Name: Food
   m_EditorClassIdentifier: 
-  name: Food
+  name: 
   description: It doesn't look like anything, and tastes terrible, but at least it
     fills your stomach
   icon: {fileID: 21300000, guid: 5707983201e7f3646ae37a2e8605b19c, type: 3}
   prefab: {fileID: 5549466461819993002, guid: e5e26c2a1964e4e4e869d555f735e370, type: 3}
-  itemType: 1
+  itemType: 2
   healing: 0
   stamina: 35
   armor: 0

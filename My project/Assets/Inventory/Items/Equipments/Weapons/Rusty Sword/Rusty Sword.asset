@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
   m_Name: Rusty Sword
   m_EditorClassIdentifier: 
-  name: Rusty Sword
+  name: 
   description: This weapon shows signs of neglect, but can still deliver fatal blows
   icon: {fileID: 21300000, guid: ce2c811ea19eed9499473910a0fdc087, type: 3}
   prefab: {fileID: 1358242207136793538, guid: f4502d8fb640c404abc3103438d97858, type: 3}
-  itemType: 0
+  itemType: 1
   healing: 0
   stamina: 0
   armor: 0

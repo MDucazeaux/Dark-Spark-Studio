@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
   m_Name: Silver Scepter
   m_EditorClassIdentifier: 
-  name: Silver Scepter
+  name: 
   description: Silver is one of the best magic conductors out there
   icon: {fileID: 21300000, guid: e84996b7a46bbc642b7308c21cd0958b, type: 3}
   prefab: {fileID: 926781662586193139, guid: efa9fd807815073408a3167437046896, type: 3}
-  itemType: 0
+  itemType: 1
   healing: 0
   stamina: 0
   armor: 0

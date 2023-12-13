@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
   m_Name: Iron Sword
   m_EditorClassIdentifier: 
-  name: Iron Sword
+  name: 
   description: A very basic blade, but with an excellent cutting edge
   icon: {fileID: 21300000, guid: af9f9b9401d28374c90f85ca198740e6, type: 3}
   prefab: {fileID: 5206378046128617640, guid: a69c2bea21c59eb49ae924af83b30e7c, type: 3}
-  itemType: 0
+  itemType: 1
   healing: 0
   stamina: 0
   armor: 0

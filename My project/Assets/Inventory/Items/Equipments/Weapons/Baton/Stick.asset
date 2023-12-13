@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
   m_Name: Stick
   m_EditorClassIdentifier: 
-  name: Stick
+  name: 
   description: The wood of this staff helps to concentrate the flow of magic
   icon: {fileID: 21300000, guid: 12a80b8987c5e3d4294ab5cd3a3a6348, type: 3}
   prefab: {fileID: 2490309541345734293, guid: 4489c20bd0aa78747bad789b10715e56, type: 3}
-  itemType: 0
+  itemType: 1
   healing: 0
   stamina: 0
   armor: 0

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
   m_Name: Throwing Knife
   m_EditorClassIdentifier: 
-  name: Throwing Knife
+  name: 
   description: Not long enough to serve as a sword, however throwing it at enemies
     would be a good idea
   icon: {fileID: 21300000, guid: 9d23b353c3ff5314b9e9bb6e4588b687, type: 3}
   prefab: {fileID: 7493025506670894982, guid: 0264fdcb2af5cdc418b2371205a7761a, type: 3}
-  itemType: 1
+  itemType: 2
   healing: 0
   stamina: 0
   armor: 0
