@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AIController : MonoBehaviour
@@ -5,6 +6,7 @@ public class AIController : MonoBehaviour
     [SerializeField] AIMovement _aiMovement;
     [SerializeField] AIDetection _aiDetection;
     [SerializeField] AIAttack _aiAttack;
+    [SerializeField] AIAnimation _aiAnimation;
 
     private enum STATES
     {
@@ -18,12 +20,14 @@ public class AIController : MonoBehaviour
 
     private void Update()
     {
+        _aiAnimation.SetLookAtPos(_aiDetection.GetPlayerPos());
         switch (_state)
         {
             case STATES.IDLE:
                 if (_aiDetection.CanSeePlayer())
                 {
                     _state = STATES.MOVING;
+                    _aiAnimation.AnimatorSetBool("Walking", true);
                     break;
                 }
                 break;
@@ -34,6 +38,8 @@ public class AIController : MonoBehaviour
                     if (_aiDetection.IsNearPlayer())
                     {
                         _state = STATES.ATTACKING;
+                        _aiAnimation.AnimatorSetBool("Walking", false);
+                        _aiAnimation.AnimatorSetBool("Attacking", true);
                         break;
                     }
                     _aiMovement.Move();
@@ -41,6 +47,7 @@ public class AIController : MonoBehaviour
                 else
                 {
                     _state = STATES.MOVELASTSIGHT;
+                    _aiAnimation.AnimatorSetBool("Walking", true);
                     break;
                 }
                 break;
@@ -52,6 +59,8 @@ public class AIController : MonoBehaviour
                 else
                 {
                     _state = STATES.MOVING;
+                    _aiAnimation.AnimatorSetBool("Walking", true);
+                    _aiAnimation.AnimatorSetBool("Attacking", false);
                 }
                 break;
             case STATES.MOVELASTSIGHT:
@@ -59,11 +68,13 @@ public class AIController : MonoBehaviour
                 if (_aiDetection.CanSeePlayer())
                 {
                     _state = STATES.MOVING;
+                    _aiAnimation.AnimatorSetBool("Walking", true);
                     break;
                 }
                 if (_aiMovement.IsAtTarget())
                 {
                     _state = STATES.IDLE;
+                    _aiAnimation.AnimatorSetBool("Walking", false);
                     break;
                 }
                 break;
