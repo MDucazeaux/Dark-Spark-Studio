@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
-  m_Name: Iron ARmor
+  m_Name: Iron Armor
   m_EditorClassIdentifier: 
-  name: 
-  description: Very sturdy, protects the torso quite well
-  icon: {fileID: 21300000, guid: fcffa0a1340b2e141aa8d18eea2ef966, type: 3}
-  prefab: {fileID: 277415171007647499, guid: 6626facb4c28a234ba832a256076a016, type: 3}
-  itemType: 0
-  healing: 0
-  stamina: 0
-  armor: 0.5
-  physicalStrength: 0
-  magicalStrength: 0
+  _name: Iron Armor
+  _description: Very sturdy, protects the torso quite well
+  _icon: {fileID: 21300000, guid: fcffa0a1340b2e141aa8d18eea2ef966, type: 3}
+  _prefab: {fileID: 277415171007647499, guid: 6626facb4c28a234ba832a256076a016, type: 3}
+  _itemType: 0
+  _healing: 0
+  _staminaStats: 0
+  _armorStats: 0.5
+  _physicalStrengthStats: 0
+  _magicalStrengthStats: 0

@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
   m_Name: Medicinal Herb
   m_EditorClassIdentifier: 
-  name: 
-  description: Not very effective on its own, but someone versed in the art of potions
+  _name: Medicinal Herb
+  _description: Not very effective on its own, but someone versed in the art of potions
     can get something out of it
-  icon: {fileID: 21300000, guid: e6dfe6aa355132842a978e490ff59f61, type: 3}
-  prefab: {fileID: 6671984306648387596, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-  itemType: 2
-  healing: 35
-  stamina: 0
-  armor: 0
-  physicalStrength: 0
-  magicalStrength: 0
+  _icon: {fileID: 21300000, guid: e6dfe6aa355132842a978e490ff59f61, type: 3}
+  _prefab: {fileID: 6671984306648387596, guid: a12c87402aa21b04e84eda348682e471, type: 3}
+  _itemType: 2
+  _healing: 35
+  _staminaStats: 0
+  _armorStats: 0
+  _physicalStrengthStats: 0
+  _magicalStrengthStats: 0

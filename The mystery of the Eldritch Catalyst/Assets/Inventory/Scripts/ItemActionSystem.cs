@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ItemActionSystem : MonoBehaviour
 {
@@ -27,16 +26,17 @@ public class ItemActionSystem : MonoBehaviour
     [SerializeField]
     private EquipmentSlot _weaponSlot;
 
-    public void OpenActionPanel(ItemData item)
+    public void OpenActionPanel(ItemData item, Vector3 slotPosition)
     {
         _itemCurrentlySelected = item;
+        _actionPanel.transform.position = slotPosition;
 
         if (item == null)
         {
             _actionPanel.SetActive(false);
             return;
         }
-        switch (item.itemType)
+        switch (item.GetItemType())
         {
             case ItemType.Armor:
                 _useItemButton.SetActive(false);
@@ -74,7 +74,7 @@ public class ItemActionSystem : MonoBehaviour
 
     public void EquipActionButton()
     {
-        if (_itemCurrentlySelected.itemType == ItemType.Armor) 
+        if (_itemCurrentlySelected.GetItemType() == ItemType.Armor) 
         {
             if(_armorSlot.GetItem() == null)
             {
@@ -85,7 +85,7 @@ public class ItemActionSystem : MonoBehaviour
                 _armorSlot.SwapEquipment(_itemCurrentlySelected);
             }
         }
-        else if(_itemCurrentlySelected.itemType == ItemType.Weapon)
+        else if(_itemCurrentlySelected.GetItemType() == ItemType.Weapon)
         {
             if (_weaponSlot.GetItem() == null)
             {
@@ -101,7 +101,7 @@ public class ItemActionSystem : MonoBehaviour
 
     public void DropActionButton()
     {
-        GameObject instantiatedItem = Instantiate(_itemCurrentlySelected.prefab);
+        GameObject instantiatedItem = Instantiate(_itemCurrentlySelected.GetPrefab());
         instantiatedItem.transform.position = _dropPoint.position;
         Inventory.Instance.RemoveItem(_itemCurrentlySelected);
         Inventory.Instance.RefreshContent();

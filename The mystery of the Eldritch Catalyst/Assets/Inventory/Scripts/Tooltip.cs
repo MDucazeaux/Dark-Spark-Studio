@@ -1,13 +1,15 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+[ExecuteInEditMode]
 public class Tooltip : MonoBehaviour
 {
     [SerializeField]
-    private Text _headerField;
+    private TextMeshProUGUI _headerField;
 
     [SerializeField]
-    private Text _contentField;
+    private TextMeshProUGUI _contentField;
 
     [SerializeField]
     private LayoutElement _layoutElement;
@@ -47,13 +49,6 @@ public class Tooltip : MonoBehaviour
 
     private void Update()
     {
-        Vector2 mousePosition= Input.mousePosition;
-
-        float pivotX = mousePosition.x / Screen.width;
-        float pivotY = mousePosition.y / Screen.height;
-
-        _rectTransform.pivot = new Vector2 (pivotX, pivotY);
-
-        _transform.position = mousePosition;
+        _transform.position = Input.mousePosition;
     }
 }
