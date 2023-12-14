@@ -1,24 +1,27 @@
 using System.Collections;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class AIMovement : MonoBehaviour
 {
     private Transform _transform;
+    [SerializeField] private Transform _collisionTransform;
 
     private Vector3 _targetPos;
     private bool _canMove = true;
 
-    private float _moveTime = 1.25f; // PLACEHOLDER!!! modify when Enemy class are done
+    private float _moveTime = 1f; // PLACEHOLDER!!! modify when Enemy class are done
 
-    private LayerMask _layerWall = LayerMask.NameToLayer("Wall");
+    private LayerMask _layerWall;    private LayerMask _layerEnemy;
 
     const float c_tileSize = 10;
 
     private void Awake()
     {
         _transform = transform;
+        _layerWall = LayerMask.NameToLayer("Wall");
+        _layerEnemy = LayerMask.NameToLayer("Enemy");
     }
+
     public void SetTargetTo(Vector3 pos)
     {
         _targetPos = pos;
@@ -70,10 +73,12 @@ public class AIMovement : MonoBehaviour
         float _elapsedTime = 0;
         while (_elapsedTime < _moveTime)
         {
+            _collisionTransform.position = pos;
             _transform.position = Vector3.Lerp(_startingPos, pos, (_elapsedTime / _moveTime));
             _elapsedTime += Time.deltaTime;
             yield return null;
         }
+        _collisionTransform.position = pos;
         _transform.position = pos;
 
         _canMove = true;
@@ -82,6 +87,11 @@ public class AIMovement : MonoBehaviour
 
     private bool CanMoveTo(Vector3 target)
     {
-        return (!Physics.Raycast(_transform.position, (target - _transform.position).normalized, c_tileSize, ~1 << _layerWall));
+        return (!Physics.Raycast(_transform.position, (target - _transform.position).normalized, c_tileSize));
+    }
+
+    public bool IsAtTarget()
+    {
+        return (Vector3.Distance(_transform.position, _targetPos)  <= c_tileSize + 1);
     }
 }
