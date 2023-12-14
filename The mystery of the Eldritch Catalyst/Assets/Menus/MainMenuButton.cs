@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -18,7 +16,7 @@ public class MainMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         _button = GetComponent<Button>();
         _transform = GetComponent<Transform>();
         _normalPosition = _transform.position;
-        _hoverPosition = _transform.position + new Vector3(-100, 0, 0);
+        _hoverPosition = _transform.position + _transform.right * -1;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
