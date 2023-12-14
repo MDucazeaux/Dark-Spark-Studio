@@ -10,6 +10,7 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
+        ItemsOnFloor.Instance.AddItemOnTheFloor(this);
         _camera = Camera.main;
         _transform = transform;
     }
@@ -22,5 +23,10 @@ public class Item : MonoBehaviour
     public void LookAtCamera()
     {
         _transform.LookAt(_camera.transform);
+    }
+
+    private void OnDestroy()
+    {
+        ItemsOnFloor.Instance.RemoveItemOnTheFloor(this);
     }
 }

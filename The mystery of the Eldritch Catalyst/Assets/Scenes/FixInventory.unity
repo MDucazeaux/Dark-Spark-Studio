@@ -597,6 +597,7 @@ GameObject:
   - component: {fileID: 268578080}
   - component: {fileID: 268578079}
   - component: {fileID: 268578081}
+  - component: {fileID: 268578082}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -651,6 +652,21 @@ MonoBehaviour:
   _dropPoint: {fileID: 1881527593}
   _armorSlot: {fileID: 1815405982}
   _weaponSlot: {fileID: 1696305123}
+--- !u!114 &268578082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268578078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81dbe3804015424fba44e1e5048e89f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemsOnFloor: []
+  _playerPosition: {fileID: 643923417}
+  cellSize: 10
 --- !u!1 &288871992
 GameObject:
   m_ObjectHideFlags: 0
