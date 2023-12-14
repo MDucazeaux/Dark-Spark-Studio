@@ -19,7 +19,6 @@ public class AIController : MonoBehaviour
 
     private void Update()
     {
-        _aiAnimation.SetLookAtPos(_aiDetection.GetPlayerPos());
         switch (_state)
         {
             case STATES.IDLE:
