@@ -1,11 +1,13 @@
 using UnityEngine;
 
-public abstract class Character
+public abstract class Character 
 {
     protected float MaxLife;
     protected float Life;
     protected float MaxStamina;
     protected float Stamina;
+    protected float StaminaLoseActionOne;
+    protected float StaminaLoseActionTwo;
     protected string Name;
     protected string Forename;
     protected float ArmorMultiplier;
@@ -17,12 +19,12 @@ public abstract class Character
 
     public abstract void Awake();
 
-    public void Attack()
-    {
-    }
+    public abstract void ActionOne();
+    public abstract void ActionTwo();
 
     public float GetLife()
     {
+        
         return Life;
     }
 
@@ -50,6 +52,16 @@ public abstract class Character
     public void UseStamina(float stamina)
     {
         Stamina -= stamina;
+    }
+
+    public void StartCooldownActionOne()
+    {
+        
+    }
+
+    public void StartCooldownActionTwo()
+    {
+
     }
 
     public float GetHealMultiplier { get { return HealMultiplier; } }

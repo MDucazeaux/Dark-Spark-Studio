@@ -11,4 +11,14 @@ public class Ruffian : Character
         MagicalMultiplier = 0;
         HealMultiplier = 1;
     }
+
+    public override void ActionOne()
+    {
+
+    }
+
+    public override void ActionTwo()
+    {
+
+    }
 }
