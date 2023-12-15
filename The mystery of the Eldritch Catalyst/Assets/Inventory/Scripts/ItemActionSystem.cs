@@ -25,6 +25,9 @@ public class ItemActionSystem : MonoBehaviour
 
     [SerializeField]
     private EquipmentSlot _weaponSlot;
+    
+    [SerializeField] 
+    private PlayerMovement _playerMovement;
 
     public void OpenActionPanel(ItemData item, Vector3 slotPosition)
     {
@@ -101,11 +104,14 @@ public class ItemActionSystem : MonoBehaviour
 
     public void DropActionButton()
     {
-        GameObject instantiatedItem = Instantiate(_itemCurrentlySelected.GetPrefab());
-        instantiatedItem.transform.position = _dropPoint.position;
-        Inventory.Instance.RemoveItem(_itemCurrentlySelected);
-        Inventory.Instance.RefreshContent();
-        CloseActionPanel();
+        if (!_playerMovement.IsMoving)
+        {
+            GameObject instantiatedItem = Instantiate(_itemCurrentlySelected.GetPrefab());
+            instantiatedItem.transform.position = _dropPoint.position;
+            Inventory.Instance.RemoveItem(_itemCurrentlySelected);
+            Inventory.Instance.RefreshContent();
+            CloseActionPanel();
+        }
     }
 
     public GameObject GetActionPanel() {return _actionPanel;}

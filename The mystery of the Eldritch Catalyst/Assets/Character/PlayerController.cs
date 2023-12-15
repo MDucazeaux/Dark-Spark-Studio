@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -44,6 +45,19 @@ public class PlayerController : MonoBehaviour
         if (context.started)
         {
             _playerInteraction.Interact();
+        }
+    }
+
+    public void OnPickUp(InputAction.CallbackContext context)
+    {
+        if (context.started && !_playerMovement.IsMoving)
+        {
+            if (ItemsOnFloor.Instance.ItemsCloseToThePlayer().Count > 0 && 
+                !Inventory.Instance.InventoryIsFull())
+            {
+                Inventory.Instance.AddItem(ItemsOnFloor.Instance.ItemsCloseToThePlayer()[0].itemData);
+                Destroy(ItemsOnFloor.Instance.ItemsCloseToThePlayer()[0].GameObject());
+            }
         }
     }
 }

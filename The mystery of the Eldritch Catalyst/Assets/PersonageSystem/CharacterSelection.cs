@@ -9,6 +9,12 @@ public class CharacterSelection : MonoBehaviour
     private List<string> _placement = new List<string>();
     private int _characterIndex;
 
+    [SerializeField]
+    private EquipmentSlot _armorSlot;
+    
+    [SerializeField]
+    private EquipmentSlot _weaponSlot;
+
     private void Awake()
     {
         Instance = this;
@@ -30,6 +36,8 @@ public class CharacterSelection : MonoBehaviour
     public void SelectCharacter(int new_character_index)
     {
         _characterIndex = new_character_index;
+        _armorSlot.RefreshVisual();
+        _weaponSlot.RefreshVisual();
     }
 
     public void SwitchCharacters(int character1, int character2)

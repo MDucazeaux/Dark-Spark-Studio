@@ -146,10 +146,24 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         switch (_slotType)
         {
             case SlotType.Armor:
-                _itemIcon.sprite = CharacterSelection.Instance.GetSelectedCharacter().GetArmor().GetIcon();
+                if (CharacterSelection.Instance.GetSelectedCharacter().GetArmor() != null)
+                {
+                    _itemIcon.sprite = CharacterSelection.Instance.GetSelectedCharacter().GetArmor().GetIcon();
+                }
+                else
+                {
+                    _itemIcon.sprite = Inventory.Instance.GetTransparentSlot();
+                }
                 break;
             case SlotType.Weapon:
-                _itemIcon.sprite = CharacterSelection.Instance.GetSelectedCharacter().GetWeapon().GetIcon();
+                if (CharacterSelection.Instance.GetSelectedCharacter().GetWeapon() != null)
+                {
+                    _itemIcon.sprite = CharacterSelection.Instance.GetSelectedCharacter().GetWeapon().GetIcon();
+                }
+                else
+                {
+                    _itemIcon.sprite = Inventory.Instance.GetTransparentSlot();
+                }
                 break;
             default:
                 break;
