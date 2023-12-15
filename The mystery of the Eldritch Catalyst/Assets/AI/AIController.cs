@@ -59,7 +59,7 @@ public class AIController : MonoBehaviour
                 }
                 break;
             case STATES.ATTACKING:
-                _aiAnimation.SetAnimatorSpeed(1); // / GetComponent(Enemy).cooldown
+                _aiAnimation.SetAnimatorSpeed(1 / GetComponent<Enemy>().GetCoolDownAttack());
                 if (_aiDetection.IsNearPlayer())
                 {
                     _aiAttack.AttackPlayer();
