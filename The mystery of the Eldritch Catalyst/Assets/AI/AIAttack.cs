@@ -21,7 +21,7 @@ public class AIAttack : MonoBehaviour
         {
             Debug.Log("Enemy Attacked at " + Time.time);
             StartCoroutine(AttackCooldown());
-            _aiAnimation.DoAttackAnimation();
+            StartCoroutine(_aiAnimation.DoAttackAnimation((_cooldown-0.1f) * 0.85f));
         }
     }
 
