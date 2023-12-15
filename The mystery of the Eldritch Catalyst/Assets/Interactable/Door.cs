@@ -41,4 +41,7 @@ public class Door : Interactable
     }
 
     public bool IsLocked { get { return _bIsLocked; } set { _bIsLocked = value; } }
+
+    public void Unlock()
+    { _bIsLocked = false; }
 }

@@ -4,29 +4,52 @@ public class Alchemist : Character
 {
     [SerializeField] private GameObject _potion;
 
-    public override void Awake()
+    [SerializeField] private float _distanceActionTwo = 10;
+
+    private LayerMask _enemyLayer;
+
+    private void Awake()
     {
         MaxLife = 100;
         Life = MaxLife;
-        ArmorMultiplier = 1f;
         MaxStamina = 100;
-        Stamina = 100;
+        Stamina = MaxStamina;
+
+        ArmorMultiplier = 1f;
         StrengthMultiplier = 1f;
         MagicalMultiplier = 0;
         HealMultiplier = 1.25f;
+
+        CoolDownActionOne = 1;
+        CoolDownActionTwo = 30;
+
+        _enemyLayer = LayerMask.GetMask("Enemy");
     }
 
     public override void ActionOne()
     {
-        GameObject.Instantiate(_potion).GetComponent<PoisonedPotion>().SetValues();
+        if (_canActionOne)
+        {
+            Instantiate(_potion).GetComponent<PoisonedPotion>().SetValues();
 
-        UseStamina(StaminaLoseActionOne);
+            UseStamina(StaminaLoseActionOne);
 
-        StartCooldownActionOne();
+            StartCooldownActionOne();
+        }
     }
 
     public override void ActionTwo()
     {
-        
+        if (_canActionTwo)
+        {
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo, _enemyLayer))
+            {
+                hitInfo.transform.GetComponent<Enemy>().StartTransmutation();
+            }
+
+            UseStamina(StaminaLoseActionTwo);
+
+            StartCooldownActionTwo();
+        }
     }
 }

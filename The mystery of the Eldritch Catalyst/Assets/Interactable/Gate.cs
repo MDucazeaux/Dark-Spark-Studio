@@ -42,4 +42,7 @@ public class Gate : Interactable
         _transform.position = _targetPos;
     }
     public bool IsLocked { get { return _bIsLocked; } set { _bIsLocked = value; } }
+
+    public void Unlock()
+    { _bIsLocked = false; }
 }

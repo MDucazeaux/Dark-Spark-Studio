@@ -14,9 +14,10 @@ public class PoisonedPotion : Throwable
         {
             Destroy(gameObject);
         }
-        /*if (collision.gameObject.TryGetComponent(out Enemy enemy))
+        if (collision.gameObject.TryGetComponent(out Enemy enemy))
         {
-            enemy.
-        }*/
+            enemy.TakeDamage(_damage);
+            Destroy(gameObject);
+        }
     }
 }

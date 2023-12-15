@@ -4,7 +4,7 @@ public class Witch : Character
 {
     [SerializeField] private GameObject _fireBall;
 
-    public override void Awake()
+    private void Awake()
     {
         MaxLife = 75;
         Life = MaxLife;
@@ -16,19 +16,37 @@ public class Witch : Character
         StrengthMultiplier = 0.75f;
         MagicalMultiplier = 1.25f;
         HealMultiplier = 1;
+
+        CoolDownActionOne = 3;
+        CoolDownActionTwo = 60;
     }
 
     public override void ActionOne()
     {
-        GameObject.Instantiate(_fireBall).GetComponent<FireBall>().SetValues();
+        if (_canActionOne)
+        {
+            Instantiate(_fireBall).GetComponent<FireBall>().SetValues();
 
-        UseStamina(StaminaLoseActionOne);
+            UseStamina(StaminaLoseActionOne);
 
-        StartCooldownActionOne();
+            StartCooldownActionOne();
+        }
     }
 
     public override void ActionTwo()
     {
+        if (_canActionTwo)
+        {
+            var AllCharacters = CharacterSelection.Instance.Characters;
 
+            foreach (var character in AllCharacters.Values)
+            {
+                character.StartProtection();
+            }
+
+            UseStamina(StaminaLoseActionTwo);
+
+            StartCooldownActionTwo();
+        }
     }
 }
