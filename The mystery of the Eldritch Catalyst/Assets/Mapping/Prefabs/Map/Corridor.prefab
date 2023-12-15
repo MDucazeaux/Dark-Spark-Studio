@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 6465508606096203615}
   m_Layer: 7
   m_Name: North
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 5201304759402099216}
   m_Layer: 7
   m_Name: West
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 8545151554251608766}
   m_Layer: 7
   m_Name: Est
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -566,6 +566,10 @@ PrefabInstance:
     - target: {fileID: 6198517514589426634, guid: ae24ce90e093fd4448db8d3f0514b2b7, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198517514589426634, guid: ae24ce90e093fd4448db8d3f0514b2b7, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

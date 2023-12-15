@@ -7,6 +7,8 @@ public class Dullahan : Enemy
 
         _originDamage = 10;
         _damage = _originDamage;
+
+        _cooldownAttack = 2;
     }
 
     public override void Death()

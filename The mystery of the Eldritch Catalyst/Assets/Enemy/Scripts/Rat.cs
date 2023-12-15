@@ -9,6 +9,8 @@ public class Rat : Enemy
 
         _originDamage = 10;
         _damage = _originDamage;
+
+        _cooldownAttack = 1;
     }
 
     public override void Death()

@@ -8,18 +8,12 @@ public class AIAttack : MonoBehaviour
 
     private bool _canAttack = true;
 
-    [SerializeField] private float _cooldown = 1;
-    [SerializeField] private float _distanceAttack = 10;
-    private LayerMask _playerLayer;
-
-    private void Awake()
-    {
-        _playerLayer = LayerMask.GetMask("Player");
-    }
+    private float _cooldown = 1;
 
     private void Start()
     {
         _enemy = GetComponent<Enemy>();
+        _cooldown = _enemy.GetCoolDownAttack();
     }
 
     public void AttackPlayer()

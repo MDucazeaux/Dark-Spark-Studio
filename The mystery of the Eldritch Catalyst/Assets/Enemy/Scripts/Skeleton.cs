@@ -7,6 +7,8 @@ public class Skeleton : Enemy
 
         _originDamage = 20;
         _damage = _originDamage;
+
+        _cooldownAttack = 1.5f;
     }
 
     public override void Death()

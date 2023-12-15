@@ -24,4 +24,7 @@ public abstract class Enemy : Entity
 
     public float GetDamage()
     { return _damage; }
+
+    public float GetCoolDownAttack() 
+    { return _cooldownAttack;}
 }

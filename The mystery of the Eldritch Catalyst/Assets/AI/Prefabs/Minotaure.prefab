@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 4623230159621626737}
   - component: {fileID: 7269778626203128646}
   - component: {fileID: 5380416079548505309}
+  - component: {fileID: 7397724714595151620}
   m_Layer: 7
   m_Name: Minotaure
   m_TagString: Untagged
@@ -319,7 +320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _aiAnimation: {fileID: 5380416079548505309}
-  _cooldown: 1
 --- !u!114 &5380416079548505309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,3 +334,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteTransform: {fileID: 827680055414630221}
   _animator: {fileID: 7522697030832897817}
+--- !u!114 &7397724714595151620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5787133764792310100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d269f28a7979fcc4c808d2edb267b9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

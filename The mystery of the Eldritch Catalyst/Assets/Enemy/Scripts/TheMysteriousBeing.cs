@@ -7,6 +7,8 @@ public class TheMysteriousBeing : Enemy
 
         _originDamage = 25;
         _damage = _originDamage;
+
+        _cooldownAttack = 1;
     }
 
     public override void Death()

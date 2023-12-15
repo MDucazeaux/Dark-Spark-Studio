@@ -11,15 +11,17 @@ public class PoisonedPotion : Throwable
         _startPosition = position;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }
-        if (collision.gameObject.TryGetComponent(out Enemy enemy))
+
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            enemy.TakeDamage(_damage);
+
+            other.GetComponentInParent<Enemy>().TakeDamage(_damage);
             Destroy(gameObject);
         }
     }

@@ -5,7 +5,7 @@ public class Ruffian : Character
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private PlayerRotation _playerRotation;
 
-    [SerializeField] private float _distanceActionTwo = 10;
+    [SerializeField] private float _distanceAction = 10;
     [SerializeField] private float _damageLight = 15;
     [SerializeField] private float _damageStrong = 30;
     private LayerMask _enemyLayer;
@@ -33,11 +33,11 @@ public class Ruffian : Character
     {
         if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
-            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo, _enemyLayer))
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceAction, _enemyLayer))
             {
-                if (hitInfo.transform.TryGetComponent(out Enemy enemy))
+                if (hitInfo.transform.CompareTag("Enemy"))
                 {
-                    enemy.TakeDamage(_damageLight);
+                    hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageLight);
                 }
             }
 
@@ -51,15 +51,16 @@ public class Ruffian : Character
     {
         if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
-            Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo);
-
-            if (hitInfo.transform.TryGetComponent(out Door door))
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceAction))
             {
-                door.Unlock();
-            }
-            else if (hitInfo.transform.TryGetComponent(out Enemy enemy))
-            {
-                enemy.TakeDamage(_damageStrong);
+                if (hitInfo.transform.TryGetComponent(out Door door))
+                {
+                    door.Unlock();
+                }
+                else if (hitInfo.transform.CompareTag("Enemy"))
+                {
+                    hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageLight);
+                }
             }
 
             UseStamina(StaminaLoseActionTwo);

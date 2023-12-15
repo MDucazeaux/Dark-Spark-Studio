@@ -49,7 +49,7 @@ public class Alchemist : Character
         {
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo, _enemyLayer))
             {
-                hitInfo.transform.GetComponent<Enemy>().StartTransmutation();
+                hitInfo.transform.GetComponentInParent<Enemy>().StartTransmutation();
             }
 
             UseStamina(StaminaLoseActionTwo);

@@ -7,6 +7,8 @@ public class Minotaur : Enemy
 
         _originDamage = 30;
         _damage = _originDamage;
+
+        _cooldownAttack = 1.5f;
     }
 
     public override void Death()
