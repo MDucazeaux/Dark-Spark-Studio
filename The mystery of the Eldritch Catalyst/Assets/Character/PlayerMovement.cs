@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Transform _collisionTransform;
+
     private Transform _transform;
     private Vector2 _direction;
     private bool _bIsMoving = false;
@@ -51,12 +53,13 @@ public class PlayerMovement : MonoBehaviour
         float _elapsedTime = 0;
         while (_elapsedTime < time)
         {
-            _transform.position = Vector3.Lerp(_startingPos, _targetPos, (_elapsedTime / time)); //move camera here instead of transform
+            _collisionTransform.position = _targetPos;
+            _transform.position = Vector3.Lerp(_startingPos, _targetPos, (_elapsedTime / time));
             _elapsedTime += Time.deltaTime;
             yield return null;
         }
         _transform.position = _targetPos;
-        //set camera local pos to 0
+        _collisionTransform.position = _targetPos;
         _bIsMoving = false;
     }
 
