@@ -4,6 +4,9 @@ public class Alchemist : Character
 {
     [SerializeField] private GameObject _potion;
 
+    [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerRotation _playerRotation;
+
     [SerializeField] private float _distanceActionTwo = 10;
 
     private LayerMask _enemyLayer;
@@ -24,11 +27,13 @@ public class Alchemist : Character
         CoolDownActionTwo = 30;
 
         _enemyLayer = LayerMask.GetMask("Enemy");
+
+        Name = "Alchemist";
     }
 
     public override void ActionOne()
     {
-        if (_canActionOne)
+        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
             Instantiate(_potion).GetComponent<PoisonedPotion>().SetValues(transform.position, transform.forward);
 
@@ -40,11 +45,11 @@ public class Alchemist : Character
 
     public override void ActionTwo()
     {
-        if (_canActionTwo)
+        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo, _enemyLayer))
             {
-                hitInfo.transform.GetComponent<Enemy>().StartTransmutation();
+                hitInfo.transform.GetComponentInParent<Enemy>().StartTransmutation();
             }
 
             UseStamina(StaminaLoseActionTwo);

@@ -4,6 +4,9 @@ public class Witch : Character
 {
     [SerializeField] private GameObject _fireBall;
 
+    [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerRotation _playerRotation;
+
     private void Awake()
     {
         MaxLife = 75;
@@ -19,11 +22,13 @@ public class Witch : Character
 
         CoolDownActionOne = 3;
         CoolDownActionTwo = 60;
+
+        Name = "Witch";
     }
 
     public override void ActionOne()
     {
-        if (_canActionOne)
+        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
             Instantiate(_fireBall).GetComponent<FireBall>().SetValues(transform.position, transform.forward);
 
@@ -35,7 +40,7 @@ public class Witch : Character
 
     public override void ActionTwo()
     {
-        if (_canActionTwo)
+        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
             var AllCharacters = CharacterSelection.Instance.Characters;
 

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class CameraScript : MonoBehaviour
 {
+    public static CameraScript Instance;
+
     private Transform _transform;
     [SerializeField] private float _shakeAmount = 0.01f;
     [SerializeField] private float _shakeSpeed = 15f;
@@ -17,6 +19,9 @@ public class CameraScript : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+
         _transform = transform;
     }
 

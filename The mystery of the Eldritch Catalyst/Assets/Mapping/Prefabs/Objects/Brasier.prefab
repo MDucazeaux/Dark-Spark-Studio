@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2046598024834172353}
   - component: {fileID: 161937866158628093}
   - component: {fileID: 8575428607379755971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: flame_MAGIK_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,9 +115,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7098492348048584805}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Brasier
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6647162852460568754}
   - component: {fileID: 8550837189857154763}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3886863282333860115}
   - component: {fileID: 5026383111790321305}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Brasero
   m_TagString: Untagged
   m_Icon: {fileID: 0}

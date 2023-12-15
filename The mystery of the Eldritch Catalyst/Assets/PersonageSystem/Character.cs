@@ -21,6 +21,8 @@ public abstract class Character : Entity
     private bool _isProtected = false;
     private float _protectionTime = 3;
 
+    private bool _isDead = false;
+
     public abstract void ActionOne();
     public abstract void ActionTwo();
 
@@ -47,7 +49,16 @@ public abstract class Character : Entity
 
     public override void TakeDamage(float damage)
     {
-        Life -= _isProtected ? damage / ArmorMultiplier : 0;
+        if (!_isProtected)
+        {
+            Life -= damage / ArmorMultiplier;
+            Life = Life < 0 ? 0 : Life;
+
+            CameraScript.Instance.TakeDamage();
+        }        
+
+        if (Life <= 0)
+            Death();
     }
 
     public void StartCooldownActionOne()
@@ -94,4 +105,15 @@ public abstract class Character : Entity
 
     public float GetHealMultiplier()
     { return HealMultiplier; }
+
+    public string GetName()
+    { return Name; }
+
+    public override void Death()
+    {
+        _isDead = true;
+        CharacterSelection.Instance.CharacterDeath(Name);
+    }
+
+    public bool IsDead {  get { return _isDead; } }
 }

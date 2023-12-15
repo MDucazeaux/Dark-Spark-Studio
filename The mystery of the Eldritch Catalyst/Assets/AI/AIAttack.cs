@@ -3,23 +3,26 @@ using UnityEngine;
 
 public class AIAttack : MonoBehaviour
 {
-    private PlayerController _playerController;
     [SerializeField] AIAnimation _aiAnimation;
+    private Enemy _enemy;
 
     private bool _canAttack = true;
 
-    [SerializeField] private float _cooldown = 1;
+    private float _cooldown = 1;
 
     private void Start()
     {
-        _playerController = PlayerController.Instance;
+        _enemy = GetComponent<Enemy>();
+        _cooldown = _enemy.GetCoolDownAttack();
     }
 
     public void AttackPlayer()
     {
-        if (_canAttack )
+        if (_canAttack)
         {
-            Debug.Log("Enemy Attacked at " + Time.time);
+            CharacterSelection.Instance.Characters[CharacterSelection.Instance.CharactersPlacement[0]].TakeDamage(_enemy.GetDamage());
+            CharacterSelection.Instance.Characters[CharacterSelection.Instance.CharactersPlacement[1]].TakeDamage(_enemy.GetDamage());
+
             StartCoroutine(AttackCooldown());
             StartCoroutine(_aiAnimation.DoAttackAnimation((_cooldown-0.1f) * 0.85f));
         }
