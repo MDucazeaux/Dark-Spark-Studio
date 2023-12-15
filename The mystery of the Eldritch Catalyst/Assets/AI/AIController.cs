@@ -13,12 +13,18 @@ public class AIController : MonoBehaviour
         MOVING,
         ATTACKING,
         MOVELASTSIGHT,
+        DEAD,
     }
 
     private STATES _state = STATES.IDLE;
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            _state = STATES.DEAD;
+        }
+
         switch (_state)
         {
             case STATES.IDLE:
@@ -75,6 +81,9 @@ public class AIController : MonoBehaviour
                     _aiAnimation.AnimatorSetBool("Walking", false);
                     break;
                 }
+                break;
+            case STATES.DEAD:
+                _aiAnimation.AnimatorSetBool("Dead", true);
                 break;
             default:
                 Debug.Log("AI STATES ERROR");

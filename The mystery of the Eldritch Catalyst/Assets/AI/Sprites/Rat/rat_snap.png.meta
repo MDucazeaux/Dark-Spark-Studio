@@ -156,9 +156,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 281
-        width: 358
-        height: 285
+        y: 284
+        width: 336
+        height: 282
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,9 +218,9 @@ TextureImporter:
       name: rat_snap_56
       rect:
         serializedVersion: 2
-        x: 0
+        x: 33
         y: 34
-        width: 358
+        width: 303
         height: 243
       alignment: 7
       pivot: {x: 0.5, y: 0}
