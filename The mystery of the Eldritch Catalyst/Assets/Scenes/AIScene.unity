@@ -4829,6 +4829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6920546f9d82c0b42975eee19e121b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _aiAnimation: {fileID: 973666229}
   _cooldown: 1
 --- !u!114 &973666226
 MonoBehaviour:
