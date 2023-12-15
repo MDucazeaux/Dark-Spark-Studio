@@ -10,6 +10,11 @@ public class AIAnimation : MonoBehaviour
         _animator.SetBool(name, value);
     }
 
+    public void DoAttackAnimation()
+    {
+
+    }
+
     public void PlayAnimation(string name)
     {
         switch (name)

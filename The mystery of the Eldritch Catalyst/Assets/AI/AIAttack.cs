@@ -4,6 +4,7 @@ using UnityEngine;
 public class AIAttack : MonoBehaviour
 {
     private PlayerController _playerController;
+    [SerializeField] AIAnimation _aiAnimation;
 
     private bool _canAttack = true;
 
@@ -20,6 +21,7 @@ public class AIAttack : MonoBehaviour
         {
             Debug.Log("Enemy Attacked at " + Time.time);
             StartCoroutine(AttackCooldown());
+            _aiAnimation.DoAttackAnimation();
         }
     }
 
