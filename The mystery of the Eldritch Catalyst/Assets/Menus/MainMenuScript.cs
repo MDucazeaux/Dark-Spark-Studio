@@ -40,12 +40,12 @@ public class MainMenuScript : MonoBehaviour
 
     public void OnNewGame()
     {
-
+        Debug.Log("new game");
     }
 
     public void OnSettings()
     {
-
+        Debug.Log("Settings");
     }
 
     public void OnCredits()
@@ -56,6 +56,7 @@ public class MainMenuScript : MonoBehaviour
     public void OnQuit()
     {
         Application.Quit();
+        Debug.Log("Quit");
     }
 
     public void OnGoToMain()
