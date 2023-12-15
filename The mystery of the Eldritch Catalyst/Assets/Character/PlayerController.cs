@@ -19,15 +19,21 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        _playerMovement.SetDirection(_playerDirection);
+        if (!_playerRotation.IsRotating)
+        {
+            _playerMovement.SetDirection(_playerDirection);
+        }
+        
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (context.started && !_playerRotation.IsRotating)
+        if (context.performed)
         {
-
-            _playerDirection = context.ReadValue<Vector2>();
+            if ((context.ReadValue<Vector2>()).magnitude <= 1)
+            {
+                _playerDirection = context.ReadValue<Vector2>();
+            }
         }
         else if (context.canceled)
         {
@@ -37,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnRotate(InputAction.CallbackContext context)
     {
-        if (context.started && !_playerMovement.IsMoving)
+        if (context.started && _playerDirection == Vector2.zero)
         {
             _playerRotation.SetDirection((int)context.ReadValue<Vector2>().x);
         }
