@@ -10,16 +10,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerRotation _playerRotation;
     [SerializeField] private PlayerInteraction _playerInteraction;
 
+    private Vector2 _playerDirection = Vector2.zero;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Update()
+    {
+        _playerMovement.SetDirection(_playerDirection);
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         if (context.started && !_playerRotation.IsRotating)
         {
-            _playerMovement.SetDirection(context.ReadValue<Vector2>());
+
+            _playerDirection = context.ReadValue<Vector2>();
+        }
+        else if (context.canceled)
+        {
+            _playerDirection = Vector2.zero;
         }
     }
 
