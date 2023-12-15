@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnRotate(InputAction.CallbackContext context)
     {
-        if (context.started && _playerDirection == Vector2.zero)
+        if (context.started && _playerDirection == Vector2.zero && !_playerMovement.IsMoving)
         {
             _playerRotation.SetDirection((int)context.ReadValue<Vector2>().x);
         }
