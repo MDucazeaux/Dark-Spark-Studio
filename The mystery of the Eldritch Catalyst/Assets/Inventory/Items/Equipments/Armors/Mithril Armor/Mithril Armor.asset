@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
   m_Name: Mithril Armor
   m_EditorClassIdentifier: 
-  name: Mithril Armor
-  description: This armor is both very strong and maneuverable, it will effectively
+  _name: Mithril Armor
+  _description: This armor is both very strong and maneuverable, it will effectively
     protect its wearer
-  icon: {fileID: 21300000, guid: b7d021609d480bc4c82dd359c2b76ae0, type: 3}
-  prefab: {fileID: 7403288675940047307, guid: b262d3a30b1bb3a4086cd5a6fecc9d7a, type: 3}
-  itemType: 0
-  healing: 0
-  stamina: 0
-  armor: 0.75
-  physicalStrength: 0
-  magicalStrength: 0
+  _icon: {fileID: 21300000, guid: b7d021609d480bc4c82dd359c2b76ae0, type: 3}
+  _prefab: {fileID: 7403288675940047307, guid: b262d3a30b1bb3a4086cd5a6fecc9d7a, type: 3}
+  _itemType: 0
+  _healing: 0
+  _staminaStats: 0
+  _armorStats: 0.75
+  _physicalStrengthStats: 0
+  _magicalStrengthStats: 0

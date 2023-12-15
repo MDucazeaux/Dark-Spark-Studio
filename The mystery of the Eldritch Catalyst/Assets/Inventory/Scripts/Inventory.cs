@@ -91,7 +91,7 @@ public class Inventory : MonoBehaviour
             Slot currentSlot = _inventorySlotsParent.GetChild(i).GetComponent<Slot>();
             currentSlot.setItem(_content[i]);
 
-            currentSlot.setItemIcon(_content[i].icon);
+            currentSlot.setItemIcon(_content[i].GetIcon());
         }
     }
 

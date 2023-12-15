@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7779634249067529301}
   - component: {fileID: 2414816131488412890}
   m_Layer: 8
-  m_Name: Hook
+  m_Name: Lock Picking Tool
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

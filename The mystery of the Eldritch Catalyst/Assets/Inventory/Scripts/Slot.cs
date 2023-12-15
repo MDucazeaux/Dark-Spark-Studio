@@ -11,11 +11,19 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     [SerializeField]
     private ItemActionSystem _itemActionsSystem;
+
+    private Transform _transform;
+
+    public void Start()
+    {
+        _transform = transform;
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (_item != null)
         {
-            TooltipSystem.Instance.Show(_item.description, _item.name);
+            TooltipSystem.Instance.Show(_item.GetDescription(), _item.name);
         }
     }
     public void OnPointerExit(PointerEventData eventData)
@@ -35,6 +43,6 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void ClickOnSlot()
     {
-        _itemActionsSystem.OpenActionPanel(_item);
+        _itemActionsSystem.OpenActionPanel(_item, _transform.position);
     }
 }
