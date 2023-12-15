@@ -21,6 +21,16 @@ public class AIAnimation : MonoBehaviour
         _animator.SetBool(name, value);
     }
 
+    public bool AnimatorGetBool(string name)
+    {
+        return _animator.GetBool(name);
+    }
+
+    public void SetAnimatorSpeed(float speed)
+    {
+        _animator.speed = speed;
+    }
+
     public IEnumerator DoAttackAnimation(float time)
     {
         if (_bisAttacking)
@@ -29,7 +39,6 @@ public class AIAnimation : MonoBehaviour
         }
 
         _bisAttacking = true;
-        print("cool");
 
         Vector3 _startingPos = _spriteTransform.localPosition;
         Vector3 _targetPos =  _spriteTransform.localPosition + -_spriteTransform.forward*1f;

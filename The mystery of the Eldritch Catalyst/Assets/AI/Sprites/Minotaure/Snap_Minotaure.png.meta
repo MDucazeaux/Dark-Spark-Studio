@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea9d5dfa5cc5e3a43aacaea3d01821bf
+guid: 246f5863fdd4a194792a0a2b05eaa296
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,127 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rat_snap_0
+      name: Snap_Minotaure_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 577
-        width: 339
-        height: 280
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 160
+        y: 1361
+        width: 989
+        height: 1185
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cd6864daab178f46a55e29c12fa30a5
-      internalID: -1833253488
+      spriteID: da4df5d460dc4c84b8cd90a1d3d7496b
+      internalID: -463531435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rat_snap_1
+      name: Snap_Minotaure_1
       rect:
         serializedVersion: 2
-        x: 367
-        y: 578
-        width: 338
-        height: 281
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1236
+        y: 1363
+        width: 1014
+        height: 1195
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8334e73a4cb79924ba51800a26013dda
-      internalID: 2056118521
+      spriteID: c66311d6e0ff0f1428cd6bb54432543e
+      internalID: -1487857940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rat_snap_2
+      name: Snap_Minotaure_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 284
-        width: 336
-        height: 282
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 2320
+        y: 1355
+        width: 982
+        height: 1199
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6d2e411b81014d42ad5a12ee982f55d
-      internalID: -1721789311
+      spriteID: 54d18f42041283346a392dfb701f7c27
+      internalID: 1297863400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rat_snap_3
+      name: Snap_Minotaure_3
       rect:
         serializedVersion: 2
-        x: 350
-        y: 282
-        width: 337
-        height: 288
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 3348
+        y: 1377
+        width: 983
+        height: 1188
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 652de37773abb824eb5f69f33c0bffbb
-      internalID: -1972468948
+      spriteID: 253301dec854ca6408e68684ababc69c
+      internalID: 1597863340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rat_snap_20
+      name: Snap_Minotaure_4
       rect:
         serializedVersion: 2
-        x: 704
-        y: 280
-        width: 296
-        height: 291
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 3244
+        y: 184
+        width: 991
+        height: 1083
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c448154ffe6feb459452aa7fa538f96
-      internalID: 544912248
+      spriteID: a97f6e97559a12f4d91042fd3058db84
+      internalID: -1630202355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rat_snap_56
+      name: Snap_Minotaure_5
       rect:
         serializedVersion: 2
-        x: 33
-        y: 34
-        width: 303
-        height: 243
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 2283
+        y: 183
+        width: 911
+        height: 1083
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c8ae01b3ae28574f8225e2641350b8d
-      internalID: 1254214345
+      spriteID: 57ee3ad780000614fb9011951f6528be
+      internalID: -1987634781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snap_Minotaure_6
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 178
+        width: 865
+        height: 1086
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c59317496a623f48b3258f91b3388ee
+      internalID: 77715149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snap_Minotaure_7
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 154
+        width: 931
+        height: 1130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08106b9eea0669458ca573e606770b2
+      internalID: 1202926158
       vertices: []
       indices: 
       edges: []
@@ -238,7 +280,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 6203ceffc2fe6e44393db2ead0eb6422
     internalID: 0
     vertices: []
     indices: 
@@ -246,65 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rat_snap_0: -1833253488
-      rat_snap_1: 2056118521
-      rat_snap_10: 116528492
-      rat_snap_11: -47420605
-      rat_snap_12: -961872931
-      rat_snap_13: 402819306
-      rat_snap_14: -874526362
-      rat_snap_15: 908743872
-      rat_snap_16: -5667924
-      rat_snap_17: -67607424
-      rat_snap_18: -1792802531
-      rat_snap_19: -389153489
-      rat_snap_2: -1721789311
-      rat_snap_20: 544912248
-      rat_snap_21: -1791976229
-      rat_snap_22: -1404519632
-      rat_snap_23: 849821851
-      rat_snap_24: -949369901
-      rat_snap_25: 2076929299
-      rat_snap_26: -1740566704
-      rat_snap_27: -442343790
-      rat_snap_28: -1271121617
-      rat_snap_29: -1987275664
-      rat_snap_3: -1972468948
-      rat_snap_30: 2109675451
-      rat_snap_31: 603930269
-      rat_snap_32: 2034884288
-      rat_snap_33: -115682549
-      rat_snap_34: 903724568
-      rat_snap_35: 596747714
-      rat_snap_36: 1955600373
-      rat_snap_37: 1731574742
-      rat_snap_38: -1843591143
-      rat_snap_39: 1126027842
-      rat_snap_4: 1690660617
-      rat_snap_40: -1486958914
-      rat_snap_41: -89507344
-      rat_snap_42: 1245645037
-      rat_snap_43: 486187347
-      rat_snap_44: 354238604
-      rat_snap_45: -1959477697
-      rat_snap_46: -458443871
-      rat_snap_47: 796114514
-      rat_snap_48: -15429266
-      rat_snap_49: 1602061559
-      rat_snap_5: -345034824
-      rat_snap_50: -985247761
-      rat_snap_51: 1545535475
-      rat_snap_52: -271278110
-      rat_snap_53: -824282756
-      rat_snap_54: 1578956428
-      rat_snap_55: -1186776412
-      rat_snap_56: 1254214345
-      rat_snap_57: 154978062
-      rat_snap_58: -1004441823
-      rat_snap_6: 885360968
-      rat_snap_7: 834316468
-      rat_snap_8: -1053648788
-      rat_snap_9: -1703987028
+      Snap_Minotaure_0: -463531435
+      Snap_Minotaure_1: -1487857940
+      Snap_Minotaure_2: 1297863400
+      Snap_Minotaure_3: 1597863340
+      Snap_Minotaure_4: -1630202355
+      Snap_Minotaure_5: -1987634781
+      Snap_Minotaure_6: 77715149
+      Snap_Minotaure_7: 1202926158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

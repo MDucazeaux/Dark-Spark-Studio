@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AIController : MonoBehaviour
@@ -7,15 +8,23 @@ public class AIController : MonoBehaviour
     [SerializeField] AIAttack _aiAttack;
     [SerializeField] AIAnimation _aiAnimation;
 
+    [SerializeField] GameObject _spriteObject;
+
     private enum STATES
     {
         IDLE,
         MOVING,
         ATTACKING,
         MOVELASTSIGHT,
+        DEAD,
     }
 
     private STATES _state = STATES.IDLE;
+
+    private void Start()
+    {
+        _spriteObject = transform.Find("Sprite").gameObject;
+    }
 
     private void Update()
     {
@@ -50,12 +59,14 @@ public class AIController : MonoBehaviour
                 }
                 break;
             case STATES.ATTACKING:
+                _aiAnimation.SetAnimatorSpeed(1); // / GetComponent(Enemy).cooldown
                 if (_aiDetection.IsNearPlayer())
                 {
                     _aiAttack.AttackPlayer();
                 }
                 else
                 {
+                    _aiAnimation.SetAnimatorSpeed(1);
                     _state = STATES.MOVING;
                     _aiAnimation.AnimatorSetBool("Walking", true);
                     _aiAnimation.AnimatorSetBool("Attacking", false);
@@ -75,6 +86,13 @@ public class AIController : MonoBehaviour
                     _aiAnimation.AnimatorSetBool("Walking", false);
                     break;
                 }
+                break;
+            case STATES.DEAD:
+                if (_aiAnimation.AnimatorGetBool("Dead"))
+                {
+                    Destroy(gameObject, _spriteObject.GetComponent<Animator>().GetNextAnimatorStateInfo(0).length);
+                }
+                _aiAnimation.AnimatorSetBool("Dead", true);
                 break;
             default:
                 Debug.Log("AI STATES ERROR");
