@@ -99,4 +99,10 @@ public class AIController : MonoBehaviour
                 break;
         }
     }
+
+    public void Death()
+    {
+        _state = STATES.DEAD;
+        _aiAnimation.AnimatorSetBool("Dead", true);
+    }
 }

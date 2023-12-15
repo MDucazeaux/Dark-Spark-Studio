@@ -13,6 +13,6 @@ public class Skeleton : Enemy
 
     public override void Death()
     {
-
+        GetComponent<AIController>().Death();
     }
 }
