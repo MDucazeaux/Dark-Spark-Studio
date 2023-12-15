@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static PlayerMovement Instance;
+    [SerializeField] private Transform _collisionTransform;
 
     private Transform _transform;
-    private int _direction;
+    private Vector2 _direction;
     private bool _bIsMoving = false;
     private LayerMask _layerWall;
     private LayerMask _layerEnemy;
@@ -15,34 +15,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-
         _transform = transform;
         _layerWall = LayerMask.NameToLayer("Wall");
         _layerEnemy = LayerMask.NameToLayer("Enemy");
     }
 
-    public void SetMovementDirection(int direction)
+    public void SetDirection(Vector2 direction)
     {
         _direction = direction;
     }
 
     public void Update()
     {
-        if (_direction != 0 && !_bIsMoving)
+        if (_direction != Vector2.zero && !_bIsMoving)
         {
             Vector3 _targetPos = _transform.position;
-            _targetPos += _transform.forward * _direction * c_tileSize;
-            _targetPos += _transform.right * _direction * c_tileSize;
+            _targetPos += _transform.forward * _direction.y * c_tileSize;
+            _targetPos += _transform.right * _direction.x * c_tileSize;
             if (CanMoveTo(_targetPos))
             {
                 _bIsMoving = true;
                 StartCoroutine(Move(_targetPos));
             }
-            _direction = 0;
+            _direction = Vector2.zero;
         }
     }
 
@@ -58,12 +53,13 @@ public class PlayerMovement : MonoBehaviour
         float _elapsedTime = 0;
         while (_elapsedTime < time)
         {
-            _transform.position = Vector3.Lerp(_startingPos, _targetPos, (_elapsedTime / time)); //move camera here instead of transform
+            _collisionTransform.position = _targetPos;
+            _transform.position = Vector3.Lerp(_startingPos, _targetPos, (_elapsedTime / time));
             _elapsedTime += Time.deltaTime;
             yield return null;
         }
         _transform.position = _targetPos;
-        //set camera local pos to 0
+        _collisionTransform.position = _targetPos;
         _bIsMoving = false;
     }
 

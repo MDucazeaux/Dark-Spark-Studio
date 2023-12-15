@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: ea9d5dfa5cc5e3a43aacaea3d01821bf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rat_snap_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 577
+        width: 339
+        height: 280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd6864daab178f46a55e29c12fa30a5
+      internalID: -1833253488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_snap_1
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 578
+        width: 338
+        height: 281
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8334e73a4cb79924ba51800a26013dda
+      internalID: 2056118521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_snap_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 281
+        width: 358
+        height: 285
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d2e411b81014d42ad5a12ee982f55d
+      internalID: -1721789311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_snap_3
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 282
+        width: 337
+        height: 288
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652de37773abb824eb5f69f33c0bffbb
+      internalID: -1972468948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_snap_20
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 280
+        width: 296
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c448154ffe6feb459452aa7fa538f96
+      internalID: 544912248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rat_snap_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 358
+        height: 243
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8ae01b3ae28574f8225e2641350b8d
+      internalID: 1254214345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      rat_snap_0: -1833253488
+      rat_snap_1: 2056118521
+      rat_snap_10: 116528492
+      rat_snap_11: -47420605
+      rat_snap_12: -961872931
+      rat_snap_13: 402819306
+      rat_snap_14: -874526362
+      rat_snap_15: 908743872
+      rat_snap_16: -5667924
+      rat_snap_17: -67607424
+      rat_snap_18: -1792802531
+      rat_snap_19: -389153489
+      rat_snap_2: -1721789311
+      rat_snap_20: 544912248
+      rat_snap_21: -1791976229
+      rat_snap_22: -1404519632
+      rat_snap_23: 849821851
+      rat_snap_24: -949369901
+      rat_snap_25: 2076929299
+      rat_snap_26: -1740566704
+      rat_snap_27: -442343790
+      rat_snap_28: -1271121617
+      rat_snap_29: -1987275664
+      rat_snap_3: -1972468948
+      rat_snap_30: 2109675451
+      rat_snap_31: 603930269
+      rat_snap_32: 2034884288
+      rat_snap_33: -115682549
+      rat_snap_34: 903724568
+      rat_snap_35: 596747714
+      rat_snap_36: 1955600373
+      rat_snap_37: 1731574742
+      rat_snap_38: -1843591143
+      rat_snap_39: 1126027842
+      rat_snap_4: 1690660617
+      rat_snap_40: -1486958914
+      rat_snap_41: -89507344
+      rat_snap_42: 1245645037
+      rat_snap_43: 486187347
+      rat_snap_44: 354238604
+      rat_snap_45: -1959477697
+      rat_snap_46: -458443871
+      rat_snap_47: 796114514
+      rat_snap_48: -15429266
+      rat_snap_49: 1602061559
+      rat_snap_5: -345034824
+      rat_snap_50: -985247761
+      rat_snap_51: 1545535475
+      rat_snap_52: -271278110
+      rat_snap_53: -824282756
+      rat_snap_54: 1578956428
+      rat_snap_55: -1186776412
+      rat_snap_56: 1254214345
+      rat_snap_57: 154978062
+      rat_snap_58: -1004441823
+      rat_snap_6: 885360968
+      rat_snap_7: 834316468
+      rat_snap_8: -1053648788
+      rat_snap_9: -1703987028
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398b43bc7fce1554baecbb37320b29dd, type: 3}
+  m_Name: Silver Scepter
+  m_EditorClassIdentifier: 
+  _name: Silver Scepter
+  _description: Silver is one of the best magic conductors out there
+  _icon: {fileID: 21300000, guid: e84996b7a46bbc642b7308c21cd0958b, type: 3}
+  _prefab: {fileID: 926781662586193139, guid: efa9fd807815073408a3167437046896, type: 3}
+  _itemType: 1
+  _healing: 0
+  _staminaStats: 0
+  _armorStats: 0
+  _physicalStrengthStats: 0
+  _magicalStrengthStats: 0.75
