@@ -6473,6 +6473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minotaure
       objectReference: {fileID: 0}
+    - target: {fileID: 7269778626203128646, guid: 3e89c3a83754c284b91f3a3047e7ce9a, type: 3}
+      propertyPath: _cooldown
+      value: 3.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
