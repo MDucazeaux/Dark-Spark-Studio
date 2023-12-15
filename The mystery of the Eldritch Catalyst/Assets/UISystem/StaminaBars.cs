@@ -28,20 +28,20 @@ public class StaminaBars : MonoBehaviour
             switch (i)
             {
                 case 0:
-                    _staminaBarSprite1.fillAmount = character.GetStamina() / character.GetStaminaMax;
-                    _staminaBarText1.text = character.GetStamina() + "/" + character.GetStaminaMax;
+                    _staminaBarSprite1.fillAmount = character.GetStamina() / character.GetStaminaMax();
+                    _staminaBarText1.text = character.GetStamina() + "/" + character.GetStaminaMax();
                     break;
                 case 1:
-                    _staminaBarSprite2.fillAmount = character.GetStamina() / character.GetStaminaMax;
-                    _staminaBarText2.text = character.GetStamina() + "/" + character.GetStaminaMax;
+                    _staminaBarSprite2.fillAmount = character.GetStamina() / character.GetStaminaMax();
+                    _staminaBarText2.text = character.GetStamina() + "/" + character.GetStaminaMax();
                     break;
                 case 2:
-                    _staminaBarSprite3.fillAmount = character.GetStamina() / character.GetStaminaMax;
-                    _staminaBarText3.text = character.GetStamina() + "/" + character.GetStaminaMax;
+                    _staminaBarSprite3.fillAmount = character.GetStamina() / character.GetStaminaMax();
+                    _staminaBarText3.text = character.GetStamina() + "/" + character.GetStaminaMax();
                     break;
                 case 3:
-                    _staminaBarSprite4.fillAmount = character.GetStamina() / character.GetStaminaMax;
-                    _staminaBarText4.text = character.GetStamina() + "/" + character.GetStaminaMax;
+                    _staminaBarSprite4.fillAmount = character.GetStamina() / character.GetStaminaMax();
+                    _staminaBarText4.text = character.GetStamina() + "/" + character.GetStaminaMax();
                     break;
             }
             
