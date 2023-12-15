@@ -24,6 +24,8 @@ public class Alchemist : Character
         CoolDownActionTwo = 30;
 
         _enemyLayer = LayerMask.GetMask("Enemy");
+
+        Name = "Alchemist";
     }
 
     public override void ActionOne()

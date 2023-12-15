@@ -19,17 +19,27 @@ public class CharacterSelection : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-
-        _characters.Add("Ruffian", _charactersList[0]);
-        _characters.Add("Thief", _charactersList[1]);
-        _characters.Add("Witch", _charactersList[2]);
-        _characters.Add("Alchemist", _charactersList[3]);
-        
-
+          
         _placement.Add("Ruffian");
         _placement.Add("Thief");
         _placement.Add("Witch");
         _placement.Add("Alchemist");
+    }
+
+    private void Start()
+    {
+        for (int i = 0; i < _charactersList.Count; i++)
+        {
+            switch (_charactersList[i].GetName())
+            {
+                case "Ruffian": _characters.Add("Ruffian", _charactersList[i]); break;
+                case "Thief": _characters.Add("Thief", _charactersList[i]); break;
+                case "Witch": _characters.Add("Witch", _charactersList[i]); break;
+                case "Alchemist": _characters.Add("Alchemist", _charactersList[i]); break;
+
+                default: Debug.Log("Error Name"); break;
+            }
+        }
     }
 
     public void SelectCharacter(int new_character_index)

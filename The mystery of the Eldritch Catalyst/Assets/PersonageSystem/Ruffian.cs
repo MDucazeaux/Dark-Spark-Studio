@@ -22,6 +22,8 @@ public class Ruffian : Character
         CoolDownActionTwo = 2;
 
         _enemyLayer = LayerMask.GetMask("Enemy");
+
+        Name = "Ruffian";
     }
 
     public override void ActionOne()

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngineInternal;
 
 public abstract class Character : Entity
 {
@@ -94,4 +95,7 @@ public abstract class Character : Entity
 
     public float GetHealMultiplier()
     { return HealMultiplier; }
+
+    public string GetName()
+    { return Name; }
 }

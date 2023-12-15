@@ -19,6 +19,8 @@ public class Witch : Character
 
         CoolDownActionOne = 3;
         CoolDownActionTwo = 60;
+
+        Name = "Witch";
     }
 
     public override void ActionOne()

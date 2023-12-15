@@ -25,6 +25,8 @@ public class Thief : Character
 
         _chestLayer = LayerMask.GetMask("Chest");
         _doorLayer = LayerMask.GetMask("Door");
+
+        Name = "Thief";
     }
 
     public override void ActionOne()
