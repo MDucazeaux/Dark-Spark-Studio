@@ -31,7 +31,7 @@ public class Thief : Character
     {
         if (_canActionOne)
         {
-            Instantiate(_knife).GetComponent<Knife>().SetValues();
+            Instantiate(_knife).GetComponent<Knife>().SetValues(transform.position, transform.forward);
 
             UseStamina(StaminaLoseActionOne);
 

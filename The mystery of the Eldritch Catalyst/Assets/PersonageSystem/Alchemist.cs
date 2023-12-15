@@ -30,7 +30,7 @@ public class Alchemist : Character
     {
         if (_canActionOne)
         {
-            Instantiate(_potion).GetComponent<PoisonedPotion>().SetValues();
+            Instantiate(_potion).GetComponent<PoisonedPotion>().SetValues(transform.position, transform.forward);
 
             UseStamina(StaminaLoseActionOne);
 

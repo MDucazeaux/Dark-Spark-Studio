@@ -25,7 +25,7 @@ public class Witch : Character
     {
         if (_canActionOne)
         {
-            Instantiate(_fireBall).GetComponent<FireBall>().SetValues();
+            Instantiate(_fireBall).GetComponent<FireBall>().SetValues(transform.position, transform.forward);
 
             UseStamina(StaminaLoseActionOne);
 

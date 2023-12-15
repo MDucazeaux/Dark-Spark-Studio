@@ -2,17 +2,20 @@ using UnityEngine;
 
 public class Knife : Throwable
 {
-    public override void SetValues()
+    public override void SetValues(Vector3 position, Vector3 direction)
     {
         _damage = 15;
         _speed = 5;
+        _direction = direction;
+        _transform.position = position;
+        _startPosition = position;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-
+            Destroy(gameObject);
         }
         if (collision.gameObject.TryGetComponent(out Enemy enemy))
         {

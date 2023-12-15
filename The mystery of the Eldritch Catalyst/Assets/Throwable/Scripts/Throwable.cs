@@ -2,13 +2,13 @@ using UnityEngine;
 
 public abstract class Throwable : MonoBehaviour
 {
-    private Transform _transform;
+    protected Transform _transform;
 
     protected float _damage = 1;
     [SerializeField] protected float _speed = 1;
     private int _maxDistance = 40;
-    private Vector3 _direction = Vector3.zero;
-    private Vector3 _startPosition = Vector3.zero;
+    protected Vector3 _direction = Vector3.zero;
+    protected Vector3 _startPosition = Vector3.zero;
 
     private bool _IsGoingToTarget = false;
 
@@ -31,7 +31,7 @@ public abstract class Throwable : MonoBehaviour
         _transform.position += _direction * _speed * Time.deltaTime;
     }
 
-    public abstract void SetValues();
+    public abstract void SetValues(Vector3 position, Vector3 direction);
 
     public void SetDamage(float damage) { _damage = damage; }
 
