@@ -28,20 +28,20 @@ public class HealthBars : MonoBehaviour
             switch (i)
             {
                 case 0:
-                    _healthBarSprite1.fillAmount = character.GetLife() / character.GetLifeMax;
-                    _healthBarText1.text = character.GetLife() + "/" + character.GetLifeMax;
+                    _healthBarSprite1.fillAmount = character.GetLife() / character.GetLifeMax();
+                    _healthBarText1.text = character.GetLife() + "/" + character.GetLifeMax();
                     break;
                 case 1:
-                    _healthBarSprite2.fillAmount = character.GetLife() / character.GetLifeMax;
-                    _healthBarText2.text = character.GetLife() + "/" + character.GetLifeMax;
+                    _healthBarSprite2.fillAmount = character.GetLife() / character.GetLifeMax();
+                    _healthBarText2.text = character.GetLife() + "/" + character.GetLifeMax();
                     break;
                 case 2:
-                    _healthBarSprite3.fillAmount = character.GetLife() / character.GetLifeMax;
-                    _healthBarText3.text = character.GetLife() + "/" + character.GetLifeMax;
+                    _healthBarSprite3.fillAmount = character.GetLife() / character.GetLifeMax();
+                    _healthBarText3.text = character.GetLife() + "/" + character.GetLifeMax();
                     break;
                 case 3:
-                    _healthBarSprite4.fillAmount = character.GetLife() / character.GetLifeMax;
-                    _healthBarText4.text = character.GetLife() + "/" + character.GetLifeMax;
+                    _healthBarSprite4.fillAmount = character.GetLife() / character.GetLifeMax();
+                    _healthBarText4.text = character.GetLife() + "/" + character.GetLifeMax();
                     break;
             }
             

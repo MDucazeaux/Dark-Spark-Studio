@@ -1356,7 +1356,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4867676303278056577}
-  - component: {fileID: 5472065101788652362}
   m_Layer: 5
   m_Name: Action1
   m_TagString: Untagged
@@ -1386,18 +1385,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5472065101788652362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2149214703041386499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0d3802de4266b4587871dc640ba805, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2363270215289343212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,9 +1774,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 718940539743182600}
+      - m_Target: {fileID: 7056463883251128765}
         m_TargetAssemblyTypeName: ActionButton, Assembly-CSharp
-        m_MethodName: OnButtonPress
+        m_MethodName: ActionTwo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2092,7 +2079,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3941088779255158779}
-  - component: {fileID: 718940539743182600}
   m_Layer: 5
   m_Name: Action2
   m_TagString: Untagged
@@ -2122,18 +2108,6 @@ RectTransform:
   m_AnchoredPosition: {x: 60, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &718940539743182600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2918704384292368109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0d3802de4266b4587871dc640ba805, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3128381479261055377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,6 +2763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3955144295526627499}
+  - component: {fileID: 1370737656515531471}
   m_Layer: 5
   m_Name: HealthBars
   m_TagString: Untagged
@@ -2819,6 +2794,26 @@ RectTransform:
   m_AnchoredPosition: {x: -590.5701, y: -447.6874}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1370737656515531471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4449458387552229573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31c251796a5ad14fb9d40be12f03daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthBarSprite1: {fileID: 7956803739192266836}
+  _healthBarSprite2: {fileID: 1006923849916939136}
+  _healthBarSprite3: {fileID: 6424395336936402312}
+  _healthBarSprite4: {fileID: 8750672141291196941}
+  _healthBarText1: {fileID: 854219693954454227}
+  _healthBarText2: {fileID: 3498189601292616814}
+  _healthBarText3: {fileID: 2874954066475716520}
+  _healthBarText4: {fileID: 2047272359055950987}
 --- !u!1 &4554248611806477906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4391,6 +4386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8836662927925277850}
+  - component: {fileID: 7056463883251128765}
   m_Layer: 5
   m_Name: Actions
   m_TagString: Untagged
@@ -4419,6 +4415,18 @@ RectTransform:
   m_AnchoredPosition: {x: 536.25, y: -440.84998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7056463883251128765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233310093784513129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0d3802de4266b4587871dc640ba805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6430529403020926277
 GameObject:
   m_ObjectHideFlags: 0
@@ -5166,9 +5174,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5472065101788652362}
+      - m_Target: {fileID: 7056463883251128765}
         m_TargetAssemblyTypeName: ActionButton, Assembly-CSharp
-        m_MethodName: OnButtonPress
+        m_MethodName: ActionOne
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

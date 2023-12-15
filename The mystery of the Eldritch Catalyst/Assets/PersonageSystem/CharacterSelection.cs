@@ -5,6 +5,7 @@ public class CharacterSelection : MonoBehaviour
 {
     public static CharacterSelection Instance;
 
+    [SerializeField] private List<Character> _charactersList;
     private Dictionary<string, Character> _characters = new Dictionary<string, Character>();
     private List<string> _placement = new List<string>();
     private int _characterIndex;
@@ -18,14 +19,12 @@ public class CharacterSelection : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        _characters.Add("Ruffian", new Ruffian());
-        _characters.Add("Thief", new Thief());
-        _characters.Add("Witch", new Witch());
-        _characters.Add("Alchemist", new Alchemist());
-        _characters["Ruffian"].Awake();
-        _characters["Thief"].Awake();
-        _characters["Witch"].Awake();
-        _characters["Alchemist"].Awake();
+
+        _characters.Add("Ruffian", _charactersList[0]);
+        _characters.Add("Thief", _charactersList[1]);
+        _characters.Add("Witch", _charactersList[2]);
+        _characters.Add("Alchemist", _charactersList[3]);
+        
 
         _placement.Add("Ruffian");
         _placement.Add("Thief");

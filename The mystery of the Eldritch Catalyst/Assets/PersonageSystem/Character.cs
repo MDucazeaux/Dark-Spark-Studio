@@ -1,39 +1,37 @@
+using System.Collections;
 using UnityEngine;
 
-public abstract class Character
+public abstract class Character : Entity
 {
-    protected float MaxLife;
-    protected float Life;
-    protected float MaxStamina;
-    protected float Stamina;
     protected string Name;
     protected string Forename;
-    protected float ArmorMultiplier;
-    protected float StrengthMultiplier;
-    protected float MagicalMultiplier;
-    protected float HealMultiplier;
-    private ItemData _weapon;
-    private ItemData _armor;
 
-    public abstract void Awake();
+    protected float MaxStamina;
+    protected float Stamina;
 
-    public void Attack()
-    {
-    }
+    protected float StaminaLoseActionOne;
+    protected float StaminaLoseActionTwo;
 
-    public float GetLife()
-    {
-        return Life;
-    }
+    protected float CoolDownActionOne;
+    protected float CoolDownActionTwo;
 
-    public float GetStamina()
-    {
-        return Stamina;
-    }
+    protected bool _canActionOne = true;
+    protected bool _canActionTwo = true;
+
+    private bool _isProtected = false;
+    private float _protectionTime = 3;
+
+    public abstract void ActionOne();
+    public abstract void ActionTwo();
+
+    public float GetStamina() 
+    { return Stamina; }
+
+    public float GetStaminaMax()
+    { return MaxStamina; }
 
     public void Heal(float heal, float healMult)
     {
-        
         Life = Mathf.Clamp(Life + heal * healMult, 0, MaxLife);
     }
 
@@ -42,38 +40,58 @@ public abstract class Character
         Stamina = Mathf.Clamp(Stamina + stamina, 0, MaxStamina);
     }
 
-    public void TakeDamage(float damage)
-    {
-        Life -= damage / ArmorMultiplier;
-    }
-
     public void UseStamina(float stamina)
     {
         Stamina -= stamina;
     }
 
-    public float GetHealMultiplier { get { return HealMultiplier; } }
-    public float GetLifeMax { get { return MaxLife;  } }
+    public override void TakeDamage(float damage)
+    {
+        Life -= _isProtected ? damage / ArmorMultiplier : 0;
+    }
 
-    public float GetStaminaMax { get { return MaxStamina; } }
-    
-    public ItemData GetArmor()
+    public void StartCooldownActionOne()
     {
-         return _armor; 
+        StartCoroutine(CooldownActionOne());
     }
-    
-    public void SetArmor(ItemData armor) 
+
+    private IEnumerator CooldownActionOne()
     {
-        _armor = armor;
+        _canActionOne = false;
+
+        yield return new WaitForSeconds(CoolDownActionOne);
+
+        _canActionOne = true;
     }
-    
-    public ItemData GetWeapon()
+
+    public void StartCooldownActionTwo()
     {
-        return _weapon;
+        StartCoroutine(CooldownActionTwo());
     }
-    
-    public void SetWeapon(ItemData weapon) 
+
+    private IEnumerator CooldownActionTwo()
     {
-        _weapon = weapon;
+        _canActionTwo = false;
+
+        yield return new WaitForSeconds(CoolDownActionTwo);
+
+        _canActionTwo = true;
     }
+
+    public void StartProtection()
+    {
+        StartCoroutine(Protection());
+    }
+
+    private IEnumerator Protection()
+    {
+        _isProtected = true;
+
+        yield return new WaitForSeconds(_protectionTime);
+
+        _isProtected = false;
+    }
+
+    public float GetHealMultiplier()
+    { return HealMultiplier; }
 }
