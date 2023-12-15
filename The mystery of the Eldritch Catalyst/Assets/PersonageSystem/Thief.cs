@@ -4,6 +4,9 @@ public class Thief : Character
 {
     [SerializeField] private GameObject _knife;
 
+    [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerRotation _playerRotation;
+
     [SerializeField] private float _distanceActionTwo = 10;
 
     private LayerMask _chestLayer;
@@ -31,7 +34,7 @@ public class Thief : Character
 
     public override void ActionOne()
     {
-        if (_canActionOne)
+        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
             Instantiate(_knife).GetComponent<Knife>().SetValues(transform.position, transform.forward);
 
@@ -43,7 +46,7 @@ public class Thief : Character
 
     public override void ActionTwo()
     {
-        if (_canActionTwo)
+        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
             Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo);
 

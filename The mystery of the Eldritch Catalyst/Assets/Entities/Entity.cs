@@ -18,6 +18,9 @@ public abstract class Entity : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         Life -= damage / ArmorMultiplier;
+
+        if (Life <= 0)
+            Death();
     }
 
     public float GetLifeMax() 
@@ -34,4 +37,6 @@ public abstract class Entity : MonoBehaviour
 
     public void SetWeapon(ItemData weapon)
     { _weapon = weapon; }
+
+    public abstract void Death();
 }

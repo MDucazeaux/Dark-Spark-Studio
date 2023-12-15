@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Ruffian : Character
 {
+    [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private PlayerRotation _playerRotation;
+
     [SerializeField] private float _distanceActionTwo = 10;
     [SerializeField] private float _damageLight = 15;
     [SerializeField] private float _damageStrong = 30;
@@ -28,7 +31,7 @@ public class Ruffian : Character
 
     public override void ActionOne()
     {
-        if (_canActionOne)
+        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo, _enemyLayer))
             {
@@ -46,7 +49,7 @@ public class Ruffian : Character
 
     public override void ActionTwo()
     {
-        if (_canActionTwo)
+        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
         {
             Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo);
 

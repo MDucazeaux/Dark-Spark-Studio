@@ -6,7 +6,7 @@ public abstract class Enemy : Entity
     protected float _originDamage = 0;
     protected float _damage = 0;
 
-    public abstract void Attack();
+    protected float _cooldownAttack = 0;
 
     public void StartTransmutation()
     {
@@ -21,4 +21,7 @@ public abstract class Enemy : Entity
 
         _damage = _originDamage;
     }
+
+    public float GetDamage()
+    { return _damage; }
 }

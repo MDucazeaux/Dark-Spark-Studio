@@ -56,6 +56,44 @@ public class CharacterSelection : MonoBehaviour
         _placement[character2] = savecharacter1;
     }
 
+    public void CharacterDeath(string name)
+    {
+        int characterPlacement = GetCharacterPlacement(name);
+
+        switch (characterPlacement)
+        {
+            case 0:
+                if (CharacterPlacementIsAlive(2))
+                { SwitchCharacters(0, 2); }
+                else if (CharacterPlacementIsAlive(3))
+                { SwitchCharacters(0, 3);}
+                break;
+            case 1:
+                if (CharacterPlacementIsAlive(2))
+                { SwitchCharacters(1, 3); }
+                else if (CharacterPlacementIsAlive(3))
+                { SwitchCharacters(1, 2); }
+                break;
+
+            default: break;
+        }
+    }
+
+    private int GetCharacterPlacement(string character)
+    {
+        for (int i = 0; i < _placement.Count;i++)
+        {
+            if (_placement[i] == character) 
+                return i;
+        }
+        return -1;
+    }
+
+    private bool CharacterPlacementIsAlive(int character)
+    {
+        return !_characters[_placement[character]].IsDead;
+    }
+
     public Dictionary<string, Character> Characters { get { return _characters; } }
     public List<string> CharactersPlacement { get { return _placement; } }
 
