@@ -60,7 +60,7 @@ public class MainMenuScript : MonoBehaviour
         while (_elapsedTime < 4) 
         {
             _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _launchingMenuPos.position, (_elapsedTime/7) * Time.deltaTime);
-            _blackFilter.color = Color.Lerp(_blackFilter.color, new Color(0, 0, 0, 1), (_elapsedTime / 3) * Time.deltaTime);
+            _blackFilter.color = Color.Lerp(_blackFilter.color, new Color(0, 0, 0, 1), (_elapsedTime / 2.8f) * Time.deltaTime);
             _elapsedTime += Time.deltaTime;
             yield return null;
         }
