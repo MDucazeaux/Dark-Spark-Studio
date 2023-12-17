@@ -8,7 +8,7 @@ public class AIController : MonoBehaviour
     [SerializeField] AIAttack _aiAttack;
     [SerializeField] AIAnimation _aiAnimation;
 
-    [SerializeField] GameObject _spriteObject;
+    GameObject _spriteObject;
 
     private enum STATES
     {
