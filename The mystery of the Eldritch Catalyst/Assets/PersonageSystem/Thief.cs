@@ -31,10 +31,8 @@ public class Thief : Character
         _coolDownActionOne = 1;
         _coolDownActionTwo = 1;
 
-        _chestLayer = LayerMask.GetMask("Chest");
-        _doorLayer = LayerMask.GetMask("Door");
-
         Name = "Thief";
+        Forename = "Lila Nightshade";
     }
 
     public override void ActionOne()
@@ -53,15 +51,28 @@ public class Thief : Character
     {
         if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionTwo && !_isDead)
         {
-            Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo);
-
-            if (hitInfo.transform.TryGetComponent(out Door door))
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo))
             {
-                door.Unlock();
-            }
-            else if (hitInfo.transform.TryGetComponent(out Chest chest))
-            {
-                chest.Unlock();
+                if (hitInfo.transform.TryGetComponent(out Door door))
+                {
+                    if (Inventory.Instance.IsInInventory("Lock Picking Tool"))
+                    {
+                        door.Unlock();
+                        Inventory.Instance.RemoveItemByName("Lock Picking Tool");
+                    }
+                    else
+                        NarratifManager.Instance.FeedBackNoLockpick();
+                }
+                else if (hitInfo.transform.TryGetComponent(out Chest chest))
+                {
+                    if (Inventory.Instance.IsInInventory("Lock Picking Tool"))
+                    {
+                        chest.Unlock();
+                        Inventory.Instance.RemoveItemByName("Lock Picking Tool");
+                    }
+                    else
+                        NarratifManager.Instance.FeedBackNoLockpick();
+                }
             }
 
             UseStamina(StaminaLoseActionTwo);

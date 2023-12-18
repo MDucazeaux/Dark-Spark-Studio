@@ -75,9 +75,9 @@ public class CharacterSelection : MonoBehaviour
                 { SwitchCharacters(0, 3);}
                 break;
             case 1:
-                if (CharacterPlacementIsAlive(2))
+                if (CharacterPlacementIsAlive(3))
                 { SwitchCharacters(1, 3); }
-                else if (CharacterPlacementIsAlive(3))
+                else if (CharacterPlacementIsAlive(2))
                 { SwitchCharacters(1, 2); }
                 break;
 

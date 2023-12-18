@@ -27,7 +27,7 @@ public class ActionButton : MonoBehaviour
     {
         Character character = CharacterSelection.Instance.GetSelectedCharacter();
 
-        CoolDownActionOne.fillAmount = character.CanActionOne ? 0 : 1 - character.TimeActionOne / character.CoolDownActionOne * 0.8f + 0.1f;
+        CoolDownActionOne.fillAmount = character.CanActionOne ? 0 : 1 - character.TimeActionOne / character.CoolDownActionOne;
         CoolDownActionTwo.fillAmount = character.CanActionTwo ? 0 : 1 - character.TimeActionTwo / character.CoolDownActionTwo;
     }
 

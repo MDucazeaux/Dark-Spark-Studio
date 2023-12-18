@@ -33,6 +33,7 @@ public class Alchemist : Character
         _enemyLayer = LayerMask.GetMask("Enemy");
 
         Name = "Alchemist";
+        Forename = "Thaddeus Emberstone";
     }
 
     public override void ActionOne()

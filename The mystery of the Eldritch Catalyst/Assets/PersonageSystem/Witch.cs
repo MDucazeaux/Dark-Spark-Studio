@@ -27,6 +27,7 @@ public class Witch : Character
         _coolDownActionTwo = 60;
 
         Name = "Witch";
+        Forename = "Elara Moonfire";
     }
 
     public override void ActionOne()

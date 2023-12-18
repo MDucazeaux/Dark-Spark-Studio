@@ -32,6 +32,7 @@ public class Ruffian : Character
         _enemyLayer = LayerMask.GetMask("Enemy");
 
         Name = "Ruffian";
+        Forename = "Magnus Stormblade";
     }
 
     public override void ActionOne()

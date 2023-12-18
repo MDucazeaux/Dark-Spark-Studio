@@ -100,11 +100,11 @@ public class Inventory : MonoBehaviour
         return c_inventorySize == _content.Count;
     }
 
-    public bool IsInInventory(ItemData item)
+    public bool IsInInventory(string item)
     {
         for (int i = 0; i < _content.Count; i++)
         {
-            if (_content[i] == item)
+            if (_content[i].GetName() == item)
             {
                 return true;
             }
@@ -112,10 +112,23 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
+
     public List<ItemData> GetContent()
     {
         return _content;
     }
 
     public Sprite GetTransparentSlot() { return _transparentSlot; }
+
+    public void RemoveItemByName(string itemName)
+    {
+        foreach (var item in _content)
+        {
+            if (item.GetName().Equals(itemName))
+            {
+                _content.Remove(item);
+                RefreshContent();
+            }
+        }
+    }
 }

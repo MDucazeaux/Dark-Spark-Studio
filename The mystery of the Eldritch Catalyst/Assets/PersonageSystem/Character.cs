@@ -51,16 +51,19 @@ public abstract class Character : Entity
 
     public override void TakeDamage(float damage)
     {
-        if (!_isProtected)
+        if (Life > 0)
         {
-            Life -= damage / ArmorMultiplier;
-            Life = Life < 0 ? 0 : Life;
+            if (!_isProtected)
+            {
+                Life -= damage / ArmorMultiplier;
+                Life = Life < 0 ? 0 : Life;
 
-            CameraScript.Instance.TakeDamage();
-        }        
+                CameraScript.Instance.TakeDamage();
+            }
 
-        if (Life <= 0)
-            Death();
+            if (Life <= 0)
+                Death();
+        }
     }
 
     public void StartCooldownActionOne()
@@ -125,6 +128,8 @@ public abstract class Character : Entity
     {
         _isDead = true;
         CharacterSelection.Instance.CharacterDeath(Name);
+
+        NarratifManager.Instance.FeedBackCharacterDie(Forename);
     }
 
     public bool IsDead { get { return _isDead; } }
