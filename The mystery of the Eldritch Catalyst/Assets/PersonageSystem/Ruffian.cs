@@ -26,8 +26,8 @@ public class Ruffian : Character
         MagicalMultiplier = 0;
         HealMultiplier = 1;
 
-        CoolDownActionOne = 1;
-        CoolDownActionTwo = 2;
+        _coolDownActionOne = 1;
+        _coolDownActionTwo = 2;
 
         _enemyLayer = LayerMask.GetMask("Enemy");
 

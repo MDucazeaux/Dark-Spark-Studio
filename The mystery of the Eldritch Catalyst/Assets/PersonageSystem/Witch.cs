@@ -23,8 +23,8 @@ public class Witch : Character
         MagicalMultiplier = 1.25f;
         HealMultiplier = 1;
 
-        CoolDownActionOne = 3;
-        CoolDownActionTwo = 60;
+        _coolDownActionOne = 3;
+        _coolDownActionTwo = 60;
 
         Name = "Witch";
     }

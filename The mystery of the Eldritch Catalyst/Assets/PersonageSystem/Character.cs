@@ -12,8 +12,10 @@ public abstract class Character : Entity
     protected float StaminaLoseActionOne;
     protected float StaminaLoseActionTwo;
 
-    protected float CoolDownActionOne;
-    protected float CoolDownActionTwo;
+    protected float _coolDownActionOne;
+    protected float _timeActionOne;
+    protected float _coolDownActionTwo;
+    protected float _timeActionTwo;
 
     protected bool _canActionOne = true;
     protected bool _canActionTwo = true;
@@ -70,8 +72,13 @@ public abstract class Character : Entity
     {
         _canActionOne = false;
 
-        yield return new WaitForSeconds(CoolDownActionOne);
+        while (_timeActionOne < CoolDownActionOne)
+        {
+            _timeActionOne += Time.deltaTime;
+            yield return null;
+        }
 
+        _timeActionOne = 0;
         _canActionOne = true;
     }
 
@@ -84,8 +91,13 @@ public abstract class Character : Entity
     {
         _canActionTwo = false;
 
-        yield return new WaitForSeconds(CoolDownActionTwo);
+        while (_timeActionTwo < CoolDownActionTwo)
+        {
+            _timeActionTwo += Time.deltaTime;
+            yield return null;
+        }
 
+        _timeActionTwo = 0;
         _canActionTwo = true;
     }
 
@@ -115,5 +127,11 @@ public abstract class Character : Entity
         CharacterSelection.Instance.CharacterDeath(Name);
     }
 
-    public bool IsDead {  get { return _isDead; } }
+    public bool IsDead { get { return _isDead; } }
+    public bool CanActionOne { get { return _canActionOne; } }
+    public bool CanActionTwo { get { return _canActionTwo; } }
+    public float TimeActionOne { get { return _timeActionOne; } }
+    public float CoolDownActionOne { get { return _coolDownActionOne; } }
+    public float TimeActionTwo { get { return _timeActionTwo; } }
+    public float CoolDownActionTwo { get { return _coolDownActionTwo; } }
 }

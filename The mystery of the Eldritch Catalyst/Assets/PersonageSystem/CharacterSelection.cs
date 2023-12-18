@@ -51,6 +51,8 @@ public class CharacterSelection : MonoBehaviour
         _armorSlot.RefreshVisual();
         _weaponSlot.RefreshVisual();
         _characterPortraitInInventory.RefreshVisual();
+        
+        ActionButton.Instance.ChangeSpriteActions();
     }
 
     public void SwitchCharacters(int character1, int character2)

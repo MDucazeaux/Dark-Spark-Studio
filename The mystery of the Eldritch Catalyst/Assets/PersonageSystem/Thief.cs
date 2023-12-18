@@ -28,8 +28,8 @@ public class Thief : Character
         MagicalMultiplier = 0;
         HealMultiplier = 1;
 
-        CoolDownActionOne = 1;
-        CoolDownActionTwo = 1;
+        _coolDownActionOne = 1;
+        _coolDownActionTwo = 1;
 
         _chestLayer = LayerMask.GetMask("Chest");
         _doorLayer = LayerMask.GetMask("Door");
