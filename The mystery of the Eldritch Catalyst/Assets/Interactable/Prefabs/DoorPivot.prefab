@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bIsLocked: 0
   _parentTransform: {fileID: 3299559445751465516}
-  _breakParticles: {fileID: 0}
+  _breakParticles: {fileID: 3714652926318410824, guid: c0b7a653760c383488fcd410d47bd0e9, type: 3}
 --- !u!1 &7806552119789460620
 GameObject:
   m_ObjectHideFlags: 0

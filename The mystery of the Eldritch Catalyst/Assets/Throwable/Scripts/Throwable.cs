@@ -12,6 +12,8 @@ public abstract class Throwable : MonoBehaviour
 
     private bool _IsGoingToTarget = false;
 
+    [SerializeField] protected GameObject _touchParticle;
+
     private void Awake()
     {
         _transform = transform;

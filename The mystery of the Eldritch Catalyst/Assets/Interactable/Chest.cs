@@ -6,6 +6,8 @@ public class Chest : Interactable
     private bool _bIsOpened = false;
     [SerializeField] private bool _bIsLocked = false;
 
+    [SerializeField] private GameObject _breakParticles;
+
     public override void Interaction()
     {
         if (!_bIsLocked && !_bIsOpened)
@@ -43,6 +45,10 @@ public class Chest : Interactable
     {
         _bIsOpened = true;
         OpenChest();
+        if (_breakParticles)
+        {
+            Instantiate(_breakParticles, transform.position, transform.rotation);
+        }
         gameObject.SetActive(false);
     }
 }
