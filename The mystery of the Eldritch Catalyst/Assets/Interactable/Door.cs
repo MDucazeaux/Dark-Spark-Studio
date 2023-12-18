@@ -78,6 +78,8 @@ public class Door : Interactable
 
     public bool IsLocked { get { return _bIsLocked; } set { _bIsLocked = value; } }
 
+    public bool IsOpened {  get { return _bIsOpened; } }
+
     public void Unlock()
     { _bIsLocked = false; }
 }
