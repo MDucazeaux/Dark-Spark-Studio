@@ -5,7 +5,7 @@ public class CharacterSelection : MonoBehaviour
 {
     public static CharacterSelection Instance;
 
-    public List<Character> CharactersList;
+    public List<Character> _charactersList;
     private Dictionary<string, Character> _characters = new Dictionary<string, Character>();
     private List<string> _placement = new List<string>();
     private int _characterIndex;
@@ -31,14 +31,14 @@ public class CharacterSelection : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < CharactersList.Count; i++)
+        for (int i = 0; i < _charactersList.Count; i++)
         {
-            switch (CharactersList[i].GetName())
+            switch (_charactersList[i].GetName())
             {
-                case "Ruffian": _characters.Add("Ruffian", CharactersList[i]); break;
-                case "Thief": _characters.Add("Thief", CharactersList[i]); break;
-                case "Witch": _characters.Add("Witch", CharactersList[i]); break;
-                case "Alchemist": _characters.Add("Alchemist", CharactersList[i]); break;
+                case "Ruffian": _characters.Add("Ruffian", _charactersList[i]); break;
+                case "Thief": _characters.Add("Thief", _charactersList[i]); break;
+                case "Witch": _characters.Add("Witch", _charactersList[i]); break;
+                case "Alchemist": _characters.Add("Alchemist", _charactersList[i]); break;
 
                 default: Debug.Log("Error Name"); break;
             }
@@ -122,4 +122,6 @@ public class CharacterSelection : MonoBehaviour
         }
         return null;
     }
+
+    public List<Character> CharactersList() { return _charactersList; }
 }
