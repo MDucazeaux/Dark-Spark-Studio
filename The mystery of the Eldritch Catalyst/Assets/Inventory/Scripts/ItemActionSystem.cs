@@ -6,7 +6,10 @@ public class ItemActionSystem : MonoBehaviour
     private GameObject _actionPanel;
 
     [SerializeField]
-    private GameObject _useItemButton;
+    private GameObject _healItemButton;
+
+    [SerializeField]
+    private GameObject _eatItemButton;
 
     [SerializeField]
     private GameObject _equipItemButton;
@@ -29,6 +32,13 @@ public class ItemActionSystem : MonoBehaviour
     [SerializeField] 
     private PlayerMovement _playerMovement;
 
+    public static ItemActionSystem Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public void OpenActionPanel(ItemData item, Vector3 slotPosition)
     {
         _itemCurrentlySelected = item;
@@ -42,24 +52,35 @@ public class ItemActionSystem : MonoBehaviour
         switch (item.GetItemType())
         {
             case ItemType.Armor:
-                _useItemButton.SetActive(false);
+                _healItemButton.SetActive(false);
+                _eatItemButton.SetActive(false);
                 _equipItemButton.SetActive(true);
-                _dropItemButton.SetActive(true);
-                _actionPanel.SetActive(true);
                 break;
             case ItemType.Weapon:
-                _useItemButton.SetActive(false);
+                _healItemButton.SetActive(false);
+                _eatItemButton.SetActive(false);
                 _equipItemButton.SetActive(true);
-                _dropItemButton.SetActive(true);
-                _actionPanel.SetActive(true);
                 break;
-            case ItemType.Consumable:
-                _useItemButton.SetActive(true);
+            case ItemType.Eat:
+                _healItemButton.SetActive(false);
+                _eatItemButton.SetActive(true);
                 _equipItemButton.SetActive(false);
-                _dropItemButton.SetActive(true);
-                _actionPanel.SetActive(true);
+                break;
+            case ItemType.Heal:
+                _healItemButton.SetActive(true);
+                _eatItemButton.SetActive(false);
+                _equipItemButton.SetActive(false);
+                break;
+            case ItemType.Tools:
+                _healItemButton.SetActive(false);
+                _eatItemButton.SetActive(false);
+                _equipItemButton.SetActive(false);
+                break;
+            default: 
                 break;
         }
+        _dropItemButton.SetActive(true);
+        _actionPanel.SetActive(true);
     }
 
     public void CloseActionPanel()
@@ -68,12 +89,19 @@ public class ItemActionSystem : MonoBehaviour
         _itemCurrentlySelected = null;
     }
 
-    public void UseActionButton()
+    public void EatActionButton()
     {
+        CharacterSelection.Instance.GetSelectedCharacter().RecoverStamina(_itemCurrentlySelected.GetStaminaStats());
         Inventory.Instance.RemoveItem(_itemCurrentlySelected);
         Inventory.Instance.RefreshContent();
         CloseActionPanel();
     }
+
+    public void HealActionButton()
+    {
+        HealChoicePanel.Instance.OpenHealChoicePanel();
+    }
+
 
     public void EquipActionButton()
     {
@@ -115,4 +143,5 @@ public class ItemActionSystem : MonoBehaviour
     }
 
     public GameObject GetActionPanel() {return _actionPanel;}
+    public ItemData GetItemCurrentlySelected() {return _itemCurrentlySelected;}
 }
