@@ -20,7 +20,7 @@ public class CharacterDeathManager : MonoBehaviour
             Instance = this;
         }
 
-        _characterList = GetComponent<CharacterSelection>().CharactersList;
+        _characterList = GetComponent<CharacterSelection>().CharactersList();
 
         // Creating and setting all the bollean to false
         _isCharacterDead = new();

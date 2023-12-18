@@ -5,7 +5,7 @@ public class CharacterSelection : MonoBehaviour
 {
     public static CharacterSelection Instance;
 
-    public List<Character> _charactersList;
+    [SerializeField] private List<Character> _charactersList;
     private Dictionary<string, Character> _characters = new Dictionary<string, Character>();
     private List<string> _placement = new List<string>();
     private int _characterIndex;
