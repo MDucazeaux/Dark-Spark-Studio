@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private PlayerRotation _playerRotation;
     [SerializeField] private PlayerInteraction _playerInteraction;
+    [SerializeField] private MenuManager _menuManager;
 
     private Vector2 _playerDirection = Vector2.zero;
 
@@ -84,6 +85,20 @@ public class PlayerController : MonoBehaviour
                 Inventory.Instance.AddItem(ItemsOnFloor.Instance.ItemsCloseToThePlayer()[0].itemData);
                 Destroy(ItemsOnFloor.Instance.ItemsCloseToThePlayer()[0].GameObject());
             }
+        }
+    }
+
+    public void OnPausing(InputAction.CallbackContext context)
+    {
+        // If the Pause menu is already open, we close it.
+        if (context.started && _menuManager.IsMenuOpen(MenuManager.MenuEnum.PauseMenu))
+        {
+            _menuManager.CloseMenu(MenuManager.MenuEnum.PauseMenu);
+        }
+        // Else if no other menus are opened then we open the Pause menu
+        else if (context.started && !_menuManager.IsAnyMenuOpen())
+        {
+            _menuManager.OpenMenu(MenuManager.MenuEnum.PauseMenu);
         }
     }
 }

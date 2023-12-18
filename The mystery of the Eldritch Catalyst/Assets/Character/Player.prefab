@@ -153,12 +153,12 @@ GameObject:
   - component: {fileID: 642320313393710410}
   - component: {fileID: 7191054867074411392}
   - component: {fileID: 516224846182078905}
+  - component: {fileID: 164616254728772865}
   - component: {fileID: 688396272822049305}
   - component: {fileID: 206571251601495686}
   - component: {fileID: 2057167433952793979}
   - component: {fileID: 3272287673724195968}
   - component: {fileID: 3709673653059869265}
-  - component: {fileID: 164616254728772865}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -235,6 +235,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &164616254728772865
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4916530746108233017}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &688396272822049305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,6 +379,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c2006a76-8a10-4774-afe5-3065a7e50f89
     m_ActionName: PlayerMap/ActionTwo[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3709673653059869265}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnPausing
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 871d997c-8ba5-4516-bb49-a96bc3b2b149
+    m_ActionName: PlayerMap/Pausing[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMap
@@ -413,29 +452,7 @@ MonoBehaviour:
   _playerMovement: {fileID: 2057167433952793979}
   _playerRotation: {fileID: 3272287673724195968}
   _playerInteraction: {fileID: 206571251601495686}
---- !u!136 &164616254728772865
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4916530746108233017}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  _menuManager: {fileID: 0}
 --- !u!1 &7136547116384208168
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +522,7 @@ GameObject:
   - component: {fileID: 7941301532368033170}
   - component: {fileID: 4605462909816670672}
   - component: {fileID: 6553583753733995578}
+  - component: {fileID: 6398739417030826348}
   m_Layer: 0
   m_Name: Characters
   m_TagString: Untagged
@@ -539,11 +557,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104ca50abad2cd24182f228b8c653149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _charactersList:
+  CharactersList:
   - {fileID: 4055355927798810077}
-  - {fileID: 6553583753733995578}
   - {fileID: 7941301532368033170}
   - {fileID: 4605462909816670672}
+  - {fileID: 6553583753733995578}
   _armorSlot: {fileID: 0}
   _weaponSlot: {fileID: 0}
   _characterPortraitInInventory: {fileID: 0}
@@ -611,3 +629,15 @@ MonoBehaviour:
   _playerMovement: {fileID: 2057167433952793979}
   _playerRotation: {fileID: 3272287673724195968}
   _distanceActionTwo: 10
+--- !u!114 &6398739417030826348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895189151308559217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e71b919bf747614fb8acfb4678c2b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
