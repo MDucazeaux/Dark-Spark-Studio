@@ -174,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4916530746108233017}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
@@ -296,7 +296,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3709673653059869265}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnAttack
+        m_MethodName: OnActionOne
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -324,6 +324,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2bf5af48-b09d-4042-9a81-019bdc13af4d
     m_ActionName: PlayerMap/Interaction[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3709673653059869265}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnPickUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 492098ae-35c9-46ba-8d1c-600c8c53de01
+    m_ActionName: PlayerMap/PickUp[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3709673653059869265}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnActionTwo
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c2006a76-8a10-4774-afe5-3065a7e50f89
+    m_ActionName: PlayerMap/ActionTwo[/Keyboard/2]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMap
@@ -469,6 +501,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7665633370944894304}
   - component: {fileID: 3821356028728341041}
+  - component: {fileID: 4055355927798810077}
+  - component: {fileID: 7941301532368033170}
+  - component: {fileID: 4605462909816670672}
+  - component: {fileID: 6553583753733995578}
   m_Layer: 0
   m_Name: Characters
   m_TagString: Untagged
@@ -503,5 +539,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104ca50abad2cd24182f228b8c653149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _charactersList:
+  - {fileID: 4055355927798810077}
+  - {fileID: 6553583753733995578}
+  - {fileID: 7941301532368033170}
+  - {fileID: 4605462909816670672}
   _armorSlot: {fileID: 0}
   _weaponSlot: {fileID: 0}
+  _characterPortraitInInventory: {fileID: 0}
+--- !u!114 &4055355927798810077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895189151308559217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c62e9d969ffff4caef3935a82aeffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerMovement: {fileID: 2057167433952793979}
+  _playerRotation: {fileID: 3272287673724195968}
+  _distanceAction: 10
+  _damageLight: 15
+  _damageStrong: 30
+--- !u!114 &7941301532368033170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895189151308559217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783d9a26c699fa04fbd97d1bcb2e0016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireBall: {fileID: 5979253051142448836, guid: f60d0758a8d7bf64d9338b0713466942, type: 3}
+  _playerMovement: {fileID: 2057167433952793979}
+  _playerRotation: {fileID: 3272287673724195968}
+--- !u!114 &4605462909816670672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895189151308559217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d052719e56363c478cdaaaea65e5bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _potion: {fileID: 5625110827337815292, guid: 1fc5bf3a4e623834ea80ea4dec6848ca, type: 3}
+  _playerMovement: {fileID: 2057167433952793979}
+  _playerRotation: {fileID: 3272287673724195968}
+  _distanceActionTwo: 10
+--- !u!114 &6553583753733995578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895189151308559217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce880eb01c6c2843a3b491051b170e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _knife: {fileID: 7618008464428678204, guid: c9e3be9690887b94184e472ee0d5e99e, type: 3}
+  _playerMovement: {fileID: 2057167433952793979}
+  _playerRotation: {fileID: 3272287673724195968}
+  _distanceActionTwo: 10

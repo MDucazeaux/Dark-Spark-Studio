@@ -16,7 +16,6 @@ public class CharacterPortraitInInventory : MonoBehaviour
 
     public void RefreshVisual()
     {
-        print(CharacterSelection.Instance.GetSelectedCharacter().GetName());
         switch (CharacterSelection.Instance.GetSelectedCharacter().GetName())
         {
             case "Alchemist":

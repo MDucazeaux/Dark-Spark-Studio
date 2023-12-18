@@ -13,11 +13,13 @@ public class AIDetection : MonoBehaviour
     private float _detectionRange = c_tileSize * 3;
 
     private LayerMask _layerEnemy;
+    private LayerMask _layerWall;
 
     private void Awake()
     {
         _transform = transform;
         _layerEnemy = LayerMask.NameToLayer("Enemy");
+        _layerWall = LayerMask.NameToLayer("Wall");
     }
 
     private void Start()
@@ -32,7 +34,7 @@ public class AIDetection : MonoBehaviour
             return false; //to optimize performance
         }
 
-        if (Physics.Raycast(_transform.position, (_playerTransform.position - _transform.position).normalized, out RaycastHit hitInfo, _detectionRange, ~(1 << _layerEnemy)))
+        if (Physics.Raycast(_transform.position, (_playerTransform.position - _transform.position).normalized, out RaycastHit hitInfo, _detectionRange, ~(1 << _layerWall)))
         {
             if (hitInfo.collider.tag == "Player")
             {
