@@ -1,4 +1,7 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuScript : MonoBehaviour
 {
@@ -6,14 +9,18 @@ public class MainMenuScript : MonoBehaviour
     {
         MAIN,
         CREDITS,
+        LAUNCHING,
     }
 
     private MENUSTATE _state = MENUSTATE.MAIN;
 
     [SerializeField] private Transform _mainMenuPos;
-    [SerializeField] private Transform _otherMenuPos;
+    [SerializeField] private Transform _creditMenuPos;
+    [SerializeField] private Transform _launchingMenuPos;
     private Transform _cameraTransform;
     private Transform _transform;
+
+    [SerializeField] private Image _blackFilter;
 
     private void Awake()
     {
@@ -33,14 +40,32 @@ public class MainMenuScript : MonoBehaviour
                 _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _mainMenuPos.position, 4f * Time.deltaTime);
                 break;
             case MENUSTATE.CREDITS:
-                _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _otherMenuPos.position, 4f * Time.deltaTime);
+                _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _creditMenuPos.position, 4f * Time.deltaTime);
+                break;
+            case MENUSTATE.LAUNCHING:
+                //_cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _launchingMenuPos.position, 0.1f * Time.deltaTime);
                 break;
         }
     }
 
     public void OnNewGame()
     {
-        Debug.Log("new game");
+        _state = MENUSTATE.LAUNCHING;
+        StartCoroutine(StartingGame());
+    }
+
+    private IEnumerator StartingGame()
+    {
+        float _elapsedTime = 0f; 
+        while (_elapsedTime < 4) 
+        {
+            _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _launchingMenuPos.position, (_elapsedTime/7) * Time.deltaTime);
+            _blackFilter.color = Color.Lerp(_blackFilter.color, new Color(0, 0, 0, 1), (_elapsedTime / 2.8f) * Time.deltaTime);
+            _elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        SceneManager.LoadSceneAsync("GameScene");
+        yield return null;
     }
 
     public void OnSettings()
@@ -56,7 +81,6 @@ public class MainMenuScript : MonoBehaviour
     public void OnQuit()
     {
         Application.Quit();
-        Debug.Log("Quit");
     }
 
     public void OnGoToMain()
