@@ -14,9 +14,14 @@ public class Ruffian : Character
     {
         MaxLife = 125;
         Life = MaxLife;
-        ArmorMultiplier = 1.25f;
+
         MaxStamina = 100;
         Stamina = 100;
+
+        StaminaLoseActionOne = 25;
+        StaminaLoseActionTwo = 30;
+
+        ArmorMultiplier = 1.25f;
         StrengthMultiplier = 1.25f;
         MagicalMultiplier = 0;
         HealMultiplier = 1;
@@ -31,7 +36,7 @@ public class Ruffian : Character
 
     public override void ActionOne()
     {
-        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
+        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionOne && !_isDead)
         {
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceAction, _enemyLayer))
             {
@@ -49,7 +54,7 @@ public class Ruffian : Character
 
     public override void ActionTwo()
     {
-        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
+        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionTwo && !_isDead)
         {
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceAction))
             {

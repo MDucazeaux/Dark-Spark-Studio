@@ -16,6 +16,9 @@ public class CharacterSelection : MonoBehaviour
     [SerializeField]
     private EquipmentSlot _weaponSlot;
 
+    [SerializeField]
+    private CharacterPortraitInInventory _characterPortraitInInventory;
+
     private void Awake()
     {
         Instance = this;
@@ -47,6 +50,7 @@ public class CharacterSelection : MonoBehaviour
         _characterIndex = new_character_index;
         _armorSlot.RefreshVisual();
         _weaponSlot.RefreshVisual();
+        _characterPortraitInInventory.RefreshVisual();
     }
 
     public void SwitchCharacters(int character1, int character2)

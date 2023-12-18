@@ -16,9 +16,14 @@ public class Thief : Character
     {
         MaxLife = 100;
         Life = MaxLife;
-        ArmorMultiplier = 1f;
+
         MaxStamina = 100;
         Stamina = 100;
+
+        StaminaLoseActionOne = 10;
+        StaminaLoseActionTwo = 5;
+
+        ArmorMultiplier = 1f;
         StrengthMultiplier = 1f;
         MagicalMultiplier = 0;
         HealMultiplier = 1;
@@ -34,7 +39,7 @@ public class Thief : Character
 
     public override void ActionOne()
     {
-        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
+        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionOne && !_isDead)
         {
             Instantiate(_knife).GetComponent<Knife>().SetValues(transform.position, transform.forward);
 
@@ -46,7 +51,7 @@ public class Thief : Character
 
     public override void ActionTwo()
     {
-        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
+        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionTwo && !_isDead)
         {
             Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo);
 

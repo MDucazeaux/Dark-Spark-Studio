@@ -50,11 +50,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void OnAttack(InputAction.CallbackContext context)
+    public void OnActionOne(InputAction.CallbackContext context)
     {
         if (context.started)
         {
+            ActionButton.Instance.ActionOne();
+        }
+    }
 
+    public void OnActionTwo(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            ActionButton.Instance.ActionTwo();
         }
     }
 

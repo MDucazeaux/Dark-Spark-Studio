@@ -14,9 +14,10 @@ public class CharacterPortraitInInventory : MonoBehaviour
     [SerializeField]
     private GameObject _alchemistPortrait;
 
-    public void Refresh()
+    public void RefreshVisual()
     {
-        switch (CharacterSelection.Instance.GetSelectedCharacter().name)
+        print(CharacterSelection.Instance.GetSelectedCharacter().GetName());
+        switch (CharacterSelection.Instance.GetSelectedCharacter().GetName())
         {
             case "Alchemist":
                 _alchemistPortrait.SetActive(true);

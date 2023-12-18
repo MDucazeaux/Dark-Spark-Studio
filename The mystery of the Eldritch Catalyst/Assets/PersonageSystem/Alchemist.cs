@@ -15,8 +15,12 @@ public class Alchemist : Character
     {
         MaxLife = 100;
         Life = MaxLife;
+
         MaxStamina = 100;
         Stamina = MaxStamina;
+
+        StaminaLoseActionOne = 25;
+        StaminaLoseActionTwo = 30;
 
         ArmorMultiplier = 1f;
         StrengthMultiplier = 1f;
@@ -33,7 +37,7 @@ public class Alchemist : Character
 
     public override void ActionOne()
     {
-        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
+        if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionOne && !_isDead)
         {
             Instantiate(_potion).GetComponent<PoisonedPotion>().SetValues(transform.position, transform.forward);
 
@@ -45,7 +49,7 @@ public class Alchemist : Character
 
     public override void ActionTwo()
     {
-        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating)
+        if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionTwo && !_isDead)
         {
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceActionTwo, _enemyLayer))
             {

@@ -21,7 +21,7 @@ public abstract class Character : Entity
     private bool _isProtected = false;
     private float _protectionTime = 3;
 
-    private bool _isDead = false;
+    protected bool _isDead = false;
 
     public abstract void ActionOne();
     public abstract void ActionTwo();
@@ -44,7 +44,7 @@ public abstract class Character : Entity
 
     public void UseStamina(float stamina)
     {
-        Stamina -= stamina;
+        Stamina = Mathf.Clamp(Stamina - stamina, 0, MaxStamina);
     }
 
     public override void TakeDamage(float damage)

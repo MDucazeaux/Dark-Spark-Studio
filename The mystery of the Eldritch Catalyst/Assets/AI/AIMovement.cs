@@ -11,7 +11,8 @@ public class AIMovement : MonoBehaviour
 
     private float _moveTime = 1f; // PLACEHOLDER!!! modify when Enemy class are done
 
-    private LayerMask _layerWall;    private LayerMask _layerEnemy;
+    private LayerMask _layerWall;
+    private LayerMask _layerEnemy;
 
     const float c_tileSize = 10;
 
@@ -87,7 +88,7 @@ public class AIMovement : MonoBehaviour
 
     private bool CanMoveTo(Vector3 target)
     {
-        return (!Physics.Raycast(_transform.position, (target - _transform.position).normalized, c_tileSize));
+        return (!Physics.Raycast(_transform.position, (target - _transform.position).normalized, c_tileSize, (1 << _layerWall | 1 << _layerEnemy)));
     }
 
     public bool IsAtTarget()

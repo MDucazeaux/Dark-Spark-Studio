@@ -2,6 +2,14 @@ using UnityEngine;
 
 public class ActionButton : MonoBehaviour
 {
+    public static ActionButton Instance;
+
+    private void Awake()
+    {
+        if (Instance == null) 
+            Instance = this;
+    }
+
     public void ActionOne()
     {
         Character character = CharacterSelection.Instance.GetSelectedCharacter();

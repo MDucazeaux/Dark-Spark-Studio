@@ -24,9 +24,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Attack",
+                    "name": "ActionOne",
                     "type": "Button",
                     "id": "eac75de6-a5c3-4dd0-b8c7-d39bd2c3b520",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ActionTwo",
+                    "type": "Button",
+                    "id": "c2006a76-8a10-4774-afe5-3065a7e50f89",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -165,11 +174,11 @@
                 {
                     "name": "",
                     "id": "0dde8e59-4932-4f79-be6b-285fdc7a6325",
-                    "path": "<Keyboard>/1",
+                    "path": "<Keyboard>/#(&)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "ActionOne",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -203,6 +212,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "PickUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f0dab559-c2ec-4f43-9bb8-b6b2d7eb0823",
+                    "path": "<Keyboard>/#(É)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ActionTwo",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
