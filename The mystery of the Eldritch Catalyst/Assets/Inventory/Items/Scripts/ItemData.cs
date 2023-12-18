@@ -49,5 +49,7 @@ public enum ItemType
 {
     Armor,
     Weapon,
-    Consumable,
+    Eat,
+    Heal,
+    Tools,
 }
