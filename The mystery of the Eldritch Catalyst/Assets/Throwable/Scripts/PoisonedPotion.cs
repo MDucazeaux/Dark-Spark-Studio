@@ -15,14 +15,23 @@ public class PoisonedPotion : Throwable
     {
         if (other.gameObject.CompareTag("Wall"))
         {
-            Destroy(gameObject);
+            Explode(false);
         }
 
         if (other.gameObject.CompareTag("Enemy"))
         {
 
             other.GetComponentInParent<Enemy>().TakeDamage(_damage);
-            Destroy(gameObject);
+            Explode(true);
+        }
+    }
+
+    private void Explode(bool touchedEnemy = false)
+    {
+        Destroy(gameObject);
+        if (_touchParticle)
+        {
+            Instantiate(_touchParticle, transform.position, transform.rotation);
         }
     }
 }

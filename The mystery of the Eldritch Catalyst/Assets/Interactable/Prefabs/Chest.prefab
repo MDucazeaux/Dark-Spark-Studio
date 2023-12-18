@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bIsLocked: 0
+  _breakParticles: {fileID: 1326000006667269455, guid: 44823fef12c7dbc4a8b4854ed8e15e8b, type: 3}
 --- !u!114 &403858304174009128
 MonoBehaviour:
   m_ObjectHideFlags: 0
