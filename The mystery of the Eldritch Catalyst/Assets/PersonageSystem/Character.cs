@@ -113,6 +113,9 @@ public abstract class Character : Entity
     {
         _isDead = true;
         CharacterSelection.Instance.CharacterDeath(Name);
+
+        // Checking if all characters are dead
+        CharacterDeathManager.Instance.AreAllCharactersDead();
     }
 
     public bool IsDead {  get { return _isDead; } }
