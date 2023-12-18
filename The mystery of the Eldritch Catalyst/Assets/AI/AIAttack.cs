@@ -20,12 +20,17 @@ public class AIAttack : MonoBehaviour
     {
         if (_canAttack)
         {
-            CharacterSelection.Instance.Characters[CharacterSelection.Instance.CharactersPlacement[0]].TakeDamage(_enemy.GetDamage());
-            CharacterSelection.Instance.Characters[CharacterSelection.Instance.CharactersPlacement[1]].TakeDamage(_enemy.GetDamage());
-
+            StartCoroutine(WaitForDamage(_cooldown*0.4f));
             StartCoroutine(AttackCooldown());
             StartCoroutine(_aiAnimation.DoAttackAnimation((_cooldown-0.1f) * 0.85f));
         }
+    }
+
+    private IEnumerator WaitForDamage(float time)
+    {
+        yield return new WaitForSeconds(time);
+        CharacterSelection.Instance.Characters[CharacterSelection.Instance.CharactersPlacement[0]].TakeDamage(_enemy.GetDamage());
+        CharacterSelection.Instance.Characters[CharacterSelection.Instance.CharactersPlacement[1]].TakeDamage(_enemy.GetDamage());
     }
 
     private IEnumerator AttackCooldown()

@@ -13,6 +13,6 @@ public class Dullahan : Enemy
 
     public override void Death()
     {
-        
+        GetComponent<AIController>().Death();
     }
 }

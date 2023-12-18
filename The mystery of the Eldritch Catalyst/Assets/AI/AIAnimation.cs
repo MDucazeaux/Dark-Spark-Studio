@@ -43,8 +43,8 @@ public class AIAnimation : MonoBehaviour
         Vector3 _startingPos = _spriteTransform.localPosition;
         Vector3 _targetPos =  _spriteTransform.localPosition + -_spriteTransform.forward*1f;
 
-        float firstAnim = time * 0.15f;
-        float secondAnim = time * 0.4f;
+        float firstAnim = time * 0.10f;
+        float secondAnim = time * 0.45f;
         float thirdAnim = time * 0.45f;
 
         float _elapsedTime = 0;

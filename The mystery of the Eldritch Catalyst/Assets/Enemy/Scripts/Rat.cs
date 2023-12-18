@@ -15,6 +15,6 @@ public class Rat : Enemy
 
     public override void Death()
     {
-
+        GetComponent<AIController>().Death();
     }
 }

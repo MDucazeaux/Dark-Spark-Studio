@@ -8,7 +8,7 @@ public class AIController : MonoBehaviour
     [SerializeField] AIAttack _aiAttack;
     [SerializeField] AIAnimation _aiAnimation;
 
-    [SerializeField] GameObject _spriteObject;
+    GameObject _spriteObject;
 
     private enum STATES
     {
@@ -59,7 +59,7 @@ public class AIController : MonoBehaviour
                 }
                 break;
             case STATES.ATTACKING:
-                _aiAnimation.SetAnimatorSpeed(1); // / GetComponent(Enemy).cooldown
+                _aiAnimation.SetAnimatorSpeed(1 / GetComponent<Enemy>().GetCoolDownAttack());
                 if (_aiDetection.IsNearPlayer())
                 {
                     _aiAttack.AttackPlayer();
@@ -98,5 +98,11 @@ public class AIController : MonoBehaviour
                 Debug.Log("AI STATES ERROR");
                 break;
         }
+    }
+
+    public void Death()
+    {
+        _state = STATES.DEAD;
+        _aiAnimation.AnimatorSetBool("Dead", true);
     }
 }

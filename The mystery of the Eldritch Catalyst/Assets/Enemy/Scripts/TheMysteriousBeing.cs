@@ -13,6 +13,6 @@ public class TheMysteriousBeing : Enemy
 
     public override void Death()
     {
-
+        GetComponent<AIController>().Death();
     }
 }
