@@ -1,5 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TutorialScript : MonoBehaviour
 {
@@ -14,6 +18,12 @@ public class TutorialScript : MonoBehaviour
     [SerializeField] private Door _DoorTo5;
     [SerializeField] private GameObject _ratTo7;
     [SerializeField] private Chest _chestTo8;
+
+    [SerializeField] private Image _fadePanel;
+
+    private float _savedHealth = -1;
+
+    private bool _bisEnding = false;
 
     private void Awake()
     {
@@ -89,8 +99,62 @@ public class TutorialScript : MonoBehaviour
                     break;
                 }
                 break;
+            case 7:
+                if (_savedHealth == -1)
+                {
+                    _savedHealth = 0;
+                    foreach (Character character in CharacterSelection.Instance.CharactersList())
+                    {
+                        _savedHealth += character.GetLife();
+                    }
+                }
+                if (!_chestTo8 || _chestTo8.IsOpened)
+                {
+                    NextTutorial();
+                }
+                break;
+            case 8:
+                /*if (Inventory.Instance.IsInInventory("Medicinal Herb"))
+                {
+                    NextTutorial();
+                }*/
+                NextTutorial();
+                break;
+            case 9:
+                float currentHealthTotal = 0;
+                foreach (Character character in CharacterSelection.Instance.CharactersList())
+                {
+                    currentHealthTotal += character.GetLife();
+                }
+                if (currentHealthTotal > _savedHealth)
+                {
+                    NextTutorial();
+                    break;
+                }
+                /*if (!Inventory.Instance.IsInInventory("Medicinal Herb"))
+                {
+                    PreviousTutorial();
+                }*/
+                break;
+            case 10:
+                if (!_bisEnding)
+                {
+                    _bisEnding = true;
+                    StartCoroutine(GoBackToMenu());
+                }
+                break;
         }
         
+    }
+
+    private IEnumerator GoBackToMenu()
+    {
+        while (_fadePanel.color.a < 1)
+        {
+            _fadePanel.color = new Color(0, 0, 0, _fadePanel.color.a + 0.25f * Time.deltaTime);
+            yield return null;
+        }
+        SceneManager.LoadSceneAsync("MainMenuScene");
     }
 
     public void NextTutorial()
@@ -137,6 +201,9 @@ public class TutorialScript : MonoBehaviour
                 break;
             case 9:
                 _text.text = "Click on your bag to open the inventory\n then click on the item you just picked up and heal yourself";
+                break;
+            case 10:
+                _text.text = "The tutorial is finished, now the real adventure can begin";
                 break;
         }
     }
