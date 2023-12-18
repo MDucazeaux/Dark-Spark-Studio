@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : Interactable
@@ -8,6 +9,8 @@ public class Door : Interactable
     [SerializeField] private Transform _parentTransform;
 
     [SerializeField] private GameObject _breakParticles;
+
+    [SerializeField] private List<MeshCollider> colliders;
 
     public override void Interaction()
     {
