@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using static UnityEditor.Progress;
 
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -21,9 +22,27 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        string content = _item.GetDescription();
         if (_item != null)
         {
-            TooltipSystem.Instance.Show(_item.GetDescription(), _item.name);
+            switch (_item.GetItemType())
+            {
+                case ItemType.Armor:
+                    content += "\nArmor = " + _item.GetArmorStats();
+                    break;
+                case ItemType.Weapon:
+                    content += "\nPhysical Strength = " + _item.GetPhysicalStrengthStats() + "\nMagical Strength = " + _item.GetMagicalStrengthStats();
+                    break;
+                case ItemType.Eat:
+                    content += "\nEat = " + _item.GetStaminaStats();
+                    break;
+                case ItemType.Heal:
+                    content += "\nHeal = " + _item.GetHealing();
+                    break;
+                default:
+                    break;
+            }
+            TooltipSystem.Instance.Show(content, _item.name);
         }
     }
     public void OnPointerExit(PointerEventData eventData)

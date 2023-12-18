@@ -110,4 +110,16 @@ public class CharacterSelection : MonoBehaviour
     {
         return _characters[_placement[_characterIndex]];
     }
+
+    public Character GetCharacterByName(string name)
+    {
+        foreach(Character character in _charactersList) 
+        {
+            if (character.GetName().Equals(name))
+            {
+                return character;
+            }
+        }
+        return null;
+    }
 }

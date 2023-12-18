@@ -17,7 +17,7 @@ public class HealChoicePortrait : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        //CharacterSelection.Instance.GetCharacterByName().Heal(ItemActionSystem.Instance.GetItemCurrentlySelected().GetHealing(), CharacterSelection.Instance.GetSelectedCharacter().GetHealMultiplier());
+        CharacterSelection.Instance.GetCharacterByName(_name).Heal(ItemActionSystem.Instance.GetItemCurrentlySelected().GetHealing(), CharacterSelection.Instance.GetSelectedCharacter().GetHealMultiplier());
         Inventory.Instance.RemoveItem(ItemActionSystem.Instance.GetItemCurrentlySelected());
         Inventory.Instance.RefreshContent();
         HealChoicePanel.Instance.CloseHealChoicePanel();
