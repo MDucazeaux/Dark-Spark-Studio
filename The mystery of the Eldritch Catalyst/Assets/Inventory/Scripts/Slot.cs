@@ -28,16 +28,16 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             switch (_item.GetItemType())
             {
                 case ItemType.Armor:
-                    content += "\nArmor = " + _item.GetArmorStats();
+                    content += "\n\nStats :\nArmor = " + _item.GetArmorStats();
                     break;
                 case ItemType.Weapon:
-                    content += "\nPhysical Strength = " + _item.GetPhysicalStrengthStats() + "\nMagical Strength = " + _item.GetMagicalStrengthStats();
+                    content += "\n\nStats :\nPhysical Strength = " + _item.GetPhysicalStrengthStats() + "\nMagical Strength = " + _item.GetMagicalStrengthStats();
                     break;
                 case ItemType.Eat:
-                    content += "\nEat = " + _item.GetStaminaStats();
+                    content += "\n\nStats :\nEat = " + _item.GetStaminaStats();
                     break;
                 case ItemType.Heal:
-                    content += "\nHeal = " + _item.GetHealing();
+                    content += "\n\nStats :\nHeal = " + _item.GetHealing();
                     break;
                 default:
                     break;
