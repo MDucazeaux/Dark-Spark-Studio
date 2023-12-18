@@ -17,9 +17,16 @@ public class Chest : Interactable
     private IEnumerator Open()
     {
         _bIsOpened = true;
+        OpenChest();
         //chest animation here
         gameObject.SetActive(false);
         yield return null;
+    }
+
+
+    private void OpenChest()
+    {
+        //put loot here
     }
 
     public override bool CanInteract()
@@ -31,4 +38,11 @@ public class Chest : Interactable
 
     public void Unlock()
     { _bIsLocked = false; }
+
+    public override void BreakInteractable()
+    {
+        _bIsOpened = true;
+        OpenChest();
+        gameObject.SetActive(false);
+    }
 }

@@ -1,12 +1,14 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Button : Interactable
 {
     private Transform _transform;
     private bool _bIsActivated = false;
     [SerializeField] private bool _bIsHidden = true;
+
+    [SerializeField] private List<Gate> _connectedGates = new List<Gate>();
 
     private void Awake()
     {
@@ -17,6 +19,10 @@ public class Button : Interactable
         if (!_bIsHidden && !_bIsActivated)
         {
             StartCoroutine(Activate());
+            for (int i = 0; i < _connectedGates.Count; i++)
+            {
+                StartCoroutine(_connectedGates[i].Open());
+            }
         }
     }
 
@@ -41,6 +47,10 @@ public class Button : Interactable
         }
         _transform.position = _targetPos;
         yield return null;
+    }
+
+    public override void BreakInteractable()
+    {
     }
 
     public bool IsHidden { get { return _bIsHidden; } set { _bIsHidden = value; } }

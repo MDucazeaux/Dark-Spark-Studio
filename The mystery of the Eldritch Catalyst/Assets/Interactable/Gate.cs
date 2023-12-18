@@ -24,7 +24,7 @@ public class Gate : Interactable
     {
         return !_bIsOpened;
     }
-    private IEnumerator Open()
+    public IEnumerator Open()
     {
         _bIsOpened = true;
         Vector3 _startingPos = _transform.position;
@@ -45,4 +45,8 @@ public class Gate : Interactable
 
     public void Unlock()
     { _bIsLocked = false; }
+
+    public override void BreakInteractable()
+    {
+    }
 }

@@ -17,13 +17,13 @@ public class PlayerInteraction : MonoBehaviour
 
     private void GetInteractable()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, c_tileSize, 1 << LayerMask.NameToLayer("Interactable"));
+        Collider[] colliders = Physics.OverlapSphere(transform.position, c_tileSize);
         if (colliders.Length > 0 )
         {
             colliders.OrderBy(x => Vector3.Distance(_transform.position, x.transform.position));
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].GetComponent<Interactable>().CanInteract())
+                if (colliders[i].CompareTag("Interactable")  && colliders[i].GetComponent<Interactable>().CanInteract())
                 {
                     colliders[i].GetComponent<Interactable>().Interaction();
                     break;
