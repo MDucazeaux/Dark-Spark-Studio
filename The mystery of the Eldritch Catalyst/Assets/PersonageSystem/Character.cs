@@ -12,8 +12,10 @@ public abstract class Character : Entity
     protected float StaminaLoseActionOne;
     protected float StaminaLoseActionTwo;
 
-    protected float CoolDownActionOne;
-    protected float CoolDownActionTwo;
+    protected float _coolDownActionOne;
+    protected float _timeActionOne;
+    protected float _coolDownActionTwo;
+    protected float _timeActionTwo;
 
     protected bool _canActionOne = true;
     protected bool _canActionTwo = true;
@@ -49,16 +51,19 @@ public abstract class Character : Entity
 
     public override void TakeDamage(float damage)
     {
-        if (!_isProtected)
+        if (Life > 0)
         {
-            Life -= damage / ArmorMultiplier;
-            Life = Life < 0 ? 0 : Life;
+            if (!_isProtected)
+            {
+                Life -= damage / ArmorMultiplier;
+                Life = Life < 0 ? 0 : Life;
 
-            CameraScript.Instance.TakeDamage();
-        }        
+                CameraScript.Instance.TakeDamage();
+            }
 
-        if (Life <= 0)
-            Death();
+            if (Life <= 0)
+                Death();
+        }
     }
 
     public void StartCooldownActionOne()
@@ -70,8 +75,13 @@ public abstract class Character : Entity
     {
         _canActionOne = false;
 
-        yield return new WaitForSeconds(CoolDownActionOne);
+        while (_timeActionOne < CoolDownActionOne)
+        {
+            _timeActionOne += Time.deltaTime;
+            yield return null;
+        }
 
+        _timeActionOne = 0;
         _canActionOne = true;
     }
 
@@ -84,8 +94,13 @@ public abstract class Character : Entity
     {
         _canActionTwo = false;
 
-        yield return new WaitForSeconds(CoolDownActionTwo);
+        while (_timeActionTwo < CoolDownActionTwo)
+        {
+            _timeActionTwo += Time.deltaTime;
+            yield return null;
+        }
 
+        _timeActionTwo = 0;
         _canActionTwo = true;
     }
 
@@ -114,9 +129,18 @@ public abstract class Character : Entity
         _isDead = true;
         CharacterSelection.Instance.CharacterDeath(Name);
 
+        NarratifManager.Instance.FeedBackCharacterDie(Forename);
+
         // Checking if all characters are dead
         CharacterDeathManager.Instance.AreAllCharactersDead();
+
     }
 
-    public bool IsDead {  get { return _isDead; } }
+    public bool IsDead { get { return _isDead; } }
+    public bool CanActionOne { get { return _canActionOne; } }
+    public bool CanActionTwo { get { return _canActionTwo; } }
+    public float TimeActionOne { get { return _timeActionOne; } }
+    public float CoolDownActionOne { get { return _coolDownActionOne; } }
+    public float TimeActionTwo { get { return _timeActionTwo; } }
+    public float CoolDownActionTwo { get { return _coolDownActionTwo; } }
 }

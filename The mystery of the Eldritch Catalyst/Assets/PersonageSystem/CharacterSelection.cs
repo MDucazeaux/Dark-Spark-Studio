@@ -51,6 +51,8 @@ public class CharacterSelection : MonoBehaviour
         _armorSlot.RefreshVisual();
         _weaponSlot.RefreshVisual();
         _characterPortraitInInventory.RefreshVisual();
+        
+        ActionButton.Instance.ChangeSpriteActions();
     }
 
     public void SwitchCharacters(int character1, int character2)
@@ -73,9 +75,9 @@ public class CharacterSelection : MonoBehaviour
                 { SwitchCharacters(0, 3);}
                 break;
             case 1:
-                if (CharacterPlacementIsAlive(2))
+                if (CharacterPlacementIsAlive(3))
                 { SwitchCharacters(1, 3); }
-                else if (CharacterPlacementIsAlive(3))
+                else if (CharacterPlacementIsAlive(2))
                 { SwitchCharacters(1, 2); }
                 break;
 

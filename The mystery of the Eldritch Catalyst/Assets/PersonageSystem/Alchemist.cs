@@ -27,12 +27,13 @@ public class Alchemist : Character
         MagicalMultiplier = 0;
         HealMultiplier = 1.25f;
 
-        CoolDownActionOne = 1;
-        CoolDownActionTwo = 30;
+        _coolDownActionOne = 1;
+        _coolDownActionTwo = 30;
 
         _enemyLayer = LayerMask.GetMask("Enemy");
 
         Name = "Alchemist";
+        Forename = "Thaddeus Emberstone";
     }
 
     public override void ActionOne()

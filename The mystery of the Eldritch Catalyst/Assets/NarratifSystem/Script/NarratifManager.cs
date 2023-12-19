@@ -8,9 +8,12 @@ using UnityEngine.UI;
 
 public class NarratifManager : MonoBehaviour
 {
+    public static NarratifManager Instance;
+
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private TextMeshProUGUI _dialogue;
     [SerializeField] private TextMeshProUGUI _character;
+    [SerializeField] private TextMeshProUGUI _feedbackText;
     [SerializeField] private Image _face;
     [SerializeField] private Image _background;
 
@@ -18,68 +21,14 @@ public class NarratifManager : MonoBehaviour
     private int _waitTime = 2;
     private int _speed = 1;
 
+    private float _feedbackTime = 0;
+    private float _feedbackWait = 3;
+    private float _feedbackWaitFade = 2;
+    private Coroutine _fadeFeedBack;
+
     private bool _canPassText = true;
     private int _index = 0;
 
-    #region vf
-    /*private List<string> _introTexts = new List<string>()
-    {
-        "Dans un monde où la magie et les monstres sont omniprésents, un homme mystérieux cherchait à recruter de courageux aventuriers." +
-        "\n\n\rSa quête : récupérer un ancien et puissant artéfact situé dans les ruines d’une ancienne civilisation : le catalyseur d’Eldritch.",
-
-        "C’est dans une taverne douteuse qu’il fit la rencontre de quatre aventuriers :" +
-        "\n\rMagnus Stormblade une brute, Lila Nightshade une voleuse," +
-        "\n\rElara Moonfire une sorcière médiocre et Thaddeus Emberstone un vieil alchimiste." +
-        "\n\n\rLes 4 aventuriers, au début réticents, acceptèrent la mission quand l’homme mystérieux leur promit argent et pouvoir.",
-
-        "En entrant dans le donjon, Thaddeus Emberstone sentit que l’air était lourd " +
-        "et tous sentirent leurs forces faiblir."
-    };
-    private List<string> _gameTexts = new List<string>()
-    {
-        "Homme mystérieux :",
-        "Bien joué aventuriers, vous avez réussi à atteindre la fin du donjon.",
-
-        "Magnus Stormblade :",
-        "Mais… qu’est-ce que tu fais ici ?",
-
-        "Thaddeus Emberstone",
-        "C’était un piège de tout évidence, n’est-ce pas ?",
-
-        "Homme mystérieux :",
-        "C’est exact.",
-
-        "Elara Moonfire :",
-        "Qu’est-ce que vous allez nous faire ?",
-
-        "Homme mystérieux :",
-        "Je vais vous voler toute votre énergie vitale. " +
-        "C’est à ça que sert cet artefact, “le catalyseur d’Eldritch”. " +
-        "Il absorbe l’énergie vitale des humains présents en ces lieux, il la transfère à son propriétaire… moi.",
-
-        "Lila Nightshade :",
-        "Mais pourquoi faites vous ça ?",
-
-        "Homme mystérieux :",
-        "Pour vivre éternellement, quelle question.",
-
-        "Magnus Stormblade :",
-        "Tu t'es servi de nous. Je vais te massacrer.",
-
-        "Homme mystérieux :",
-        "Vas-y viens tenter ta chance !"
-    };
-    private List<string> _goodEndTexts = new List<string>()
-    {
-        "Malgré la redoutable puissance de leur antagoniste, les intrépides aventuriers sortirent triomphants de ce combat ardu. " +
-        "Une fois guéris de leurs blessures, ils décidèrent de détruire l'artefact maudit et de sceller l'entrée du donjon, " +
-        "veillant ainsi à ce qu'aucun autre être humain ne puisse pénétrer en ces lieux mystérieux.\r\n"
-    };
-    private List<string> _badEndTexts = new List<string>()
-    { "Malgré leurs efforts et leurs ténacités, les aventuriers ne parvinrent pas à surpasser la puissance de l’homme mystérieux."};*/
-    #endregion
-
-    #region ve
     private List<string> _introTexts = new List<string>()
     {
         "In a world where magic and fantastic creatures are omnipresent, a mysterious being with a frail, weather-beaten physique was striving to rally intrepid adventurers to his cause. " +
@@ -136,7 +85,6 @@ public class NarratifManager : MonoBehaviour
     };
     private List<string> _badEndTexts = new List<string>()
     { "Despite their best efforts and unfailing tenacity, the adventurers were unable to overcome the mysterious power of their opponents."};
-    #endregion
 
     [SerializeField] private List<Sprite> _faces = new List<Sprite>(); //warrior, thief, witch, alchimist, 
 
@@ -146,6 +94,12 @@ public class NarratifManager : MonoBehaviour
     }
 
     public Phase _phase = Phase.Intro;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
 
     private void Start()
     {
@@ -337,5 +291,93 @@ public class NarratifManager : MonoBehaviour
 
         _background.color = Color.black; 
         _text.color = Color.white;
+    }
+
+    public void FeedBackCharacterDie(string name)
+    {
+        _feedbackText.enabled = true;
+        _feedbackText.color = Color.white;
+
+        _feedbackText.text = name + " is dead.";
+        _feedbackTime = Time.time + _feedbackWait;
+
+        if (_fadeFeedBack != null)
+            StopCoroutine(_fadeFeedBack);
+
+        _fadeFeedBack = StartCoroutine(FadeFeedBack());
+    }
+
+    public void FeedBackKeyUse()
+    {
+        _feedbackText.enabled = true;
+        _feedbackText.color = Color.white;
+
+        _feedbackText.text = "You used the key.";
+        _feedbackTime = Time.time + _feedbackWait;
+
+        if (_fadeFeedBack != null)
+            StopCoroutine(_fadeFeedBack);
+
+        _fadeFeedBack = StartCoroutine(FadeFeedBack());
+    }
+
+    public void FeedBackLockpickUse()
+    {
+        _feedbackText.enabled = true;
+        _feedbackText.color = Color.white;
+
+        _feedbackText.text = "You used the lockpick.";
+        _feedbackTime = Time.time + _feedbackWait;
+
+        if (_fadeFeedBack != null)
+            StopCoroutine(_fadeFeedBack);
+
+        _fadeFeedBack = StartCoroutine(FadeFeedBack());
+    }
+
+    public void FeedBackNoKey()
+    {
+        _feedbackText.enabled = true;
+        _feedbackText.color = Color.white;
+
+        _feedbackText.text = "je n'ai pas de clé pour l'ouvrir mais ça a l'air fragile";
+        _feedbackTime = Time.time + _feedbackWait;
+
+        if (_fadeFeedBack != null)
+            StopCoroutine(_fadeFeedBack);
+
+        _fadeFeedBack = StartCoroutine(FadeFeedBack());
+    }
+
+    public void FeedBackNoLockpick()
+    {
+        _feedbackText.enabled = true;
+        _feedbackText.color = Color.white;
+
+        _feedbackText.text = "je n'ai pas de crochet pour l'ouvrir mais ça a l'air fragile";
+        _feedbackTime = Time.time + _feedbackWait;
+
+        if (_fadeFeedBack != null)
+            StopCoroutine(_fadeFeedBack);
+
+        _fadeFeedBack = StartCoroutine(FadeFeedBack());
+    }
+
+    private IEnumerator FadeFeedBack()
+    {
+        yield return new WaitWhile(() => Time.time < _feedbackTime);
+
+        Color fromTxt = Color.white;
+        Color toTxt = Color.white - Color.black;
+        float time = 0;
+
+        while (time < _feedbackTime)
+        {
+            _feedbackText.color = Color.Lerp(fromTxt, toTxt, time);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        _feedbackText.enabled = false;
     }
 }
