@@ -35,7 +35,6 @@ public class PickUpText : MonoBehaviour
         SetText(text);
         EnablePickUpInfo();
         yield return new WaitForSeconds(_infoDuration);
-        print("niketoi");
         DisablePickUpInfo();
     }
 

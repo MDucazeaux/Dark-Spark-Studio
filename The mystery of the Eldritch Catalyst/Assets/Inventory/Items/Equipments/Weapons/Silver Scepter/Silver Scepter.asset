@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Silver Scepter
   _description: Silver is one of the best magic conductors out there
-  _icon: {fileID: 21300000, guid: e84996b7a46bbc642b7308c21cd0958b, type: 3}
+  _icon: {fileID: 21300000, guid: 53ade11248c629c4c98c5a0f9874abd0, type: 3}
   _prefab: {fileID: 926781662586193139, guid: efa9fd807815073408a3167437046896, type: 3}
   _itemType: 1
   _healing: 0

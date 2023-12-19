@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Leather Armor
   _description: Not very protective but it's very easy to move around with
-  _icon: {fileID: 21300000, guid: c514aa48ad9289f42b03316e6434bb89, type: 3}
+  _icon: {fileID: 21300000, guid: e82ff9d91b760f842b338484e56c9d15, type: 3}
   _prefab: {fileID: 2542724273749861836, guid: 2647f6971ce141b4ea86ec7aa390e989, type: 3}
   _itemType: 0
   _healing: 0

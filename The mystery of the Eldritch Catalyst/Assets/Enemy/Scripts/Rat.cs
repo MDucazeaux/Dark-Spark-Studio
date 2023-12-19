@@ -16,6 +16,6 @@ public class Rat : Enemy
     public override void Death()
     {
         GetComponent<AIController>().Death();
-        DropManager.Instance.DropItems(transform, "Rat");
+        DropManager.Instance.DropItems(_dropPoint, "Rat");
     }
 }

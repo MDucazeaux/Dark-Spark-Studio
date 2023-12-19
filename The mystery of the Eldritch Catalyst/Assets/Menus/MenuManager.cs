@@ -91,7 +91,7 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 0.0f;
 
         // Show the player mouse cursor, so he can use it to click on buttons
-        Cursor.visible = true;
+        //Cursor.visible = true;
 
         // Show the menu given, and select the correspondant button
         switch (menu)
@@ -124,7 +124,7 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1f;
 
         // Hide the player mouse cursor
-        Cursor.visible = false;
+        //Cursor.visible = false;
 
         // Hide the menu given
         switch (menu)

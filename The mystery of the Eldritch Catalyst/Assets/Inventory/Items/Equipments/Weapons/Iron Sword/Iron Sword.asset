@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Iron Sword
   _description: A very basic blade, but with an excellent cutting edge
-  _icon: {fileID: 21300000, guid: af9f9b9401d28374c90f85ca198740e6, type: 3}
+  _icon: {fileID: 21300000, guid: f09f1690b3aa96146b249c7569ab7b1c, type: 3}
   _prefab: {fileID: 5206378046128617640, guid: a69c2bea21c59eb49ae924af83b30e7c, type: 3}
   _itemType: 1
   _healing: 0

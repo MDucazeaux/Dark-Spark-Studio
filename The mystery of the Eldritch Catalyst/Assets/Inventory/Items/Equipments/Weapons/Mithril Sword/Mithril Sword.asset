@@ -15,7 +15,7 @@ MonoBehaviour:
   _name: Mithril Sword
   _description: In addition to being very solid, this weapon has an extraordinary
     cutting edge
-  _icon: {fileID: 21300000, guid: b0ad6c55be7c8f44993e57afd12a0746, type: 3}
+  _icon: {fileID: 21300000, guid: 8b09cef1b0fb613498cd5df5ff147f47, type: 3}
   _prefab: {fileID: 5868866848372988761, guid: c6601871736ad40428cf2c23a89da179, type: 3}
   _itemType: 1
   _healing: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   _name: Medicinal Herb
   _description: Not very effective on its own, but someone versed in the art of potions
     can get something out of it
-  _icon: {fileID: 21300000, guid: e6dfe6aa355132842a978e490ff59f61, type: 3}
+  _icon: {fileID: 21300000, guid: 9b3acc134df357645816b25d830c95b9, type: 3}
   _prefab: {fileID: 6671984306648387596, guid: a12c87402aa21b04e84eda348682e471, type: 3}
   _itemType: 3
   _healing: 35

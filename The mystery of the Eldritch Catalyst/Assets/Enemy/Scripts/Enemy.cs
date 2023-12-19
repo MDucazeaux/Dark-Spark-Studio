@@ -3,6 +3,8 @@ using UnityEngine;
 
 public abstract class Enemy : Entity
 {
+    [SerializeField]
+    protected Transform _dropPoint;
     protected float _originDamage = 0;
     protected float _damage = 0;
 

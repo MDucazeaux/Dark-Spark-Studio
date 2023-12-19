@@ -15,7 +15,7 @@ MonoBehaviour:
   _name: Staff Set With A Gem
   _description: The gem has magical properties that allow the magic to be better
     concentrated
-  _icon: {fileID: 21300000, guid: 5bb79981a6f68f94e829a2b688dcc184, type: 3}
+  _icon: {fileID: 21300000, guid: ed33cb62333587b408d985a148004d0e, type: 3}
   _prefab: {fileID: 2972022493931607585, guid: 59349c5e71209814481bd5b995d3448a, type: 3}
   _itemType: 1
   _healing: 0

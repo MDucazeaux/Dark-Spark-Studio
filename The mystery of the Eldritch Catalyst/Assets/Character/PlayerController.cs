@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerRotation _playerRotation;
     [SerializeField] private PlayerInteraction _playerInteraction;
     [SerializeField] private MenuManager _menuManager;
+    [SerializeField] private PickUpText _pickUpText;
 
     private Vector2 _playerDirection = Vector2.zero;
 
@@ -83,6 +84,7 @@ public class PlayerController : MonoBehaviour
                 !Inventory.Instance.InventoryIsFull())
             {
                 Inventory.Instance.AddItem(ItemsOnFloor.Instance.ItemsCloseToThePlayer()[0].itemData);
+                _pickUpText.StartShowText();
                 Destroy(ItemsOnFloor.Instance.ItemsCloseToThePlayer()[0].GameObject());
             }
         }

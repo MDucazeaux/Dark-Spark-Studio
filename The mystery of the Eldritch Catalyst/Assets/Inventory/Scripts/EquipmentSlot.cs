@@ -69,13 +69,17 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void EquipEquipment(ItemData equipment)
     {
+        Character character = CharacterSelection.Instance.GetSelectedCharacter();
         switch (_slotType)
         {
             case SlotType.Armor:
-                CharacterSelection.Instance.GetSelectedCharacter().SetArmor(equipment);
+                character.SetArmor(equipment);
+                character.AddArmorMultiplier(equipment.GetArmorStats());
                 break;
             case SlotType.Weapon:
-                CharacterSelection.Instance.GetSelectedCharacter().SetWeapon(equipment);
+                character.SetWeapon(equipment);
+                character.AddStrenghtMultiplier(equipment.GetPhysicalStrengthStats());
+                character.AddMagicalStrenghtMultiplier(equipment.GetMagicalStrengthStats());
                 break;
             default:
                 break;
@@ -89,20 +93,24 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (!Inventory.Instance.InventoryIsFull())
         {
+            Character character = CharacterSelection.Instance.GetSelectedCharacter();
             switch (_slotType)
             {
                 case SlotType.Armor:
-                    if (CharacterSelection.Instance.GetSelectedCharacter().GetArmor() != null)
+                    if (character.GetArmor() != null)
                     {
-                        Inventory.Instance.AddItem(CharacterSelection.Instance.GetSelectedCharacter().GetArmor());
-                        CharacterSelection.Instance.GetSelectedCharacter().SetArmor(null);
+                        Inventory.Instance.AddItem(character.GetArmor());
+                        character.ReduceArmorMultiplier(character.GetArmor().GetArmorStats());
+                        character.SetArmor(null);
                     }
                     break;
                 case SlotType.Weapon:
-                    if (CharacterSelection.Instance.GetSelectedCharacter().GetWeapon() != null)
+                    if (character.GetWeapon() != null)
                     {
-                        Inventory.Instance.AddItem(CharacterSelection.Instance.GetSelectedCharacter().GetWeapon());
-                        CharacterSelection.Instance.GetSelectedCharacter().SetWeapon(null);
+                        Inventory.Instance.AddItem(character.GetWeapon());
+                        character.ReduceStrenghtMultiplier(character.GetWeapon().GetPhysicalStrengthStats());
+                        character.ReduceMagicalStrenghtMultiplier(character.GetWeapon().GetMagicalStrengthStats());
+                        character.SetWeapon(null);
                     }
                     break;
                 default:
@@ -116,16 +124,27 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void SwapEquipment(ItemData equipment)
     {
         Inventory.Instance.RemoveItem(equipment);
+        Character character = CharacterSelection.Instance.GetSelectedCharacter();
         switch (_slotType)
         {
             case SlotType.Armor:
-                Inventory.Instance.AddItem(CharacterSelection.Instance.GetSelectedCharacter().GetArmor());
-                CharacterSelection.Instance.GetSelectedCharacter().SetArmor(equipment);
+                character.ReduceArmorMultiplier(character.GetArmor().GetArmorStats());
+                Inventory.Instance.AddItem(character.GetArmor());
+
+                character.SetArmor(equipment);
+                character.AddArmorMultiplier(equipment.GetArmorStats());
                 break;
+
             case SlotType.Weapon:
-                Inventory.Instance.AddItem(CharacterSelection.Instance.GetSelectedCharacter().GetWeapon());
-                CharacterSelection.Instance.GetSelectedCharacter().SetWeapon(equipment);
+                character.ReduceStrenghtMultiplier(character.GetWeapon().GetPhysicalStrengthStats());
+                character.ReduceMagicalStrenghtMultiplier(character.GetWeapon().GetMagicalStrengthStats());
+                Inventory.Instance.AddItem(character.GetWeapon());
+
+                character.SetWeapon(equipment);
+                character.AddStrenghtMultiplier(equipment.GetPhysicalStrengthStats());
+                character.AddMagicalStrenghtMultiplier(equipment.GetMagicalStrengthStats());
                 break;
+
             default:
                 break;
         }

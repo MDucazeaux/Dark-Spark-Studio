@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stick
   _description: "Le bois de ce b\xE2ton permet de concentrer le flot de magie"
-  _icon: {fileID: 21300000, guid: 12a80b8987c5e3d4294ab5cd3a3a6348, type: 3}
+  _icon: {fileID: 21300000, guid: a8a81c09d4aed194fb6f3745b09a3542, type: 3}
   _prefab: {fileID: 2490309541345734293, guid: 4489c20bd0aa78747bad789b10715e56, type: 3}
   _itemType: 1
   _healing: 0
