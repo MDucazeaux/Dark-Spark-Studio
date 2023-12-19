@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Option A
+  m_text: 1920 x 1080
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c9efd9989167604b96a1007e1229ec1, type: 2}
   m_sharedMaterial: {fileID: -3865875183206146060, guid: 1c9efd9989167604b96a1007e1229ec1, type: 2}
@@ -873,7 +873,8 @@ MonoBehaviour:
   _mainVolSlider: {fileID: 7134023085525968998}
   _sfxVolSlider: {fileID: 2125185717036079020}
   _musicVolSlider: {fileID: 4820395529143231979}
-  _blackFilter: {fileID: 2358481615025973249}
+  _resolutionDropdown: {fileID: 1570541895120568882}
+  _fullscreenToggle: {fileID: 2059409127604402596}
 --- !u!1 &1354260010754783035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,18 +2462,32 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 4664977228161589158}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 2
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: 640 x 360
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: 1280 x 720
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: 1920 x 1080
+      m_Image: {fileID: 0}
+    - m_Text: 2560 x 1440
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8395945537661190341}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: OnResolutionChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!1 &5345062434547821158
 GameObject:
