@@ -22,9 +22,9 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        string content = _item.GetDescription();
         if (_item != null)
         {
+            string content = _item.GetDescription();
             switch (_item.GetItemType())
             {
                 case ItemType.Armor:

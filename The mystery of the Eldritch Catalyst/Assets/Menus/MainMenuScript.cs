@@ -51,10 +51,10 @@ public class MainMenuScript : MonoBehaviour
     public void OnNewGame()
     {
         _state = MENUSTATE.LAUNCHING;
-        StartCoroutine(StartingGame());
+        StartCoroutine(StartingGame("GameScene"));
     }
 
-    private IEnumerator StartingGame()
+    private IEnumerator StartingGame(string scene)
     {
         float _elapsedTime = 0f; 
         while (_elapsedTime < 4) 
@@ -64,7 +64,7 @@ public class MainMenuScript : MonoBehaviour
             _elapsedTime += Time.deltaTime;
             yield return null;
         }
-        SceneManager.LoadSceneAsync("GameScene");
+        SceneManager.LoadSceneAsync(scene);
         yield return null;
     }
 
@@ -88,6 +88,11 @@ public class MainMenuScript : MonoBehaviour
         _state = MENUSTATE.MAIN;
     }
 
+    public void OnGoToTutorial()
+    {
+        _state = MENUSTATE.LAUNCHING;
+        StartCoroutine(StartingGame("TutorialScene"));
+    }
     public void SwitchState(string state)
     {
         switch (state)

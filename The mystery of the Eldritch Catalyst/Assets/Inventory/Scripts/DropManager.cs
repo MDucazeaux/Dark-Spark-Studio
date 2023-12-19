@@ -6,7 +6,7 @@ public class DropManager : MonoBehaviour
     [SerializeField]
     private List<LootTableData> _dropTables = new List<LootTableData>();
 
-    private List<ItemData> _dropList;
+    private List<ItemData> _dropList = new List<ItemData>();
 
     [System.Serializable]
     private struct LootTableData
@@ -30,6 +30,13 @@ public class DropManager : MonoBehaviour
         public int[] dropPercentages;
         [SerializeField]
         public int maxQuantity;
+    }
+
+    public static DropManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
     }
 
     public void DropCalculation(string enemy)

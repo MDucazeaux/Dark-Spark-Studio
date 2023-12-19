@@ -1012,6 +1012,7 @@ GameObject:
   - component: {fileID: 268578081}
   - component: {fileID: 268578082}
   - component: {fileID: 268578083}
+  - component: {fileID: 268578084}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1096,6 +1097,91 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healChoicePanel: {fileID: 101880673}
+--- !u!114 &268578084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268578078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b578b72ba2e0f4ea895630994ce476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dropTables:
+  - EnemyType: Rat
+    ItemsToLoot: []
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+      dropPercentages: 0a000000
+      maxQuantity: 1
+    ChestQuantity: 0
+  - EnemyType: Dullahan
+    ItemsToLoot: []
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+      dropPercentages: 19000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+      dropPercentages: 0f000000
+      maxQuantity: 1
+    ChestQuantity: 0
+  - EnemyType: Minotaur
+    ItemsToLoot: []
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+      dropPercentages: 64000000
+      maxQuantity: 1
+    ChestQuantity: 0
+  - EnemyType: Skeleton
+    ItemsToLoot: []
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+      dropPercentages: 14000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
+      dropPercentages: 0a000000
+      maxQuantity: 1
+    ChestQuantity: 0
+  - EnemyType: TutoChest
+    ItemsToLoot:
+    - itemCanDropped: {fileID: 11400000, guid: 9df32270c842dea4a8ef850c28c4e222, type: 2}
+      dropPercentages: 
+      maxQuantity: 1
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
+      dropPercentages: 0a000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+      dropPercentages: 14000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+      dropPercentages: 1e000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+      dropPercentages: 28000000
+      maxQuantity: 1
+    ChestQuantity: 3
+  - EnemyType: Chest1
+    ItemsToLoot:
+    - itemCanDropped: {fileID: 11400000, guid: 9df32270c842dea4a8ef850c28c4e222, type: 2}
+      dropPercentages: 
+      maxQuantity: 1
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
+      dropPercentages: 0a000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+      dropPercentages: 14000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+      dropPercentages: 1e000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+      dropPercentages: 28000000
+      maxQuantity: 1
+    ChestQuantity: 3
 --- !u!1 &288871992
 GameObject:
   m_ObjectHideFlags: 0
@@ -10961,6 +11047,7 @@ MonoBehaviour:
   _itemActionSystem: {fileID: 268578081}
   _inventoryBackground: {fileID: 289955716}
   _inventorySlotsParent: {fileID: 1399940690}
+  _healChoicePanel: {fileID: 101880673}
   _transparentSlot: {fileID: 21300000, guid: 69ae240fd68b67c459d30f071f52d118, type: 3}
 --- !u!4 &1828479074
 Transform:

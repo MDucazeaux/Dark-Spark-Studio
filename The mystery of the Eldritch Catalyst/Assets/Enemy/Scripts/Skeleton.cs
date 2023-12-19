@@ -14,5 +14,6 @@ public class Skeleton : Enemy
     public override void Death()
     {
         GetComponent<AIController>().Death();
+        DropManager.Instance.DropItems(transform, "Skeleton");
     }
 }

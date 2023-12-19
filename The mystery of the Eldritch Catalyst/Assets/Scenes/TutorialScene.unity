@@ -1345,6 +1345,7 @@ GameObject:
   - component: {fileID: 268578081}
   - component: {fileID: 268578082}
   - component: {fileID: 268578083}
+  - component: {fileID: 268578084}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1429,6 +1430,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healChoicePanel: {fileID: 101880673}
+--- !u!114 &268578084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268578078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b578b72ba2e0f4ea895630994ce476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dropTables:
+  - EnemyType: Rat
+    ItemsToLoot: []
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+      dropPercentages: 0a000000
+      maxQuantity: 1
+    ChestQuantity: 0
+  - EnemyType: Dullahan
+    ItemsToLoot: []
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+      dropPercentages: 19000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+      dropPercentages: 0f000000
+      maxQuantity: 1
+    ChestQuantity: 0
+  - EnemyType: Minotaur
+    ItemsToLoot: []
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+      dropPercentages: 64000000
+      maxQuantity: 1
+    ChestQuantity: 0
+  - EnemyType: Skeleton
+    ItemsToLoot: []
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+      dropPercentages: 14000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
+      dropPercentages: 0a000000
+      maxQuantity: 1
+    ChestQuantity: 0
+  - EnemyType: TutoChest
+    ItemsToLoot:
+    - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+      dropPercentages: 
+      maxQuantity: 1
+    LootTable: []
+    ChestQuantity: 1
+  - EnemyType: Chest1
+    ItemsToLoot:
+    - itemCanDropped: {fileID: 11400000, guid: 9df32270c842dea4a8ef850c28c4e222, type: 2}
+      dropPercentages: 
+      maxQuantity: 1
+    LootTable:
+    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
+      dropPercentages: 0a000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+      dropPercentages: 14000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+      dropPercentages: 1e000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+      dropPercentages: 28000000
+      maxQuantity: 1
+    ChestQuantity: 3
 --- !u!4 &285703136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2622537951923278079, guid: 86c4e055ce728d64b833686d90fb3f5c, type: 3}
@@ -2655,7 +2729,6 @@ Transform:
   - {fileID: 2082892495}
   - {fileID: 839004965}
   - {fileID: 621492693}
-  - {fileID: 617083792}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &455353597 stripped
@@ -3955,11 +4028,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611777540}
   m_CullTransparentMesh: 1
---- !u!4 &617083792 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-  m_PrefabInstance: {fileID: 1406172317}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &618540597
 GameObject:
   m_ObjectHideFlags: 0
@@ -7400,6 +7468,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9103263798684001807, guid: 31f0ec3b556c7af419c5efdf85fc40e8, type: 3}
+      propertyPath: _name
+      value: TutoChest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8199,63 +8271,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 642320313393710410, guid: 745b75963c564454d93ac75dc5704afe, type: 3}
   m_PrefabInstance: {fileID: 2055707666}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1406172317
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 450514475}
-    m_Modifications:
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.0999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9469969
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.32124263
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123066100484600521, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6671984306648387596, guid: a12c87402aa21b04e84eda348682e471, type: 3}
-      propertyPath: m_Name
-      value: Medicinal Herb
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a12c87402aa21b04e84eda348682e471, type: 3}
 --- !u!1 &1406850762
 GameObject:
   m_ObjectHideFlags: 0
@@ -10990,6 +11005,7 @@ MonoBehaviour:
   _itemActionSystem: {fileID: 268578081}
   _inventoryBackground: {fileID: 289955716}
   _inventorySlotsParent: {fileID: 1399940690}
+  _healChoicePanel: {fileID: 101880673}
   _transparentSlot: {fileID: 21300000, guid: 69ae240fd68b67c459d30f071f52d118, type: 3}
 --- !u!4 &1828479074
 Transform:

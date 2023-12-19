@@ -14,5 +14,6 @@ public class Minotaur : Enemy
     public override void Death()
     {
         GetComponent<AIController>().Death();
+        DropManager.Instance.DropItems(transform, "Minotaur");
     }
 }

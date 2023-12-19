@@ -114,11 +114,10 @@ public class TutorialScript : MonoBehaviour
                 }
                 break;
             case 8:
-                /*if (Inventory.Instance.IsInInventory("Medicinal Herb"))
+                if (Inventory.Instance.IsInInventory("Medicinal Herb"))
                 {
                     NextTutorial();
-                }*/
-                NextTutorial();
+                }
                 break;
             case 9:
                 float currentHealthTotal = 0;
@@ -131,10 +130,10 @@ public class TutorialScript : MonoBehaviour
                     NextTutorial();
                     break;
                 }
-                /*if (!Inventory.Instance.IsInInventory("Medicinal Herb"))
+                if (!Inventory.Instance.IsInInventory("Medicinal Herb"))
                 {
                     PreviousTutorial();
-                }*/
+                }
                 break;
             case 10:
                 if (!_bisEnding)
@@ -172,10 +171,10 @@ public class TutorialScript : MonoBehaviour
         switch (_tutorialId)
         {
             case 0:
-                _text.text = "Welcome to The Mystery of the Eldritch Catalyst\r\nTo begin your adventure open this door with [left click]";
+                _text.text = "Welcome to The Mystery of the Eldritch Catalyst\r\nTo begin your adventure open this door with [left click]\nMove with [z q s d]";
                 break;
             case 1:
-                _text.text = "Hmm, it seems like we can't open this\nTry going back and check for a button, then interact with [left click]";
+                _text.text = "Hmm, it seems like we can't open this\nTry going back and check for a button [a or e], then interact with [left click]";
                 break;
             case 2:
                 _text.text = "The path has been cleared, let's continue your adventure";
@@ -193,7 +192,7 @@ public class TutorialScript : MonoBehaviour
                 _text.text = "Kill this rat now !\nPress [&] or [é] to use your actions";
                 break;
             case 7:
-                _text.text = "Okay that could have gotten worse\nLet's open that chest to find some loot";
+                _text.text = "Okay that could have gotten worse\nLet's open that chest to find some loot [Left click]";
                 break;
             case 8:
                 _text.text = "Nice we can heal ourselves with that !\nPick this item with [F]";

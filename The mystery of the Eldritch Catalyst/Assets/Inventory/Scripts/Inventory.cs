@@ -16,6 +16,9 @@ public class Inventory : MonoBehaviour
     private Transform _inventorySlotsParent;
 
     [SerializeField]
+    private GameObject _healChoicePanel;
+
+    [SerializeField]
     private Sprite _transparentSlot;
 
     private const int c_inventorySize = 20;
@@ -60,6 +63,7 @@ public class Inventory : MonoBehaviour
 
     public void CloseInventory()
     {
+        _healChoicePanel.SetActive(false);
         _inventoryBackground.SetActive(false);
         _itemActionSystem.GetActionPanel().SetActive(false);
     }

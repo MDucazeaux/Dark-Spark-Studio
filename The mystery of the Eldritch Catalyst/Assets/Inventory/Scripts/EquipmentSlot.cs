@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -20,15 +21,19 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             case SlotType.Armor :
                 if (CharacterSelection.Instance.GetSelectedCharacter().GetArmor() != null)
                 {
-                    TooltipSystem.Instance.Show(CharacterSelection.Instance.GetSelectedCharacter().GetArmor().GetDescription(),
-                                        CharacterSelection.Instance.GetSelectedCharacter().GetArmor().name);
+                    ItemData armor = CharacterSelection.Instance.GetSelectedCharacter().GetArmor();
+                    string content = armor.GetDescription();
+                    content += "\n\nStats :\nArmor = " + armor.GetArmorStats();
+                    TooltipSystem.Instance.Show(content, armor.name);
                 }
                 break;
             case SlotType.Weapon :
                 if (CharacterSelection.Instance.GetSelectedCharacter().GetWeapon() != null)
                 {
-                    TooltipSystem.Instance.Show(CharacterSelection.Instance.GetSelectedCharacter().GetWeapon().GetDescription(),
-                                            CharacterSelection.Instance.GetSelectedCharacter().GetWeapon().name);
+                    ItemData weapon = CharacterSelection.Instance.GetSelectedCharacter().GetWeapon();
+                    string content = weapon.GetDescription();
+                    content += "\n\nStats :\nPhysical Strength = " + weapon.GetPhysicalStrengthStats() + "\nMagical Strength = " + weapon.GetMagicalStrengthStats();
+                    TooltipSystem.Instance.Show(content, weapon.name);
                 }
                 break;
             default:

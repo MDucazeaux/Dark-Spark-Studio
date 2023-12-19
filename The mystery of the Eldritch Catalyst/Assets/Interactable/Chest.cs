@@ -8,6 +8,10 @@ public class Chest : Interactable
 
     [SerializeField] private GameObject _breakParticles;
 
+    [SerializeField] private Transform _dropPoint;
+
+    [SerializeField] private string _name;
+
     public override void Interaction()
     {
         if (!_bIsLocked && !_bIsOpened)
@@ -28,7 +32,7 @@ public class Chest : Interactable
 
     private void OpenChest()
     {
-        //put loot here
+        DropManager.Instance.DropItemsInChests(_dropPoint, _name);
     }
 
     public override bool CanInteract()
