@@ -122,7 +122,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 7b81a59a112ab1349be1380cab39f035, type: 3}
     _characterHitten:
     - {fileID: 8300000, guid: 7603f6a1deb7cee43bd74bbf6221d6df, type: 3}
-    _characterKilled: []
+    _characterKilled:
+    - {fileID: 8300000, guid: dbb8ff78d3f3dd246ab5d839a23cb52b, type: 3}
     _ratIdle:
     - {fileID: 8300000, guid: 30807a03bcbc1da4889588ceab46a6a0, type: 3}
     _ratMoving:
