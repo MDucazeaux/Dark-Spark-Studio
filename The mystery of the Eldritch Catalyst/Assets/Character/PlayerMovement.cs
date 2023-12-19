@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 _bIsMoving = true;
                 StartCoroutine(Move(_targetPos));
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersMoves, 1);
             }
             _direction = Vector2.zero;
         }

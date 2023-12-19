@@ -86,6 +86,8 @@ public class PlayerController : MonoBehaviour
                 Inventory.Instance.AddItem(ItemsOnFloor.Instance.ItemsCloseToThePlayer()[0].itemData);
                 _pickUpText.StartShowText();
                 Destroy(ItemsOnFloor.Instance.ItemsCloseToThePlayer()[0].GameObject());
+
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickupItem, 1);
             }
         }
     }

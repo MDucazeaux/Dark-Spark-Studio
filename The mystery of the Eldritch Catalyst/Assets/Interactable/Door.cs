@@ -27,6 +27,7 @@ public class Door : Interactable
 
     private IEnumerator Open()
     {
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.OpeningDoor, 1);
         _bIsOpened = true;
         float _startRotation = _parentTransform.rotation.eulerAngles.y;
         float _endRotation = _startRotation - 90;

@@ -59,6 +59,7 @@ public abstract class Character : Entity
                 Life = Life < 0 ? 0 : Life;
 
                 CameraScript.Instance.TakeDamage();
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharacterHitten);
             }
 
             if (Life <= 0)
@@ -134,6 +135,7 @@ public abstract class Character : Entity
         // Checking if all characters are dead
         CharacterDeathManager.Instance.AreAllCharactersDead();
 
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharacterKilled);
     }
 
     public bool IsDead { get { return _isDead; } }
