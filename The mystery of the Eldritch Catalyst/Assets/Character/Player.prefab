@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 2057167433952793979}
   - component: {fileID: 3272287673724195968}
   - component: {fileID: 3709673653059869265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6218211993013009409}
   - component: {fileID: 502913542525055681}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collision
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -557,11 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104ca50abad2cd24182f228b8c653149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharactersList:
-  - {fileID: 4055355927798810077}
-  - {fileID: 7941301532368033170}
-  - {fileID: 4605462909816670672}
-  - {fileID: 6553583753733995578}
+  _charactersList: []
   _armorSlot: {fileID: 0}
   _weaponSlot: {fileID: 0}
   _characterPortraitInInventory: {fileID: 0}
