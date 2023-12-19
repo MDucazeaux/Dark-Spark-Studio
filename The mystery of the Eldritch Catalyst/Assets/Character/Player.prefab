@@ -581,6 +581,7 @@ MonoBehaviour:
   _damageStrong: 30
   _whiteSwoosh: {fileID: 228154944414223481, guid: 4c2713f88c350a744b2caf7206103208, type: 3}
   _redSwoosh: {fileID: 5228714176221858076, guid: 85e5fe5c3341bf04cb931e455f9e5961, type: 3}
+  _bloodParticle: {fileID: 6334590284349246100, guid: da83f7be68e45c24691eef5dbb914390, type: 3}
 --- !u!114 &7941301532368033170
 MonoBehaviour:
   m_ObjectHideFlags: 0
