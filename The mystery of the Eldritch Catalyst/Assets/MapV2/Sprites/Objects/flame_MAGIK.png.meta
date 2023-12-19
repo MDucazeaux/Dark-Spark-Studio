@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flame_MAGIK_6
+      name: Flame_MAGIK_6
       rect:
         serializedVersion: 2
         x: 77
@@ -137,18 +137,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f382913021dfd734bb14f38040a75640
-      internalID: 1473336346
+      spriteID: ac8d6f1dab7dfd24a925a440320978d4
+      internalID: 1689444153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flame_MAGIK_7
+      name: Flame_MAGIK_7
       rect:
         serializedVersion: 2
         x: 286
-        y: 637
+        y: 635
         width: 120
         height: 435
       alignment: 6
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b6369583e1fd8643b9511bebab9c657
-      internalID: -1416602505
+      spriteID: 085697cec81ddea458105bdb14115fdc
+      internalID: -1135553916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flame_MAGIK_9
+      name: Flame_MAGIK_9
       rect:
         serializedVersion: 2
         x: 896
         y: 637
         width: 139
-        height: 474
+        height: 489
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d38fa54cb5dcbb846906cba5035f85fd
-      internalID: -209931796
+      spriteID: efb72f923a5b3434ba0d20150c46eb06
+      internalID: -303206558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flame_MAGIK_11
+      name: Flame_MAGIK_11
       rect:
         serializedVersion: 2
         x: 1088
         y: 635
         width: 118
-        height: 527
+        height: 524
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48f91819ef51a634abaeff1d20a00571
-      internalID: 1619462682
+      spriteID: b1cbf16f635160244b586b0e57c29906
+      internalID: -1652566888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flame_MAGIK_12
+      name: Flame_MAGIK_12
       rect:
         serializedVersion: 2
         x: 507
         y: 625
         width: 127
-        height: 471
+        height: 480
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cea95f604eb4be46b99a3e5acbfef8b
-      internalID: 658004446
+      spriteID: 592af412b93cf144cb550fca67a532a5
+      internalID: 1026080208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flame_MAGIK_13
+      name: Flame_MAGIK_13
       rect:
         serializedVersion: 2
         x: 708
         y: 634
         width: 134
-        height: 487
+        height: 492
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a961759f5d43f4ba17a0ad11ce2444
-      internalID: -777086374
+      spriteID: 6fa5f6cc9beaf4d43981d6f79aaac2eb
+      internalID: -173106239
       vertices: []
       indices: 
       edges: []
@@ -251,7 +251,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ec4d68eb873cfa64c950327ec189da6c
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -259,23 +259,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      flame_MAGIK_0: 1596982243
-      flame_MAGIK_1: -1909819433
-      flame_MAGIK_10: -687002063
-      flame_MAGIK_11: 1619462682
-      flame_MAGIK_12: 658004446
-      flame_MAGIK_13: -777086374
-      flame_MAGIK_14: 1332665475
-      flame_MAGIK_15: 1418224481
-      flame_MAGIK_16: 1763391546
-      flame_MAGIK_2: -1597657453
-      flame_MAGIK_3: -2050223242
-      flame_MAGIK_4: 1481778945
-      flame_MAGIK_5: -2044635690
-      flame_MAGIK_6: 1473336346
-      flame_MAGIK_7: -1416602505
-      flame_MAGIK_8: 695577696
-      flame_MAGIK_9: -209931796
+      Flame_MAGIK_0: 1363961713
+      Flame_MAGIK_1: 2007679961
+      Flame_MAGIK_10: 904604992
+      Flame_MAGIK_11: -1652566888
+      Flame_MAGIK_12: 1026080208
+      Flame_MAGIK_13: -173106239
+      Flame_MAGIK_14: 707773131
+      Flame_MAGIK_15: 1383293936
+      Flame_MAGIK_16: -2142201095
+      Flame_MAGIK_2: -1047930344
+      Flame_MAGIK_3: 354275497
+      Flame_MAGIK_4: -155782098
+      Flame_MAGIK_5: 597212708
+      Flame_MAGIK_6: 1689444153
+      Flame_MAGIK_7: -1135553916
+      Flame_MAGIK_8: -823616562
+      Flame_MAGIK_9: -303206558
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
