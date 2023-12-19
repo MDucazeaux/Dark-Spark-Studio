@@ -69,6 +69,7 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void EquipEquipment(ItemData equipment)
     {
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.DullahanIdle);
         Character character = CharacterSelection.Instance.GetSelectedCharacter();
         switch (_slotType)
         {
@@ -93,6 +94,7 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (!Inventory.Instance.InventoryIsFull())
         {
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.DullahanIdle);
             Character character = CharacterSelection.Instance.GetSelectedCharacter();
             switch (_slotType)
             {
@@ -123,6 +125,7 @@ public class EquipmentSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void SwapEquipment(ItemData equipment)
     {
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.DullahanMoving);
         Inventory.Instance.RemoveItem(equipment);
         Character character = CharacterSelection.Instance.GetSelectedCharacter();
         switch (_slotType)

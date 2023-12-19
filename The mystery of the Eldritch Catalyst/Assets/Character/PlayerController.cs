@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
                 _pickUpText.StartShowText();
                 Destroy(ItemsOnFloor.Instance.ItemsCloseToThePlayer()[0].GameObject());
 
-                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickupItem, 1);
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickupItem, 4);
             }
         }
     }
