@@ -8250,8 +8250,8 @@ OcclusionArea:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034738248}
   serializedVersion: 2
-  m_Size: {x: 641, y: 30, z: 572}
-  m_Center: {x: 85.5, y: 0, z: 186}
+  m_Size: {x: 620, y: 30, z: 540}
+  m_Center: {x: 25, y: 15, z: 185}
   m_IsViewVolume: 1
 --- !u!4 &2034738250
 Transform:
@@ -9167,14 +9167,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 357478844898893865, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 50489ea288bc80b46965649153c9e0c1, type: 2}
-    - target: {fileID: 2152308451015371054, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 856093c25b7190e4eaf6d46651380495, type: 2}
     - target: {fileID: 5131261049764094232, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_Name
       value: Map
