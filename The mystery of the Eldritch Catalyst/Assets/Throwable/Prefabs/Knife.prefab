@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7484854455602109130}
   - component: {fileID: -7424456103133985840}
   - component: {fileID: -6207170225666300412}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 7494959438755211203}
   - component: {fileID: 2712583116678100746}
   - component: {fileID: 8680344526585312331}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
