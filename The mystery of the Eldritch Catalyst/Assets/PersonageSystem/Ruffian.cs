@@ -45,7 +45,7 @@ public class Ruffian : Character
         if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionOne && !_isDead)
         {
             Instantiate(_whiteSwoosh, transform.position + transform.forward * 2, Quaternion.identity);
-            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.NormalSwordAttack, 2);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.NormalSwordAttack);
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceAction, _enemyLayer))
             {
                 
@@ -53,7 +53,6 @@ public class Ruffian : Character
                 {
                     hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageLight);
                     Instantiate(_bloodParticle, hitInfo.transform.position, Quaternion.identity);
-                    SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab, 1);
                 }
             }
 
@@ -68,7 +67,7 @@ public class Ruffian : Character
         if (_canActionTwo && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionTwo && !_isDead)
         {
             Instantiate(_redSwoosh, transform.position + transform.forward * 2, Quaternion.identity);
-            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.HeavySwordAttack, 0.6f);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.HeavySwordAttack, 0.4f);
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceAction))
             {
                 if (hitInfo.transform.TryGetComponent(out Door door))
@@ -79,7 +78,6 @@ public class Ruffian : Character
                 {
                     hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageLight);
                     Instantiate(_bloodParticle, hitInfo.transform.position, Quaternion.identity);
-                    SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab, 1);
                 }
             }
 

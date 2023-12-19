@@ -22,7 +22,7 @@ public abstract class Entity : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         Life -= damage / ArmorMultiplier;
-        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab, 1);
+
         if (Life <= 0)
             Death();
     }

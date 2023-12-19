@@ -46,7 +46,7 @@ public class AIAttack : MonoBehaviour
                 SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.SkeletonAttaking);
                 break;
             case TheMysteriousBeing:
-                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.NormalSwordAttack);
+                //SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.)
                 break;
         }
     }

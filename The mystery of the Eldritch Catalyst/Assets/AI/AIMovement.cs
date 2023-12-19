@@ -78,7 +78,7 @@ public class AIMovement : MonoBehaviour
                 SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersMoves);
                 break;
             case Dullahan:
-                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersMoves, 2.5f);
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersMoves);
                 SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.DullahanMoving, 0.3f);
                 break;
             case Minotaur:

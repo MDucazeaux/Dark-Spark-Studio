@@ -53,7 +53,6 @@ public class CharacterSelection : MonoBehaviour
         _characterPortraitInInventory.RefreshVisual();
         
         ActionButton.Instance.ChangeSpriteActions();
-        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.ButtonClick, 0.25f);
     }
 
     public void SwitchCharacters(int character1, int character2)
@@ -61,7 +60,6 @@ public class CharacterSelection : MonoBehaviour
         string savecharacter1 = _placement[character1];
         _placement[character1] = _placement[character2];
         _placement[character2] = savecharacter1;
-        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickupItem, 3);
     }
 
     public void CharacterDeath(string name)

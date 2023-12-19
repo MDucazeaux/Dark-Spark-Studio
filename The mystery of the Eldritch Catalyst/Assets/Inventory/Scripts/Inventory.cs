@@ -70,7 +70,6 @@ public class Inventory : MonoBehaviour
 
     public void SetActive() 
     {
-        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.ButtonClick, 0.3f);
         if (!_inventoryBackground.activeSelf) 
         {
             OpenInventory();

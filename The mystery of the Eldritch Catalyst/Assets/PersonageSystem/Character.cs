@@ -59,7 +59,7 @@ public abstract class Character : Entity
                 Life = Life < 0 ? 0 : Life;
 
                 CameraScript.Instance.TakeDamage();
-                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharacterHitten, 0.4f);
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharacterHitten);
             }
 
             if (Life <= 0)
