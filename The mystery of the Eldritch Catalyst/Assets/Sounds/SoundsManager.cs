@@ -14,6 +14,9 @@ public class SoundsManager : MonoBehaviour
     [SerializeField] AudioSource _musicsPlayerAudioSource;
     [SerializeField] AudioSource _SFXPlayerAudioSource;
 
+    public AudioSource MusicsPlayerAudioSource { get { return _musicsPlayerAudioSource; } }
+    public AudioSource SFXPlayerAudioSource { get { return _SFXPlayerAudioSource; } }
+
     [Header("Sounds")]
     // Musics
     [SerializeField] AllMusics _allMusics; 
@@ -255,7 +258,7 @@ public class SoundsManager : MonoBehaviour
     }
 
     /// <summary> Randomize the music list given and play it endlessly /!\ It's a Coroutine /!\ </summary>
-    public IEnumerator PlayMusicEndlessly(TypesOfMusics typesOfMusics, float volume = 1)
+    public IEnumerator PlayMusicEndlessly(TypesOfMusics typesOfMusics)
     {
         List<AudioClip> musicList = ReturnMusic(typesOfMusics);
 
@@ -278,7 +281,6 @@ public class SoundsManager : MonoBehaviour
             for (int i = 0; i < musicList.Count; i++)
             {
                 _musicsPlayerAudioSource.clip = musicList[i];
-                _musicsPlayerAudioSource.volume = volume;
 
                 _musicsPlayerAudioSource.Play();
 
@@ -454,8 +456,10 @@ public class SoundsManager : MonoBehaviour
     /// <summary> Play a random SFX of the type of SFX you wanted </summary>
     public void PlaySFX(TypesOfSFX typesOfSFX, float volume = 1)
     {
-        _SFXPlayerAudioSource.PlayOneShot(ReturnSFX(typesOfSFX), volume);
+        _SFXPlayerAudioSource.PlayOneShot(ReturnSFX(typesOfSFX), volume * Settings.Instance.MainVolume * Settings.Instance.SfxVolume);
     }
+
+    
     #endregion
 
     #endregion

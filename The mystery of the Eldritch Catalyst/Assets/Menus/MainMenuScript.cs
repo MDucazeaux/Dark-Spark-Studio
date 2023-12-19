@@ -70,7 +70,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void OnSettings()
     {
-        Debug.Log("Settings");
+        Settings.Instance.OpenSettings();
     }
 
     public void OnCredits()
