@@ -88,7 +88,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 61d1d8beded665443b7c961d3fda849d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,12 +109,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 24
-  m_Sprite: {fileID: 1473336346, guid: 62ebf2c28430b00448ff6fed85bcab14, type: 3}
+  m_Sprite: {fileID: 1689444153, guid: 62ebf2c28430b00448ff6fed85bcab14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.595, y: 1.955}
+  m_Size: {x: 6, y: 6.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -130,7 +130,7 @@ Animator:
   m_GameObject: {fileID: 1197888087894797919}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92b6ef15d0552c547b9bac25e81b5716, type: 2}
+  m_Controller: {fileID: 9100000, guid: a957d3482019cff4daddec0375fd7a8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5269,7 +5269,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 61d1d8beded665443b7c961d3fda849d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5290,7 +5290,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 24
-  m_Sprite: {fileID: 1473336346, guid: 62ebf2c28430b00448ff6fed85bcab14, type: 3}
+  m_Sprite: {fileID: 1689444153, guid: 62ebf2c28430b00448ff6fed85bcab14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5311,7 +5311,7 @@ Animator:
   m_GameObject: {fileID: 6535305789429605774}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92b6ef15d0552c547b9bac25e81b5716, type: 2}
+  m_Controller: {fileID: 9100000, guid: a957d3482019cff4daddec0375fd7a8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
