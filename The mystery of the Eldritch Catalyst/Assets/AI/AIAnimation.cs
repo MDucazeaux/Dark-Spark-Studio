@@ -89,4 +89,6 @@ public class AIAnimation : MonoBehaviour
                 break;
         }
     }
+
+    public Transform SpriteTransform {  get { return _spriteTransform; } }
 }

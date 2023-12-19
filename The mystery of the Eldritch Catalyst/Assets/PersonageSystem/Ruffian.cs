@@ -13,6 +13,8 @@ public class Ruffian : Character
     [SerializeField] private GameObject _whiteSwoosh;
     [SerializeField] private GameObject _redSwoosh;
 
+    [SerializeField] private GameObject _bloodParticle;
+
     private void Awake()
     {
         MaxLife = 125;
@@ -50,6 +52,7 @@ public class Ruffian : Character
                 if (hitInfo.transform.CompareTag("Enemy"))
                 {
                     hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageLight);
+                    Instantiate(_bloodParticle, hitInfo.transform.position, Quaternion.identity);
                 }
             }
 
@@ -74,6 +77,7 @@ public class Ruffian : Character
                 else if (hitInfo.transform.CompareTag("Enemy"))
                 {
                     hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageLight);
+                    Instantiate(_bloodParticle, hitInfo.transform.position, Quaternion.identity);
                 }
             }
 
