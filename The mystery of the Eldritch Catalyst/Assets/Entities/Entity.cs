@@ -27,17 +27,33 @@ public abstract class Entity : MonoBehaviour
             Death();
     }
 
-    public void SetArmorMultiplier(float number)
-    { ArmorMultiplier = number; }
+    // Armor
+    public void AddArmorMultiplier(float number)
+    { ArmorMultiplier += number; }
 
-    public void SetStrenghtMultiplier(float number)
-    { StrengthMultiplier = number; }
+    public void ReduceArmorMultiplier(float number)
+    { ArmorMultiplier -= number; }
 
-    public void SetMagicalStrenghtMultiplier(float number)
-    { MagicalMultiplier = number; }
+    // Strenght
+    public void AddStrenghtMultiplier(float number)
+    { StrengthMultiplier += number; }
 
-    public void SetHealMultiplier(float number)
-    { HealMultiplier = number; }
+    public void ReduceStrenghtMultiplier(float number)
+    { StrengthMultiplier -= number; }
+
+    // Magical strenght
+    public void AddMagicalStrenghtMultiplier(float number)
+    { MagicalMultiplier += number; }
+
+    public void ReduceMagicalStrenghtMultiplier(float number)
+    { MagicalMultiplier -= number; }
+
+    // Heal
+    public void AddHealMultiplier(float number)
+    { HealMultiplier += number; }
+
+    public void ReduceHealMultiplier(float number)
+    { HealMultiplier -= number; }
 
     public ItemData GetArmor()
     { return _armor; }
