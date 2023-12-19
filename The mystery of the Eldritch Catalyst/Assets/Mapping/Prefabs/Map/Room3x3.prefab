@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5079652447811923880}
   - component: {fileID: 4218796190412623126}
   - component: {fileID: 5186939696447109588}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallNorthLeft
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 6263119457678384163}
   - component: {fileID: 4170514605361008102}
   - component: {fileID: 7058782543218687371}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallLeftFront
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 5832604318651658600}
   - component: {fileID: 5439453318797052886}
   - component: {fileID: 833165738229477563}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallSouthMiddle
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 7900120514794745281}
   - component: {fileID: 7123284252768429202}
   - component: {fileID: 8922446166657432797}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallEstMiddle
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1103,7 +1103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1815985036146352457}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallsWest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1417,7 +1417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 803203015644491270}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallsSouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1488,7 +1488,7 @@ GameObject:
   - component: {fileID: 8080470037376415299}
   - component: {fileID: 3211531728093216758}
   - component: {fileID: 3597938520072387157}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallSouthRight
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1594,7 +1594,7 @@ GameObject:
   - component: {fileID: 446619751048828867}
   - component: {fileID: 915222085805410009}
   - component: {fileID: 4653724899955921853}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallLeftBack
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1980,7 +1980,7 @@ GameObject:
   - component: {fileID: 8934514261714479209}
   - component: {fileID: 7341686345694179546}
   - component: {fileID: 5344920089529148876}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallNorthMiddle
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2192,7 +2192,7 @@ GameObject:
   - component: {fileID: 1771139394751314402}
   - component: {fileID: 7209146398987829944}
   - component: {fileID: 9157472270197117867}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallEstFront
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2298,7 +2298,7 @@ GameObject:
   - component: {fileID: 2422866552899185400}
   - component: {fileID: 4301921294165682868}
   - component: {fileID: 84790639436708500}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallLeftMiddle
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2404,7 +2404,7 @@ GameObject:
   - component: {fileID: 247539627520553696}
   - component: {fileID: 452530537018227803}
   - component: {fileID: 5482100661337397265}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallNorthRight
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2507,7 +2507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1714584962275652071}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallsEst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2650,7 +2650,7 @@ GameObject:
   - component: {fileID: 6356564253052224402}
   - component: {fileID: 5858075876182496739}
   - component: {fileID: 3719912925269696426}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallSouthLeft
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3245,7 +3245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7234432968796323110}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: AllWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3280,7 +3280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6782060386142796830}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallsNorth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3423,7 +3423,7 @@ GameObject:
   - component: {fileID: 3512732709727352709}
   - component: {fileID: 4495027777537718423}
   - component: {fileID: 7100698154248483090}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WalEstBack
   m_TagString: Wall
   m_Icon: {fileID: 0}

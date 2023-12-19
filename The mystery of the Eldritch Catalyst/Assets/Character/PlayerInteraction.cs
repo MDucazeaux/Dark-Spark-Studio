@@ -18,9 +18,7 @@ public class PlayerInteraction : MonoBehaviour
     private void GetInteractable()
     {
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, c_tileSize, 1 << LayerMask.NameToLayer("Interactable"));
-        
-
+        Collider[] colliders = Physics.OverlapSphere(transform.position, c_tileSize);
 
         if (colliders.Length > 0 )
         {
@@ -28,33 +26,43 @@ public class PlayerInteraction : MonoBehaviour
 
             for (int i = 0; i < colliders.Length; i++)
             {
-
-                if (colliders[i].TryGetComponent(out Button button))
-               
+                if (!colliders[i].CompareTag("Interactable"))
                 {
-                    button.Interaction();
-                    break;
+                    continue;
+                }
+                if (colliders[i].TryGetComponent(out Button button))
+                {
+                    if (button.CanInteract())
+                    {
+                        button.Interaction();
+                        break;
+                    }
                 }
                 else if (colliders[i].TryGetComponent(out Door door))
                 {
                     if (door.CanInteract())
                     {
-                        if (Inventory.Instance.IsInInventory("Key"))
-                        {
-                            door.Interaction();
-                            Inventory.Instance.RemoveItemByName("Key");
-                            break;
-                        }
-                        else
-                        {
-                            NarratifManager.Instance.FeedBackNoKey();
-                            break;
-                        }
+                        door.Interaction();
+                        break;
+                    }
+                    if (Inventory.Instance.IsInInventory("Key") && door.IsLocked && !door.IsOpened)
+                    {
+                        Inventory.Instance.RemoveItemByName("Key");
+                        break;
+                    }
+                    else if (door.IsLocked && !door.IsOpened)
+                    {
+                        NarratifManager.Instance.FeedBackNoKey();
+                        break;
                     }
                 }
                 else if (colliders[i].TryGetComponent(out Chest chest))
                 {
                     if (chest.CanInteract())
+                    {
+                        chest.Interaction();
+                    }
+                    else
                     {
                         if (Inventory.Instance.IsInInventory("Key"))
                         {

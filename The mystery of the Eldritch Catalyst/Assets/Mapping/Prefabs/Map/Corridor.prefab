@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 8451372896168147026}
   - component: {fileID: 6691086228818402428}
   - component: {fileID: 6465508606096203615}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: North
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 8512684391935266660}
   - component: {fileID: 8266839014186185544}
   - component: {fileID: 5201304759402099216}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: West
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 451870571983192782}
   - component: {fileID: 7432709508059674331}
   - component: {fileID: 8545151554251608766}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Est
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -565,7 +565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6198517514589426634, guid: ae24ce90e093fd4448db8d3f0514b2b7, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6198517514589426634, guid: ae24ce90e093fd4448db8d3f0514b2b7, type: 3}
       propertyPath: m_TagString

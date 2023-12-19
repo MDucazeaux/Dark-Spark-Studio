@@ -55,7 +55,7 @@ public class Thief : Character
             {
                 if (hitInfo.transform.TryGetComponent(out Door door))
                 {
-                    if (Inventory.Instance.IsInInventory("Lock Picking Tool"))
+                    if (door.IsLocked && Inventory.Instance.IsInInventory("Lock Picking Tool"))
                     {
                         door.Unlock();
                         Inventory.Instance.RemoveItemByName("Lock Picking Tool");
@@ -65,13 +65,16 @@ public class Thief : Character
                 }
                 else if (hitInfo.transform.TryGetComponent(out Chest chest))
                 {
-                    if (Inventory.Instance.IsInInventory("Lock Picking Tool"))
+                    if (chest.IsLocked)
                     {
-                        chest.Unlock();
-                        Inventory.Instance.RemoveItemByName("Lock Picking Tool");
+                        if (Inventory.Instance.IsInInventory("Lock Picking Tool"))
+                        {
+                            chest.Unlock();
+                            Inventory.Instance.RemoveItemByName("Lock Picking Tool");
+                        }
+                        else
+                            NarratifManager.Instance.FeedBackNoLockpick();
                     }
-                    else
-                        NarratifManager.Instance.FeedBackNoLockpick();
                 }
             }
 
