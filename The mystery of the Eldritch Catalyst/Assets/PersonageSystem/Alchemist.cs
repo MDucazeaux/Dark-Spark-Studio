@@ -63,7 +63,7 @@ public class Alchemist : Character
 
             StartCooldownActionTwo();
 
-            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.TransmutationSpell);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.TransmutationSpell, 0.6f);
         }
     }
 }

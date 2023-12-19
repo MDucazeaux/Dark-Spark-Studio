@@ -69,7 +69,7 @@ public class Ruffian : Character
             {
                 if (hitInfo.transform.TryGetComponent(out Door door))
                 {
-                    door.Unlock();
+                    door.BreakInteractable();
                 }
                 else if (hitInfo.transform.CompareTag("Enemy"))
                 {

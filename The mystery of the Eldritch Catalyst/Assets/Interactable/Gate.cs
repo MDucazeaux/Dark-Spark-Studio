@@ -26,7 +26,7 @@ public class Gate : Interactable
     }
     public IEnumerator Open()
     {
-        // SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.OpeningGate, 0.25f);
         _bIsOpened = true;
         Vector3 _startingPos = _transform.position;
         Vector3 _targetPos = _startingPos;

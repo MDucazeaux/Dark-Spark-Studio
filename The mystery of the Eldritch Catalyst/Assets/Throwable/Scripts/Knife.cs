@@ -17,6 +17,7 @@ public class Knife : Throwable
         if (other.gameObject.CompareTag("Wall"))
         {
             Explode(false);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeHitWall);
         }
 
         if (other.gameObject.CompareTag("Enemy"))
@@ -24,6 +25,7 @@ public class Knife : Throwable
 
             other.GetComponentInParent<Enemy>().TakeDamage(_damage);
             Explode(true);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab);
         }
     }
 

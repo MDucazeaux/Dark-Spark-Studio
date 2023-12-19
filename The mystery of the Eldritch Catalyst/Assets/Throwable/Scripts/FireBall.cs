@@ -32,6 +32,7 @@ public class FireBall : Throwable
         if (_touchParticle)
         {
             Instantiate(_touchParticle, transform.position, transform.rotation);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.FireBallExplosion, 0.85f);
         }
     }
 }

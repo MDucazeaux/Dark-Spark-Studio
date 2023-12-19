@@ -16,6 +16,7 @@ public class PoisonedPotion : Throwable
         if (other.gameObject.CompareTag("Wall"))
         {
             Explode(false);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PotionBreaking);
         }
 
         if (other.gameObject.CompareTag("Enemy"))
@@ -23,6 +24,7 @@ public class PoisonedPotion : Throwable
 
             other.GetComponentInParent<Enemy>().TakeDamage(_damage);
             Explode(true);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PotionBreaking);
         }
     }
 

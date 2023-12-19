@@ -48,13 +48,15 @@ public class Door : Interactable
 
     public override void BreakInteractable()
     {
+        _bIsOpened = true;
         transform.GetComponent<MeshCollider>().enabled = false;
+        StopAllCoroutines();
         StartCoroutine(BreakAnimation());
     }
 
     private IEnumerator BreakAnimation()
     {
-        _bIsOpened = true;
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.SlammingDoor);
 
         if (_breakParticles)
         {
