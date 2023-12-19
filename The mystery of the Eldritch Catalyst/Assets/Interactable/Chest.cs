@@ -51,4 +51,6 @@ public class Chest : Interactable
         }
         gameObject.SetActive(false);
     }
+
+    public bool IsOpened { get { return _bIsOpened; } }
 }

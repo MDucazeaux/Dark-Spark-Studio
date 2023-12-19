@@ -54,4 +54,6 @@ public class Button : Interactable
     }
 
     public bool IsHidden { get { return _bIsHidden; } set { _bIsHidden = value; } }
+
+    public bool IsActivated {  get { return _bIsActivated; } }
 }

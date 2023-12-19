@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : Interactable
@@ -8,6 +9,8 @@ public class Door : Interactable
     [SerializeField] private Transform _parentTransform;
 
     [SerializeField] private GameObject _breakParticles;
+
+    [SerializeField] private List<MeshCollider> colliders;
 
     public override void Interaction()
     {
@@ -74,6 +77,8 @@ public class Door : Interactable
     }
 
     public bool IsLocked { get { return _bIsLocked; } set { _bIsLocked = value; } }
+
+    public bool IsOpened {  get { return _bIsOpened; } }
 
     public void Unlock()
     { _bIsLocked = false; }

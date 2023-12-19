@@ -34,7 +34,7 @@ public class AIDetection : MonoBehaviour
             return false; //to optimize performance
         }
 
-        if (Physics.Raycast(_transform.position, (_playerTransform.position - _transform.position).normalized, out RaycastHit hitInfo, _detectionRange, ~(1 << _layerWall)))
+        if (Physics.Raycast(_transform.position, (_playerTransform.position - _transform.position).normalized, out RaycastHit hitInfo, _detectionRange))
         {
             if (hitInfo.collider.tag == "Player")
             {

@@ -119,5 +119,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bIsHidden: 0
-  _connectedGates:
-  - {fileID: 0}
+  _connectedGates: []
