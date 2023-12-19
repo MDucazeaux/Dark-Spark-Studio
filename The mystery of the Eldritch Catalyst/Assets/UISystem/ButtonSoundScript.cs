@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -7,27 +5,15 @@ public class ButtonSoundScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 {
     public void OnPointerClick(PointerEventData eventData)
     {
-        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.ButtonClick);
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.ButtonClick, 0.3f);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.ButtonHover);
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.ButtonHover, 0.3f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

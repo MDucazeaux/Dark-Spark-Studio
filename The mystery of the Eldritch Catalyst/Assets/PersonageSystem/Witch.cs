@@ -40,7 +40,7 @@ public class Witch : Character
 
             StartCooldownActionOne();
 
-            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.FireBallSpell, 0.5f);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.FireBallSpell, 0.3f);
         }
     }
 

@@ -181,6 +181,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: ab205adb04630f947b7fd3e47ef727eb, type: 3}
     - {fileID: 8300000, guid: 5f7a9045b13740c45a9c9304d82ef8b1, type: 3}
     _whispers: []
+    _buttonHover:
+    - {fileID: 8300000, guid: 2929bbc1e5d13b9438b5a6d2914a2b3b, type: 3}
+    _buttonPressed:
+    - {fileID: 8300000, guid: 41f8bb37abaf3b04ea4c082f7582ae32, type: 3}
 --- !u!1 &3698390827710894465
 GameObject:
   m_ObjectHideFlags: 0

@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169eaf9d93c364448856dfa2bae27f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
+  _speed: 30
   _touchParticle: {fileID: 6334590284349246100, guid: da83f7be68e45c24691eef5dbb914390, type: 3}
   _dustParticle: {fileID: 9068169796899452077, guid: 5992d1ef962de294d8053ee611fbd9d3, type: 3}
 --- !u!54 &-6207170225666300412
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 61d1d8beded665443b7c961d3fda849d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

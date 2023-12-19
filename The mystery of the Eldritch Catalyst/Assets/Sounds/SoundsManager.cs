@@ -314,16 +314,16 @@ public class SoundsManager : MonoBehaviour
         {
             #region Player's actions
             case TypesOfSFX.CharactersMoves:
-                return _allSFX._charactersMoves[Random.Range(0, _allSFX._charactersMoves.Length - 1)];
+                return _allSFX._charactersMoves[Random.Range(0, _allSFX._charactersMoves.Length)];
 
             case TypesOfSFX.CharactersRotate:
-                return _allSFX._charactersRotate[Random.Range(0, _allSFX._charactersRotate.Length - 1)];
+                return _allSFX._charactersRotate[Random.Range(0, _allSFX._charactersRotate.Length)];
 
             case TypesOfSFX.PickupItem:
-                return _allSFX._pickupItem[Random.Range(0, _allSFX._pickupItem.Length - 1)];
+                return _allSFX._pickupItem[Random.Range(0, _allSFX._pickupItem.Length)];
 
             case TypesOfSFX.OpeningDoor:
-                return _allSFX._openingDoor[Random.Range(0, _allSFX._openingDoor.Length - 1)];
+                return _allSFX._openingDoor[Random.Range(0, _allSFX._openingDoor.Length)];
             #endregion
 
             #region Character's moves
@@ -461,6 +461,11 @@ public class SoundsManager : MonoBehaviour
             case TypesOfSFX.EvilWizardKilled:
                 return _allSFX._evilWizardKilled[Random.Range(0, _allSFX._evilWizardKilled.Length)];
             #endregion
+
+            case TypesOfSFX.ButtonHover:
+                return _allSFX._buttonHover[0];
+            case TypesOfSFX.ButtonClick:
+                return _allSFX._buttonPressed[0];
 
             #region Environment
             case TypesOfSFX.WaterDrop:
