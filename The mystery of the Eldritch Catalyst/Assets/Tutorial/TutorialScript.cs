@@ -169,7 +169,6 @@ public class TutorialScript : MonoBehaviour
 
     private void UpdateText()
     {
-        print(TutorialId);
         switch (_tutorialId)
         {
             case 0:
