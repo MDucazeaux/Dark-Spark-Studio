@@ -100,11 +100,11 @@ public class Inventory : MonoBehaviour
         return c_inventorySize == _content.Count;
     }
 
-    public bool IsInInventory(ItemData item)
+    public bool IsInInventory(string item)
     {
         for (int i = 0; i < _content.Count; i++)
         {
-            if (_content[i] == item)
+            if (_content[i].GetName() == item)
             {
                 return true;
             }
