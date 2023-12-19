@@ -130,6 +130,10 @@ public abstract class Character : Entity
         CharacterSelection.Instance.CharacterDeath(Name);
 
         NarratifManager.Instance.FeedBackCharacterDie(Forename);
+
+        // Checking if all characters are dead
+        CharacterDeathManager.Instance.AreAllCharactersDead();
+
     }
 
     public bool IsDead { get { return _isDead; } }

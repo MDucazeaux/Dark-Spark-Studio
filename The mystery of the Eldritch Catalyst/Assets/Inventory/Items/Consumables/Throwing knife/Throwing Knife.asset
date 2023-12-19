@@ -17,7 +17,7 @@ MonoBehaviour:
     would be a good idea
   _icon: {fileID: 21300000, guid: 9d23b353c3ff5314b9e9bb6e4588b687, type: 3}
   _prefab: {fileID: 7493025506670894982, guid: 0264fdcb2af5cdc418b2371205a7761a, type: 3}
-  _itemType: 2
+  _itemType: 4
   _healing: 0
   _staminaStats: 0
   _armorStats: 0
