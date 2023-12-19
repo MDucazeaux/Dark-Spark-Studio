@@ -415,7 +415,7 @@ public class SoundsManager : MonoBehaviour
 
             // Dullahan
             case TypesOfSFX.DullahanIdle:
-                return _allSFX._skeletonIdle[Random.Range(0, _allSFX._skeletonIdle.Length)];
+                return _allSFX._dullahanIdle[Random.Range(0, _allSFX._dullahanIdle.Length)];
 
             case TypesOfSFX.DullahanMoving:
                 return _allSFX._dullahanMoving[Random.Range(0, _allSFX._dullahanMoving.Length)];

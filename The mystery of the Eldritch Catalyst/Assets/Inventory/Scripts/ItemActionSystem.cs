@@ -134,6 +134,7 @@ public class ItemActionSystem : MonoBehaviour
     {
         if (!_playerMovement.IsMoving)
         {
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickupItem, 4);
             GameObject instantiatedItem = Instantiate(_itemCurrentlySelected.GetPrefab());
             instantiatedItem.transform.position = _dropPoint.position;
             Inventory.Instance.RemoveItem(_itemCurrentlySelected);
