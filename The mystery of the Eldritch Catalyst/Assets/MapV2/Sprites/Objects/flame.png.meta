@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 08745471ab79abe47aa4cae97105d708
+guid: 1febd34fa622bea43a2223e9bdeeed02
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 77
-        y: 631
+        y: 633
         width: 119
         height: 391
       alignment: 6
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7e79e4a3100dc24683c3fd13a3c0453
-      internalID: 827600268
+      spriteID: b75548cfb2976564ebca4215bd69e4e9
+      internalID: 1073728041
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8afdec56bc4668444b2fed56794c5da2
-      internalID: 210360352
+      spriteID: 6d87de8a18922d34f862c765060e7dbd
+      internalID: -1804907444
       vertices: []
       indices: 
       edges: []
@@ -169,9 +169,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 896
-        y: 637
+        y: 636
         width: 139
-        height: 480
+        height: 475
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a4889bf708810645889065643e9f4c3
-      internalID: 52833845
+      spriteID: f6826b6a7522fc349be2707d4acfd662
+      internalID: 2051899293
       vertices: []
       indices: 
       edges: []
@@ -192,7 +192,7 @@ TextureImporter:
         x: 1088
         y: 635
         width: 118
-        height: 528
+        height: 525
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a26ae3b71dec5524f8574b1b9638446e
-      internalID: 2071223057
+      spriteID: 5493d3968d2c02e4ea803ba757ab4a3d
+      internalID: 1550218970
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: flame2_12
       rect:
         serializedVersion: 2
-        x: 508
+        x: 507
         y: 625
         width: 127
-        height: 472
+        height: 470
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 112feb790d2e8c0419e393717dca9670
-      internalID: 1883854863
+      spriteID: cd4a3d374ee7f3b48952906030304c6a
+      internalID: 1649133555
       vertices: []
       indices: 
       edges: []
@@ -234,7 +234,7 @@ TextureImporter:
         x: 708
         y: 634
         width: 134
-        height: 495
+        height: 491
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e34f3c6c0a06acb488e0530713a6b064
-      internalID: -1414635585
+      spriteID: d157088d767c5674288cbdb9c7c231f4
+      internalID: 2122671048
       vertices: []
       indices: 
       edges: []
@@ -251,7 +251,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 74ad1c489b2540544acc80f412b01416
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -259,23 +259,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      flame2_0: -1408507033
-      flame2_1: 302231516
-      flame2_10: 1041965048
-      flame2_11: 2071223057
-      flame2_12: 1883854863
-      flame2_13: -1414635585
-      flame2_14: 1679711455
-      flame2_15: 1072994447
-      flame2_16: -1658458243
-      flame2_2: 1570794739
-      flame2_3: 1473627218
-      flame2_4: 60813851
-      flame2_5: -1419386649
-      flame2_6: 827600268
-      flame2_7: 210360352
-      flame2_8: -827217522
-      flame2_9: 52833845
+      flame2_0: 1358974423
+      flame2_1: -188846924
+      flame2_10: 959828904
+      flame2_11: 1550218970
+      flame2_12: 1649133555
+      flame2_13: 2122671048
+      flame2_14: 493706279
+      flame2_15: 786302558
+      flame2_16: 282625743
+      flame2_2: -363772975
+      flame2_3: 1898529341
+      flame2_4: 767463596
+      flame2_5: -1855492810
+      flame2_6: 1073728041
+      flame2_7: -1804907444
+      flame2_8: -1079699866
+      flame2_9: 2051899293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
