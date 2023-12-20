@@ -98,7 +98,7 @@ public class DropManager : MonoBehaviour
         for (int i = 0; i < _dropList.Count; i++)
         {
             GameObject instantiatedItem = Instantiate(_dropList[i].GetPrefab());
-            instantiatedItem.transform.position = transform.position;
+            instantiatedItem.transform.position = transform.position + new Vector3(UnityEngine.Random.Range(0, 8) - 4, 0, UnityEngine.Random.Range(0, 8) - 4);
         }
     }
 
@@ -108,7 +108,7 @@ public class DropManager : MonoBehaviour
         for (int i = 0; i < _dropList.Count; i++)
         {
             GameObject instantiatedItem = Instantiate(_dropList[i].GetPrefab());
-            instantiatedItem.transform.position = transform.position;
+            instantiatedItem.transform.position = transform.position + new Vector3(UnityEngine.Random.Range(0, 8) - 4, 0, UnityEngine.Random.Range(0, 8) - 4);
         }
     }
 }
