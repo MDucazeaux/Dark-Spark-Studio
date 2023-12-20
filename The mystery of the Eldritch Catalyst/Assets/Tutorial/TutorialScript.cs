@@ -195,7 +195,7 @@ public class TutorialScript : MonoBehaviour
                 _text.text = "Okay that could have gotten worse\nLet's lockpick that chest with the thief and then open it with [r]";
                 break;
             case 8:
-                _text.text = "Nice we can heal ourselves with that !\nPick this item with [f]";
+                _text.text = "Nice we can heal ourselves with that !\nWalk on the item then pick it with [f]";
                 break;
             case 9:
                 _text.text = "Click on your bag to open the inventory\n then click on the item you just picked up and heal yourself";
