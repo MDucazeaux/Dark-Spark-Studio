@@ -5503,6 +5503,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5047132237727499581, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 5131261049764094232, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_Name
       value: Map
