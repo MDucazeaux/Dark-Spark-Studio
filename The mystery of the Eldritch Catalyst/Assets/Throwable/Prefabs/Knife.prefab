@@ -102,6 +102,39 @@ MonoBehaviour:
   _speed: 30
   _touchParticle: {fileID: 6334590284349246100, guid: da83f7be68e45c24691eef5dbb914390, type: 3}
   _dustParticle: {fileID: 9068169796899452077, guid: 5992d1ef962de294d8053ee611fbd9d3, type: 3}
+  _curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0000006360933
+      value: 0.0031461716
+      inSlope: 4.2331157
+      outSlope: 4.2331157
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.043146312
+      value: 0.18578681
+      inSlope: 3.0631495
+      outSlope: 3.0631495
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.040205166
+    - serializedVersion: 3
+      time: 0.98498535
+      value: -0.045581818
+      inSlope: -4.5170183
+      outSlope: -4.5170183
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.025744356
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!135 &8793687703646043062
 SphereCollider:
   m_ObjectHideFlags: 0
