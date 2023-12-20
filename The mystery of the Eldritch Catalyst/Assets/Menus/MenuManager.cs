@@ -45,6 +45,11 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        _settingsMenu = Settings.Instance.gameObject;
+    }
+
     /// <summary> Return if the menu given is open </summary>
     public bool IsMenuOpen(MenuEnum menu)
     {
@@ -167,6 +172,11 @@ public class MenuManager : MonoBehaviour
         _menuStruct.WinMenu.SetActive(false);
         _menuStruct.LoseMenu.SetActive(false);
         _settingsMenu.SetActive(false);
+    }
+
+    public void OpenSettings()
+    {
+        Settings.Instance.OpenSettings();
     }
     #endregion
 }
