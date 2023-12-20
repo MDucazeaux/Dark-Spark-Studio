@@ -40,6 +40,12 @@ public class Ruffian : Character
         Forename = "Magnus Stormblade";
     }
 
+    private void Start()
+    {
+        this.SetWeapon(Inventory.Instance.GetItemByName("Rusty Sword"));
+        Inventory.Instance.RemoveItemByName("Rusty Sword");
+    }
+
     public override void ActionOne()
     {
         if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionOne && !_isDead)
