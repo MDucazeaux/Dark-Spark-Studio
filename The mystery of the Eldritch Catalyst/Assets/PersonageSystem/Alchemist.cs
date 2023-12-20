@@ -11,6 +11,8 @@ public class Alchemist : Character
 
     private LayerMask _enemyLayer;
 
+    [SerializeField] private GameObject _transmutationSpellVisual;
+
     private void Awake()
     {
         MaxLife = 100;
@@ -64,6 +66,8 @@ public class Alchemist : Character
             StartCooldownActionTwo();
 
             SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.TransmutationSpell, 0.6f);
+
+            Instantiate(_transmutationSpellVisual, _transmutationSpellVisual.transform.position, transform.rotation);
         }
     }
 }

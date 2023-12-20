@@ -145,4 +145,6 @@ public abstract class Character : Entity
     public float CoolDownActionOne { get { return _coolDownActionOne; } }
     public float TimeActionTwo { get { return _timeActionTwo; } }
     public float CoolDownActionTwo { get { return _coolDownActionTwo; } }
+
+    public float ProtectionTime { get { return _protectionTime; } }
 }
