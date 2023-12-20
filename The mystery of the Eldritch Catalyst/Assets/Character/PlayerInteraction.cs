@@ -41,10 +41,6 @@ public class PlayerInteraction : MonoBehaviour
                 }
                 else if (colliders[i].TryGetComponent(out Door door))
                 {
-                    print("\n");
-                    print(Inventory.Instance.IsInInventory("Key"));
-                    print(door.IsLocked);
-                    print(door.IsOpened);
 
                     if (door.CanInteract() && !door.IsLocked)
                     {
