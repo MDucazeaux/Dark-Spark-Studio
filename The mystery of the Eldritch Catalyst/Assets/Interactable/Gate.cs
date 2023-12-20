@@ -5,7 +5,7 @@ public class Gate : Interactable
 {
     private Transform _transform;
     [SerializeField] private bool _bIsLocked = true;
-    private bool _bIsOpened = false;
+    [SerializeField] private bool _bIsOpened = false;
 
     private void Awake()
     {
