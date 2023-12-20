@@ -48,7 +48,7 @@ public class Alchemist : Character
     {
         if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionOne && !_isDead)
         {
-            Instantiate(_potion).GetComponent<PoisonedPotion>().SetValues(transform.position, transform.forward);
+            Instantiate(_potion).GetComponent<PoisonedPotion>().SetValues(Camera.main.transform.position, transform.forward);
 
             UseStamina(StaminaLoseActionOne);
 
@@ -73,7 +73,7 @@ public class Alchemist : Character
 
             SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.TransmutationSpell, 0.6f);
 
-            Instantiate(_transmutationSpellVisual, transform.position, transform.rotation);
+            Instantiate(_transmutationSpellVisual, Camera.main.transform.position, transform.rotation);
         }
     }
 }

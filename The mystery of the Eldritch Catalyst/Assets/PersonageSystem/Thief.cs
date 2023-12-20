@@ -45,7 +45,7 @@ public class Thief : Character
     {
         if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionOne && !_isDead)
         {
-            Instantiate(_knife).GetComponent<Knife>().SetValues(transform.position, transform.forward);
+            Instantiate(_knife).GetComponent<Knife>().SetValues(Camera.main.transform.position, transform.forward);
 
             UseStamina(StaminaLoseActionOne);
 

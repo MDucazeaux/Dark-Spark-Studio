@@ -10,7 +10,7 @@ public class ProjectSpell : MonoBehaviour
     private void Awake()
     {
         _transform = transform;
-        _transform.position = new Vector3(_transform.position.x, 3, _transform.position.z);
+        _transform.position = new Vector3(_transform.position.x, 5, _transform.position.z);
     }
 
     private void Start()

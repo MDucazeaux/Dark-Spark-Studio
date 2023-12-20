@@ -19,6 +19,6 @@ public class ProjectShield : MonoBehaviour
 
     void Update()
     {
-        _transform.localPosition = Vector3.Lerp(_transform.localPosition, new Vector3(0, 0, 1) * _travelDistance, _travelSpeed * Time.deltaTime);
+        _transform.localPosition = Vector3.Lerp(_transform.localPosition, new Vector3(0, 0.15f, 1) * _travelDistance, _travelSpeed * Time.deltaTime);
     }
 }

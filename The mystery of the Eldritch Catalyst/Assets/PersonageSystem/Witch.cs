@@ -69,7 +69,7 @@ public class Witch : Character
 
             SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.InvincibilitySpell);
 
-            Instantiate(_protectionSpellVisual, transform.position, transform.rotation, transform).GetComponent<DestroyAfterTime>().SetTime(CharacterSelection.Instance.Characters["Witch"].ProtectionTime);
+            Instantiate(_protectionSpellVisual, Camera.main.transform.position, transform.rotation, transform).GetComponent<DestroyAfterTime>().SetTime(CharacterSelection.Instance.Characters["Witch"].ProtectionTime);
         }
     }
 }
