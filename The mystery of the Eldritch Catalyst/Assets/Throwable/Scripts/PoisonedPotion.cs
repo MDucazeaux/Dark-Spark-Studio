@@ -57,7 +57,7 @@ public class PoisonedPotion : Throwable
         if (other.gameObject.CompareTag("Enemy"))
         {
 
-            other.GetComponentInParent<Enemy>().TakeDamage(_damage);
+            other.GetComponentInParent<Enemy>().StartTakeDamageInTime();
             Explode(true);
             SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PotionBreaking);
         }
