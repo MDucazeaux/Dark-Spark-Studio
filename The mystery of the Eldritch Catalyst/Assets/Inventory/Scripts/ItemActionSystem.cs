@@ -47,6 +47,7 @@ public class ItemActionSystem : MonoBehaviour
         if (item == null)
         {
             _actionPanel.SetActive(false);
+            HealChoicePanel.Instance.CloseHealChoicePanel();
             return;
         }
         switch (item.GetItemType())

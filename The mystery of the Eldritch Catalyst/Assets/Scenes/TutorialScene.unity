@@ -11666,6 +11666,8 @@ MonoBehaviour:
   _inventorySlotsParent: {fileID: 1399940690}
   _healChoicePanel: {fileID: 101880673}
   _transparentSlot: {fileID: 21300000, guid: 69ae240fd68b67c459d30f071f52d118, type: 3}
+  _armorSlot: {fileID: 1815405982}
+  _weaponSlot: {fileID: 1696305123}
 --- !u!4 &1828479074
 Transform:
   m_ObjectHideFlags: 0
