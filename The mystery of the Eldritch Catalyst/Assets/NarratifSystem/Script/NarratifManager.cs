@@ -127,7 +127,7 @@ public class NarratifManager : MonoBehaviour
                     {
                         _canPassText = false;
                         DesableDialogue();
-                        //gamemanager launch boss fight
+                        GameManager.Instance.LaunchBossFight();
                         Debug.Log("end boss fight");
                     }
                     else
@@ -181,6 +181,12 @@ public class NarratifManager : MonoBehaviour
         _phase = Enum.GetValues(typeof(GameManager.NaratifPhase)).Cast<GameManager.NaratifPhase>().SkipWhile(e => e != _phase).Skip(1).First();
         _phase = _phase == GameManager.NaratifPhase.None ? GameManager.NaratifPhase.Intro : _phase;
 
+        ChangePhase(_phase);
+    }
+
+    public void ChangePhase(GameManager.NaratifPhase phase)
+    {
+        _phase = phase;
         _canPassText = true;
         _index = 0;
 

@@ -26,4 +26,15 @@ public class GameManager : MonoBehaviour
     {
         playerController.enabled = true;
     }
+
+    public void LaunchDialogueBeforeBossFight()
+    {
+        PlayerController.Instance.enabled = false;
+        NarratifManager.Instance.ChangePhase(NaratifPhase.BeforeBossFight);
+    }
+
+    public void LaunchBossFight()
+    {
+        playerController.enabled = true;
+    }
 }
