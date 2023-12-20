@@ -50,9 +50,9 @@ public class Settings : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void OnFullscreen(bool fullscreen)
+    public void OnFullscreen()
     {
-        Screen.fullScreen = fullscreen;
+        Screen.fullScreen = !Screen.fullScreen;
     }
 
     public void OnResolutionChange()
