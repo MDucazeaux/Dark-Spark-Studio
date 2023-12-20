@@ -21,6 +21,7 @@ public abstract class Character : Entity
     protected bool _canActionTwo = true;
 
     private bool _isProtected = false;
+    private bool _isCheatProtected;
     private float _protectionTime = 3;
 
     protected bool _isDead = false;
@@ -110,7 +111,16 @@ public abstract class Character : Entity
 
     public void StartProtection()
     {
-        StartCoroutine(Protection());
+        if (!_isCheatProtected)
+        {
+            StartCoroutine(Protection());
+        }
+    }
+
+    public void ChangeEndlessProtection(bool isProtectionActivated)
+    {
+        _isProtected = isProtectionActivated;
+        _isCheatProtected = isProtectionActivated;
     }
 
     private IEnumerator Protection()
