@@ -3,8 +3,16 @@ using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
+    public static PlayerRotation Instance;
+
     private int _direction;
     private bool _bIsRotating = false;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
 
     public void SetDirection(int direction)
     {

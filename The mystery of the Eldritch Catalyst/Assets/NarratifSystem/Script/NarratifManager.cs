@@ -170,7 +170,7 @@ public class NarratifManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.P))
         {
             NextNarratifPhase();
         }
@@ -292,7 +292,7 @@ public class NarratifManager : MonoBehaviour
     {
         _text.enabled = true;
         _background.raycastTarget = true;
-        _background.color = Color.black; 
+        _background.color = Color.black;
         _text.color = Color.white;
     }
 

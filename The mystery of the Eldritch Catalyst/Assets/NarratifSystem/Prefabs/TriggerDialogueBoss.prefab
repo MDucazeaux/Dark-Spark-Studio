@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6109520924286255553}
-  - component: {fileID: 5831114981402154113}
   - component: {fileID: 5313957966998732898}
   - component: {fileID: 8993280257111606458}
+  - component: {fileID: 1574452011463205498}
   m_Layer: 2
   m_Name: TriggerDialogueBoss
   m_TagString: Untagged
@@ -34,18 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5831114981402154113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161190817679694817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4c5b2d46175b6e4b97485e06f93602b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &5313957966998732898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94,3 +82,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1574452011463205498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161190817679694817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce1490a87b7cb24682a153fcb2d74cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
