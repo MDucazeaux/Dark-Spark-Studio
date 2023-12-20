@@ -67,6 +67,18 @@ public class Thief : Character
                     else
                         NarratifManager.Instance.FeedBackNoLockpick();
                 }
+                else if (hitInfo.transform.parent.TryGetComponent(out Door door2))
+                {
+                    if (door2.IsLocked && Inventory.Instance.IsInInventory("Lock Picking Tool"))
+                    {
+                        door2.Unlock();
+                        Inventory.Instance.RemoveItemByName("Lock Picking Tool");
+
+                        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickingLock);
+                    }
+                    else
+                        NarratifManager.Instance.FeedBackNoLockpick();
+                }
                 else if (hitInfo.transform.TryGetComponent(out Chest chest))
                 {
                     if (chest.IsLocked)

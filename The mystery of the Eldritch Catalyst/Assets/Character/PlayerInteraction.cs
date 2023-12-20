@@ -1,4 +1,5 @@
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
@@ -40,14 +41,17 @@ public class PlayerInteraction : MonoBehaviour
                 }
                 else if (colliders[i].TryGetComponent(out Door door))
                 {
-                    if (door.CanInteract())
+
+                    if (door.CanInteract() && !door.IsLocked)
                     {
                         door.Interaction();
                         break;
                     }
+                    
                     if (Inventory.Instance.IsInInventory("Key") && door.IsLocked && !door.IsOpened)
                     {
                         Inventory.Instance.RemoveItemByName("Key");
+                        StartCoroutine(door.Open());
                         break;
                     }
                     else if (door.IsLocked && !door.IsOpened)
