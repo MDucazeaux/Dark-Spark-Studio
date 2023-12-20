@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aef2bf16b1f500489c4313f441f435f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _poisonParticle: {fileID: 6671111231025494226, guid: b0ba057c511493641886c5be6f447513, type: 3}
   _dropPoint: {fileID: 3232511642523327228}
 --- !u!1 &6440428664040620754
 GameObject:

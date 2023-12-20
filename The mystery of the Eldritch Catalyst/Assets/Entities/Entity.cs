@@ -19,10 +19,14 @@ public abstract class Entity : MonoBehaviour
     public float GetLifeMax()
     { return MaxLife; }
 
-    public virtual void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage, bool doSound = true)
     {
         Life -= damage / ArmorMultiplier;
-        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab, 1);
+        if (doSound)
+        {
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab, 0.8f);
+        }
+        
         if (Life <= 0)
             Death();
     }

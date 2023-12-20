@@ -3,6 +3,8 @@ using UnityEngine;
 
 public abstract class Enemy : Entity
 {
+    [SerializeField] private GameObject _poisonParticle;
+
     [SerializeField]
     protected Transform _dropPoint;
     protected float _originDamage = 0;
@@ -11,7 +13,6 @@ public abstract class Enemy : Entity
     protected float _cooldownAttack = 0;
 
     private Coroutine _poisonCoroutine = null;
-    private float _timePoison = 0;
     private float _waitPoison = 1;
     private float _allTimePoison = 10;
     private float _poisonDamage = 2;
@@ -40,9 +41,15 @@ public abstract class Enemy : Entity
 
     private IEnumerator TakeDamageInTime()
     {
+        float _timePoison = 0;
         while (_timePoison < _allTimePoison)
         {
-            TakeDamage(_poisonDamage);
+            TakeDamage(_poisonDamage, false);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PoisonDamage, 0.3f);
+            if (_poisonParticle)
+            {
+                Instantiate(_poisonParticle, transform.position, Quaternion.identity);
+            }
             yield return new WaitForSeconds(_waitPoison);
             _timePoison += _waitPoison;
         }

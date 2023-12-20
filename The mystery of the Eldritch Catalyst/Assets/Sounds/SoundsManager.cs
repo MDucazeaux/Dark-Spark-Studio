@@ -14,12 +14,13 @@ public class SoundsManager : MonoBehaviour
     [SerializeField] AudioSource _musicsPlayerAudioSource;
     [SerializeField] AudioSource _SFXPlayerAudioSource;
 
+    // Getters Setters
     public AudioSource MusicsPlayerAudioSource { get { return _musicsPlayerAudioSource; } }
     public AudioSource SFXPlayerAudioSource { get { return _SFXPlayerAudioSource; } }
 
     [Header("Sounds")]
     // Musics
-    [SerializeField] AllMusics _allMusics; 
+    [SerializeField] AllMusics _allMusics;
     // SFX
     [SerializeField] AllSFX _allSFX;
 
@@ -50,21 +51,22 @@ public class SoundsManager : MonoBehaviour
         HeavySwordAttack,
 
         // Witch
-        FireBallSpell, 
+        FireBallSpell,
         FireBallFire,
         FireBallExplosion,
         InvincibilitySpell,
 
         // Thief
         KnifeThrowing,
-        PickingLock,
-        KnifeHitWall,
         KnifeStab,
+        KnifeHitWall,
+        PickingLock,
 
         // Alchemist
         PotionThrowing,
-        TransmutationSpell,
         PotionBreaking,
+        PoisonDamage,
+        TransmutationSpell,
         #endregion
 
         #region Character Damaged
@@ -160,13 +162,14 @@ public class SoundsManager : MonoBehaviour
 
         [Header("Thief moves :")]
         public AudioClip[] _knifeThrowing;
-        public AudioClip[] _pickingLock;
         public AudioClip[] _knifeStab;
         public AudioClip[] _knifeHitWall;
+        public AudioClip[] _pickingLock;
 
         [Header("Alchemist moves :")]
         public AudioClip[] _potionThrowing;
         public AudioClip[] _potionBreaking;
+        public AudioClip[] _poisonDamage;
         public AudioClip[] _transmutationSpell;
         #endregion
 
@@ -324,6 +327,12 @@ public class SoundsManager : MonoBehaviour
 
             case TypesOfSFX.OpeningDoor:
                 return _allSFX._openingDoor[Random.Range(0, _allSFX._openingDoor.Length)];
+
+            case TypesOfSFX.OpeningGate:
+                return _allSFX._openingGate[Random.Range(0, _allSFX._openingDoor.Length)];
+
+            case TypesOfSFX.SlammingDoor:
+                return _allSFX._slamingDoor[Random.Range(0, _allSFX._slamingDoor.Length)];
             #endregion
 
             #region Character's moves
@@ -351,12 +360,24 @@ public class SoundsManager : MonoBehaviour
             case TypesOfSFX.KnifeThrowing:
                 return _allSFX._knifeThrowing[Random.Range(0, _allSFX._knifeThrowing.Length)];
 
+            case TypesOfSFX.KnifeStab:
+                return _allSFX._knifeStab[Random.Range(0, _allSFX._knifeStab.Length)];
+
+            case TypesOfSFX.KnifeHitWall:
+                return _allSFX._knifeHitWall[Random.Range(0, _allSFX._knifeHitWall.Length)];
+
             case TypesOfSFX.PickingLock:
                 return _allSFX._pickingLock[Random.Range(0, _allSFX._pickingLock.Length)];
 
             // Alchimist
             case TypesOfSFX.PotionThrowing:
                 return _allSFX._potionThrowing[Random.Range(0, _allSFX._potionThrowing.Length)];
+
+            case TypesOfSFX.PotionBreaking:
+                return _allSFX._potionBreaking[Random.Range(0, _allSFX._potionBreaking.Length)];
+
+            case TypesOfSFX.PoisonDamage:
+                return _allSFX._poisonDamage[Random.Range(0, _allSFX._poisonDamage.Length)];
 
             case TypesOfSFX.TransmutationSpell:
                 return _allSFX._transmutationSpell[Random.Range(0, _allSFX._transmutationSpell.Length)];
@@ -367,19 +388,9 @@ public class SoundsManager : MonoBehaviour
                 return _allSFX._characterHitten[Random.Range(0, _allSFX._characterHitten.Length)];
 
             case TypesOfSFX.CharacterKilled:
-                return _allSFX._characterKilled[Random.Range(0, _allSFX._characterKilled.Length)];
-            case TypesOfSFX.OpeningGate:
-                return _allSFX._openingGate[0];
-            case TypesOfSFX.SlammingDoor:
-                return _allSFX._slamingDoor[0];
-            case TypesOfSFX.KnifeHitWall:
-                return _allSFX._knifeHitWall[0];
-            case TypesOfSFX.KnifeStab:
-                return _allSFX._knifeStab[0];
-            case TypesOfSFX.PotionBreaking:
-                return _allSFX._potionBreaking[Random.Range(0, _allSFX._potionBreaking.Length)];
+                return _allSFX._knifeStab[Random.Range(0, _allSFX._knifeStab.Length)];
             #endregion
-            
+
             #region Enemies
             // Rat
             case TypesOfSFX.RatIdle:
@@ -462,10 +473,13 @@ public class SoundsManager : MonoBehaviour
                 return _allSFX._evilWizardKilled[Random.Range(0, _allSFX._evilWizardKilled.Length)];
             #endregion
 
+            #region UIs
             case TypesOfSFX.ButtonHover:
-                return _allSFX._buttonHover[0];
+                return _allSFX._buttonHover[Random.Range(0, _allSFX._buttonHover.Length)];
+
             case TypesOfSFX.ButtonClick:
-                return _allSFX._buttonPressed[0];
+                return _allSFX._buttonPressed[Random.Range(0, _allSFX._buttonPressed.Length)];
+            #endregion
 
             #region Environment
             case TypesOfSFX.WaterDrop:
@@ -487,7 +501,7 @@ public class SoundsManager : MonoBehaviour
         _SFXPlayerAudioSource.PlayOneShot(ReturnSFX(typesOfSFX), volume * Settings.Instance.MainVolume * Settings.Instance.SfxVolume);
     }
 
-    
+
     #endregion
 
     #endregion
