@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Inventory : MonoBehaviour
 {
@@ -127,11 +128,11 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItemByName(string itemName)
     {
-        foreach (var item in _content)
+        for (int i = 0; i < _content.Count; i++)
         {
-            if (item.GetName().Equals(itemName))
+            if (_content[i].GetName().Equals(itemName))
             {
-                _content.Remove(item);
+                _content.Remove(_content[i]);
                 RefreshContent();
             }
         }
