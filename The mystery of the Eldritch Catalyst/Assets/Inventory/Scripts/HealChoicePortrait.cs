@@ -17,7 +17,7 @@ public class HealChoicePortrait : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (!CharacterSelection.Instance.GetCharacterByName(_name).IsDead)
+        if (!CharacterSelection.Instance.GetCharacterByName(_name).IsDead && !CharacterSelection.Instance.GetCharacterByName(_name).bIsMaxLife())
         {
             CharacterSelection.Instance.GetCharacterByName(_name).Heal(ItemActionSystem.Instance.GetItemCurrentlySelected().GetHealing(), CharacterSelection.Instance.GetSelectedCharacter().GetHealMultiplier());
             Inventory.Instance.RemoveItem(ItemActionSystem.Instance.GetItemCurrentlySelected());

@@ -104,7 +104,7 @@ public class ItemActionSystem : MonoBehaviour
 
     public void HealActionButton()
     {
-        if (!CharacterSelection.Instance.GetSelectedCharacter().IsDead && !CharacterSelection.Instance.GetSelectedCharacter().bIsMaxLife())
+        if (!CharacterSelection.Instance.GetSelectedCharacter().IsDead)
         {
             HealChoicePanel.Instance.OpenHealChoicePanel();
         }
