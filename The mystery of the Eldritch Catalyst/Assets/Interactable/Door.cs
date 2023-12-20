@@ -25,7 +25,7 @@ public class Door : Interactable
         return !_bIsOpened;
     }
 
-    private IEnumerator Open()
+    public IEnumerator Open()
     {
         SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.OpeningDoor, 1);
         _bIsOpened = true;
