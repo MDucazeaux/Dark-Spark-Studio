@@ -113,7 +113,6 @@ public class NarratifManager : MonoBehaviour
                         _canPassText = false;
                         StartCoroutine(DesableBackground());
                         GameManager.Instance.LaunchGame();
-                        Debug.Log("end intro");
 
                     }
                     else
@@ -128,7 +127,6 @@ public class NarratifManager : MonoBehaviour
                         _canPassText = false;
                         DesableDialogue();
                         GameManager.Instance.LaunchBossFight();
-                        Debug.Log("end boss fight");
                     }
                     else
                     {
@@ -142,8 +140,6 @@ public class NarratifManager : MonoBehaviour
                     if (_index == _goodEndTexts.Count)
                     {
                         _canPassText = false;
-
-                        Debug.Log("end good end");
                     }
                     else
                     {
@@ -155,8 +151,6 @@ public class NarratifManager : MonoBehaviour
                     if (_index == _badEndTexts.Count)
                     {
                         _canPassText = false;
-
-                        Debug.Log("end bad end");
                     }
                     else
                     {

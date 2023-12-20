@@ -22,7 +22,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.ButtonHover, 0.3f);
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.ButtonHover, 0.1f);
         if (_item != null)
         {
             string content = _item.GetDescription();

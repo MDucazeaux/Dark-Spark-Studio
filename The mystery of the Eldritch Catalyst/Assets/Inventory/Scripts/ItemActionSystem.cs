@@ -91,15 +91,21 @@ public class ItemActionSystem : MonoBehaviour
 
     public void EatActionButton()
     {
-        CharacterSelection.Instance.GetSelectedCharacter().RecoverStamina(_itemCurrentlySelected.GetStaminaStats());
-        Inventory.Instance.RemoveItem(_itemCurrentlySelected);
-        Inventory.Instance.RefreshContent();
-        CloseActionPanel();
+        if (!CharacterSelection.Instance.GetSelectedCharacter().IsDead)
+        {
+            CharacterSelection.Instance.GetSelectedCharacter().RecoverStamina(_itemCurrentlySelected.GetStaminaStats());
+            Inventory.Instance.RemoveItem(_itemCurrentlySelected);
+            Inventory.Instance.RefreshContent();
+            CloseActionPanel();
+        }
     }
 
     public void HealActionButton()
     {
-        HealChoicePanel.Instance.OpenHealChoicePanel();
+        if (!CharacterSelection.Instance.GetSelectedCharacter().IsDead)
+        {
+            HealChoicePanel.Instance.OpenHealChoicePanel();
+        }
     }
 
 
