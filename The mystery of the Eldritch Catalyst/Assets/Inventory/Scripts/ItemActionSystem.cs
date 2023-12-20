@@ -87,6 +87,7 @@ public class ItemActionSystem : MonoBehaviour
     {
         _actionPanel.SetActive(false);
         _itemCurrentlySelected = null;
+        HealChoicePanel.Instance.CloseHealChoicePanel();
     }
 
     public void EatActionButton()
