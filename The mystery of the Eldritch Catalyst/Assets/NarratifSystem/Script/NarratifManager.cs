@@ -88,12 +88,7 @@ public class NarratifManager : MonoBehaviour
 
     [SerializeField] private List<Sprite> _faces = new List<Sprite>(); //warrior, thief, witch, alchimist, 
 
-    public enum Phase
-    {
-        Intro, BeforeBossFight, GoodEnd, BadEnd
-    }
-
-    public Phase _phase = Phase.Intro;
+    public GameManager.NaratifPhase _phase = GameManager.NaratifPhase.Intro;
 
     private void Awake()
     {
@@ -112,12 +107,12 @@ public class NarratifManager : MonoBehaviour
         {
             switch (_phase)
             {
-                case Phase.Intro:
+                case GameManager.NaratifPhase.Intro:
                     if (_index == _introTexts.Count)
                     {
                         _canPassText = false;
                         StartCoroutine(DesableBackground());
-                        //gamemanager launch game
+                        GameManager.Instance.LaunchGame();
                         Debug.Log("end intro");
 
                     }
@@ -127,7 +122,7 @@ public class NarratifManager : MonoBehaviour
                     }
                     break;
 
-                case Phase.BeforeBossFight:
+                case GameManager.NaratifPhase.BeforeBossFight:
                     if (_index == _gameTexts.Count)
                     {
                         _canPassText = false;
@@ -143,7 +138,7 @@ public class NarratifManager : MonoBehaviour
                     }
                     break;
 
-                case Phase.GoodEnd:
+                case GameManager.NaratifPhase.GoodEnd:
                     if (_index == _goodEndTexts.Count)
                     {
                         _canPassText = false;
@@ -156,7 +151,7 @@ public class NarratifManager : MonoBehaviour
                     }
                     break;
 
-                case Phase.BadEnd:
+                case GameManager.NaratifPhase.BadEnd:
                     if (_index == _badEndTexts.Count)
                     {
                         _canPassText = false;
@@ -170,7 +165,7 @@ public class NarratifManager : MonoBehaviour
                     break;
 
                 default:
-                    Debug.Log("Error Phase");
+                    Debug.Log("Error GameManager.NaratifPhase");
                     break;
             }
         }
@@ -183,34 +178,35 @@ public class NarratifManager : MonoBehaviour
 
     public void NextNarratifPhase()
     {
-        _phase = Enum.GetValues(typeof(Phase)).Cast<Phase>().SkipWhile(e => e != _phase).Skip(1).First();
+        _phase = Enum.GetValues(typeof(GameManager.NaratifPhase)).Cast<GameManager.NaratifPhase>().SkipWhile(e => e != _phase).Skip(1).First();
+        _phase = _phase == GameManager.NaratifPhase.None ? GameManager.NaratifPhase.Intro : _phase;
 
         _canPassText = true;
         _index = 0;
 
         switch (_phase)
         {
-            case Phase.BeforeBossFight:
+            case GameManager.NaratifPhase.BeforeBossFight:
                 EnableDialogue();
                 ChangeCharacter();
                 SwitchFace();
                 _dialogue.text = _gameTexts[_index++];
                 break;
 
-            case Phase.GoodEnd:
+            case GameManager.NaratifPhase.GoodEnd:
                 EnableNarratif();
 
                 _text.text = _goodEndTexts[_index++];
                 break;
 
-            case Phase.BadEnd:
+            case GameManager.NaratifPhase.BadEnd:
                 EnableNarratif();
 
                 _text.text = _badEndTexts[_index++];
                 break;
 
             default:
-                Debug.Log("Error Phase");
+                Debug.Log("Error GameManager.NaratifPhase");
                 break;
         }
     }
@@ -268,6 +264,7 @@ public class NarratifManager : MonoBehaviour
             yield return null;
         }
 
+        _background.raycastTarget = false;
         _text.enabled = false;
     }
 
@@ -288,7 +285,7 @@ public class NarratifManager : MonoBehaviour
     private void EnableNarratif()
     {
         _text.enabled = true;
-
+        _background.raycastTarget = true;
         _background.color = Color.black; 
         _text.color = Color.white;
     }
