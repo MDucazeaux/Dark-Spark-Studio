@@ -35,6 +35,12 @@ public class Thief : Character
         Forename = "Lila Nightshade";
     }
 
+    private void Start()
+    {
+        this.SetWeapon(Inventory.Instance.GetItemByName("Rusty Sword"));
+        Inventory.Instance.RemoveItemByName("Rusty Sword");
+    }
+
     public override void ActionOne()
     {
         if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionOne && !_isDead)

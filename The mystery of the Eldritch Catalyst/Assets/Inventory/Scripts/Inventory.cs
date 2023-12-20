@@ -21,6 +21,12 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private Sprite _transparentSlot;
 
+    [SerializeField]
+    private EquipmentSlot _armorSlot;
+
+    [SerializeField]
+    private EquipmentSlot _weaponSlot;
+
     private const int c_inventorySize = 20;
 
     public static Inventory Instance;
@@ -98,6 +104,8 @@ public class Inventory : MonoBehaviour
 
             currentSlot.setItemIcon(_content[i].GetIcon());
         }
+        _armorSlot.RefreshVisual();
+        _weaponSlot.RefreshVisual();
     }
 
     public bool InventoryIsFull()
@@ -135,5 +143,17 @@ public class Inventory : MonoBehaviour
                 RefreshContent();
             }
         }
+    }
+
+    public ItemData GetItemByName(string itemName)
+    {
+        for (int i = 0; i < _content.Count; i++)
+        {
+            if (_content[i].GetName().Equals(itemName))
+            {
+                return(_content[i]);
+            }
+        }
+        return null;
     }
 }

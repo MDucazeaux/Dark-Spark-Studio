@@ -38,6 +38,12 @@ public class Alchemist : Character
         Forename = "Thaddeus Emberstone";
     }
 
+    private void Start()
+    {
+        this.SetWeapon(Inventory.Instance.GetItemByName("Stick"));
+        Inventory.Instance.RemoveItemByName("Stick");
+    }
+
     public override void ActionOne()
     {
         if (_canActionOne && !_playerMovement.IsMoving && !_playerRotation.IsRotating && Stamina >= StaminaLoseActionOne && !_isDead)
