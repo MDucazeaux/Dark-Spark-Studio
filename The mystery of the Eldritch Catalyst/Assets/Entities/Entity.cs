@@ -13,7 +13,7 @@ public abstract class Entity : MonoBehaviour
     protected ItemData _weapon;
     protected ItemData _armor;
 
-    public float GetLife() 
+    public float GetLife()
     { return Life; }
 
     public float GetLifeMax()
@@ -26,7 +26,7 @@ public abstract class Entity : MonoBehaviour
         {
             SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab, 0.8f);
         }
-        
+
         if (Life <= 0)
             Death();
     }
@@ -72,4 +72,16 @@ public abstract class Entity : MonoBehaviour
     { _weapon = weapon; }
 
     public abstract void Death();
+
+    public bool bIsMaxLife()
+    { 
+        if(Life == MaxLife)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

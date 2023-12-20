@@ -93,7 +93,7 @@ public class ItemActionSystem : MonoBehaviour
 
     public void EatActionButton()
     {
-        if (!CharacterSelection.Instance.GetSelectedCharacter().IsDead)
+        if (!CharacterSelection.Instance.GetSelectedCharacter().IsDead && !CharacterSelection.Instance.GetSelectedCharacter().bIsMaxStamina())
         {
             CharacterSelection.Instance.GetSelectedCharacter().RecoverStamina(_itemCurrentlySelected.GetStaminaStats());
             Inventory.Instance.RemoveItem(_itemCurrentlySelected);
@@ -104,7 +104,7 @@ public class ItemActionSystem : MonoBehaviour
 
     public void HealActionButton()
     {
-        if (!CharacterSelection.Instance.GetSelectedCharacter().IsDead)
+        if (!CharacterSelection.Instance.GetSelectedCharacter().IsDead && !CharacterSelection.Instance.GetSelectedCharacter().bIsMaxLife())
         {
             HealChoicePanel.Instance.OpenHealChoicePanel();
         }

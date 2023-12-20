@@ -160,4 +160,16 @@ public abstract class Character : Entity
     public float CoolDownActionTwo { get { return _coolDownActionTwo; } }
 
     public float ProtectionTime { get { return _protectionTime; } }
+
+    public bool bIsMaxStamina()
+    {
+        if (Stamina == MaxStamina)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

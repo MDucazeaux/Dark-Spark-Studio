@@ -8974,6 +8974,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 02f98349104aa674bb68c92c343c0e9b, type: 2}
   - {fileID: 11400000, guid: 393a205467cc4544893836303de7ed9e, type: 2}
   - {fileID: 11400000, guid: 393a205467cc4544893836303de7ed9e, type: 2}
+  - {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
   _itemActionSystem: {fileID: 268578081}
   _inventoryBackground: {fileID: 289955716}
   _inventorySlotsParent: {fileID: 1399940690}
