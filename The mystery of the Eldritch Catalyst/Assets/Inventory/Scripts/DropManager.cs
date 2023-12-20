@@ -85,7 +85,27 @@ public class DropManager : MonoBehaviour
                         if (dropPercentage <= 0)
                         {
                             _dropList.Add(_dropTables[i].LootTable[j].itemCanDropped);
+                            break;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    public void DropChestToLootCalculation(string enemy)
+    {
+        _dropList.Clear();
+
+        for (int i = 0; i < _dropTables.Count; i++)
+        {
+            if (_dropTables[i].EnemyType == enemy)
+            {
+                for (int j = 0; j < _dropTables[i].ItemsToLoot.Count; j++)
+                {
+                    for (int k = 0; k < _dropTables[i].ItemsToLoot[j].maxQuantity; k++)
+                    {
+                        _dropList.Add(_dropTables[i].ItemsToLoot[j].itemCanDropped);
                     }
                 }
             }
@@ -105,6 +125,16 @@ public class DropManager : MonoBehaviour
     public void DropItemsInChests(Transform transform, string chest)
     {
         DropChestCalculation(chest);
+        for (int i = 0; i < _dropList.Count; i++)
+        {
+            GameObject instantiatedItem = Instantiate(_dropList[i].GetPrefab());
+            instantiatedItem.transform.position = transform.position + new Vector3(UnityEngine.Random.Range(0, 8) - 4, 0, UnityEngine.Random.Range(0, 8) - 4);
+        }
+    }
+
+    public void DropItemsToLootInChests(Transform transform, string chest)
+    {
+        DropChestToLootCalculation(chest);
         for (int i = 0; i < _dropList.Count; i++)
         {
             GameObject instantiatedItem = Instantiate(_dropList[i].GetPrefab());
