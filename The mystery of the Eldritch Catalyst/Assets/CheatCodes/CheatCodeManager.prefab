@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5332116837379395008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5785377848926670447}
+  m_Layer: 0
+  m_Name: MinautaurTeleporterWaypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5785377848926670447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5332116837379395008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 190, y: 4, z: 200}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 60740563026867802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7470645070491545101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 60740563026867802}
+  - component: {fileID: 773743615762637925}
+  m_Layer: 0
+  m_Name: CheatCodeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &60740563026867802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470645070491545101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5785377848926670447}
+  - {fileID: 4242078043876966851}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773743615762637925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470645070491545101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd6343fc7a71b047850e91fde1ecaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _giveEquipmentControl: 111
+  _invisibilityControl: 107
+  _teleportationToMinotaurControl: 108
+  _teleportationToBossControl: 109
+  _cheatShowing: {fileID: 0}
+  _cheatTextPrefab: {fileID: 0}
+  _cheatTextShowingTime: 2
+  _player: {fileID: 0}
+  _allTeleportationTarget:
+    _minotaurTeleporterWaypoint: {fileID: 5332116837379395008}
+    _bossTeleporterWaypoint: {fileID: 7646406412425044048}
+  _numberOfTimeYouWantThis: 1
+  _itemGiven:
+  - {fileID: 5549466461819993002, guid: e5e26c2a1964e4e4e869d555f735e370, type: 3}
+  - {fileID: 6671984306648387596, guid: a12c87402aa21b04e84eda348682e471, type: 3}
+  - {fileID: 6767129410186665062, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+  - {fileID: 1640438158358617317, guid: c0fb56f8de9603940b04a99fa47958b4, type: 3}
+  - {fileID: 7403288675940047307, guid: b262d3a30b1bb3a4086cd5a6fecc9d7a, type: 3}
+  - {fileID: 5868866848372988761, guid: c6601871736ad40428cf2c23a89da179, type: 3}
+  - {fileID: 926781662586193139, guid: efa9fd807815073408a3167437046896, type: 3}
+--- !u!1 &7646406412425044048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4242078043876966851}
+  m_Layer: 0
+  m_Name: BossTeleporterWaypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4242078043876966851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7646406412425044048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: 320}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 60740563026867802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
