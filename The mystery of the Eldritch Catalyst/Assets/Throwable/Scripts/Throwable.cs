@@ -6,11 +6,11 @@ public abstract class Throwable : MonoBehaviour
 
     protected float _damage = 1;
     [SerializeField] protected float _speed = 1;
-    private int _maxDistance = 40;
+    protected int _maxDistance = 40;
     protected Vector3 _direction = Vector3.zero;
     protected Vector3 _startPosition = Vector3.zero;
 
-    private bool _IsGoingToTarget = false;
+    protected bool _IsGoingToTarget = false;
 
     [SerializeField] protected GameObject _touchParticle;
 
@@ -19,7 +19,7 @@ public abstract class Throwable : MonoBehaviour
         _transform = transform;
     }
 
-    private void Update()
+    public virtual void Update()
     {
         if (!_IsGoingToTarget)
         {

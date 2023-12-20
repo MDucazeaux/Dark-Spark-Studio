@@ -87,8 +87,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!65 &7484854455602109130
 BoxCollider:
+=======
+--- !u!114 &-7424456103133985840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618008464428678204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169eaf9d93c364448856dfa2bae27f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 30
+  _touchParticle: {fileID: 6334590284349246100, guid: da83f7be68e45c24691eef5dbb914390, type: 3}
+  _dustParticle: {fileID: 9068169796899452077, guid: 5992d1ef962de294d8053ee611fbd9d3, type: 3}
+  _curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0000006360933
+      value: 0.0031461716
+      inSlope: 4.2331157
+      outSlope: 4.2331157
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.043146312
+      value: 0.18578681
+      inSlope: 3.0631495
+      outSlope: 3.0631495
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.040205166
+    - serializedVersion: 3
+      time: 0.98498535
+      value: -0.045581818
+      inSlope: -4.5170183
+      outSlope: -4.5170183
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.025744356
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!135 &8793687703646043062
+SphereCollider:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
