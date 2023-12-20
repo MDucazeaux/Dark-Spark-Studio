@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ProjectSpell : MonoBehaviour
+public class ProjectShield : MonoBehaviour
 {
     private Vector3 _startingPos;
     private Transform _transform;
@@ -10,16 +10,15 @@ public class ProjectSpell : MonoBehaviour
     private void Awake()
     {
         _transform = transform;
-        _transform.position = new Vector3(_transform.position.x, 3, _transform.position.z);
     }
 
     private void Start()
     {
-        _startingPos = transform.position;
+        _startingPos = transform.localPosition;
     }
 
     void Update()
     {
-        _transform.position = Vector3.Lerp(_transform.position, _startingPos + _transform.forward * _travelDistance, _travelSpeed * Time.deltaTime);
+        _transform.localPosition = Vector3.Lerp(_transform.localPosition, new Vector3(0, 0, 1) * _travelDistance, _travelSpeed * Time.deltaTime);
     }
 }

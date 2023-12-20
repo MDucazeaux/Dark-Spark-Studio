@@ -597,6 +597,7 @@ MonoBehaviour:
   _fireBall: {fileID: 5979253051142448836, guid: f60d0758a8d7bf64d9338b0713466942, type: 3}
   _playerMovement: {fileID: 2057167433952793979}
   _playerRotation: {fileID: 3272287673724195968}
+  _protectionSpellVisual: {fileID: 5225779698739059964, guid: 9cfa2118b3a747f49ad677ef114f96f2, type: 3}
 --- !u!114 &4605462909816670672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +614,7 @@ MonoBehaviour:
   _playerMovement: {fileID: 2057167433952793979}
   _playerRotation: {fileID: 3272287673724195968}
   _distanceActionTwo: 10
+  _transmutationSpellVisual: {fileID: 5225779698739059964, guid: 24fe7d7afb9e3164f94b495930473c30, type: 3}
 --- !u!114 &6553583753733995578
 MonoBehaviour:
   m_ObjectHideFlags: 0

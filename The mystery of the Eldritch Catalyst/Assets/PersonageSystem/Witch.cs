@@ -7,6 +7,8 @@ public class Witch : Character
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private PlayerRotation _playerRotation;
 
+    [SerializeField] private GameObject _protectionSpellVisual;
+
     private void Awake()
     {
         MaxLife = 75;
@@ -60,6 +62,8 @@ public class Witch : Character
             StartCooldownActionTwo();
 
             SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.InvincibilitySpell);
+
+            Instantiate(_protectionSpellVisual, transform.position, transform.rotation, transform).GetComponent<DestroyAfterTime>().SetTime(CharacterSelection.Instance.Characters["Witch"].ProtectionTime);
         }
     }
 }
