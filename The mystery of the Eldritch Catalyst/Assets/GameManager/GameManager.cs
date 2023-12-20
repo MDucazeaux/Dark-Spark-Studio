@@ -4,7 +4,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject Boss;
 
     public enum NaratifPhase
@@ -20,20 +19,23 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        playerController.enabled = false;
+        PlayerController.Instance.enabled = false;
+        ContinualLossOfEnergy.Instance.enabled = false;
         Boss.SetActive(false);
         Boss.GetComponent<AIController>().enabled = false;
     }
 
     public void LaunchGame()
     {
-        playerController.enabled = true;
+        PlayerController.Instance.enabled = true;
+        ContinualLossOfEnergy.Instance.enabled = true;
     }
 
     public void LaunchDialogueBeforeBossFight()
     {
         Boss.SetActive(true);
         PlayerController.Instance.enabled = false;
+        ContinualLossOfEnergy.Instance.enabled = false;
         PlayerRotation.Instance.SetDirection(2);
         NarratifManager.Instance.ChangePhase(NaratifPhase.BeforeBossFight);
 
@@ -41,7 +43,8 @@ public class GameManager : MonoBehaviour
 
     public void LaunchBossFight()
     {
-        playerController.enabled = true;
+        PlayerController.Instance.enabled = true;
+        ContinualLossOfEnergy.Instance.enabled = true;
         Boss.GetComponent<AIController>().enabled = true;
     }
 }

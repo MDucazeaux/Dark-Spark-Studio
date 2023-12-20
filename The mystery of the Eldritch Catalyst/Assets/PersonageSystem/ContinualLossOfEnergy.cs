@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class ContinualLossOfEnergy : MonoBehaviour
 {
+    public static ContinualLossOfEnergy Instance;
+
     #region Variables
     [SerializeField] float _timeBetweenEnemySteal = 5f;
     [SerializeField] float _energyStolen = 1f;
 
     MenuManager _menuManager;
     #endregion
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
 
     #region Methods
     private void Start()

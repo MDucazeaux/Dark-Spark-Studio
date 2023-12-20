@@ -11,6 +11,8 @@ public class NarratifManager : MonoBehaviour
     public static NarratifManager Instance;
 
     [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private TextMeshProUGUI _infoContiueNarratif;
+    [SerializeField] private TextMeshProUGUI _infoContiueDialogue;
     [SerializeField] private TextMeshProUGUI _dialogue;
     [SerializeField] private TextMeshProUGUI _character;
     [SerializeField] private TextMeshProUGUI _feedbackText;
@@ -260,6 +262,7 @@ public class NarratifManager : MonoBehaviour
         {
             _background.color = Color.Lerp(fromBg, toBg, _time);
             _text.color = Color.Lerp(fromTxt, toTxt, _time);
+            _infoContiueNarratif.color = Color.Lerp(fromTxt, toTxt, _time);
             _time += Time.deltaTime;
             yield return null;
         }
@@ -271,6 +274,7 @@ public class NarratifManager : MonoBehaviour
     private void EnableDialogue()
     {
         _dialogue.enabled = true;
+        _infoContiueDialogue.enabled = true;
         _face.enabled = true;
         _character.enabled = true;
     }
@@ -279,6 +283,7 @@ public class NarratifManager : MonoBehaviour
     {
         _face.enabled = false;
         _dialogue.enabled = false;
+        _infoContiueDialogue.enabled = false;
         _character.enabled = false;
     }
 
@@ -288,6 +293,7 @@ public class NarratifManager : MonoBehaviour
         _background.raycastTarget = true;
         _background.color = Color.black;
         _text.color = Color.white;
+        _infoContiueNarratif.color = Color.white;
     }
 
     public void FeedBackCharacterDie(string name)
