@@ -85,7 +85,7 @@ public class AIMovement : MonoBehaviour
                 SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersMoves, 6);
                 break;
             case Skeleton:
-                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.SkeletonMoving);
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersMoves, 1.5f);
                 break;
             case TheMysteriousBeing:
                 //SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.)
