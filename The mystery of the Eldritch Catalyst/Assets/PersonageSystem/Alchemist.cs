@@ -67,7 +67,7 @@ public class Alchemist : Character
 
             SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.TransmutationSpell, 0.6f);
 
-            Instantiate(_transmutationSpellVisual, _transmutationSpellVisual.transform.position, transform.rotation);
+            Instantiate(_transmutationSpellVisual, transform.position, transform.rotation);
         }
     }
 }
