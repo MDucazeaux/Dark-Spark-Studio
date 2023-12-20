@@ -171,10 +171,10 @@ public class TutorialScript : MonoBehaviour
         switch (_tutorialId)
         {
             case 0:
-                _text.text = "Welcome to The Mystery of the Eldritch Catalyst\r\nTo begin your adventure open this door with [left click]\nMove with [z q s d]";
+                _text.text = "Welcome to The Mystery of the Eldritch Catalyst\r\nTo begin your adventure open this door with [r]\nMove with [z q s d]";
                 break;
             case 1:
-                _text.text = "Hmm, it seems like we can't open this\nTry going back and check for a button [a or e], then interact with [left click]";
+                _text.text = "Hmm, it seems like we can't open this\nTry going back and check for a button [a or e], then interact with [r]";
                 break;
             case 2:
                 _text.text = "The path has been cleared, let's continue your adventure";
@@ -186,16 +186,16 @@ public class TutorialScript : MonoBehaviour
                 _text.text = "Great ! Now that the Thief is Selected\nUse her special action with [é] to lockpick the door";
                 break;
             case 5:
-                _text.text = "Now you only have to open the door with [Left click]";
+                _text.text = "Now you only have to open the door with [r]";
                 break;
             case 6:
                 _text.text = "Kill this rat now !\nPress [&] or [é] to use your actions";
                 break;
             case 7:
-                _text.text = "Okay that could have gotten worse\nLet's open that chest to find some loot [Left click]";
+                _text.text = "Okay that could have gotten worse\nLet's lockpick that chest with the thief and then open it with [r]";
                 break;
             case 8:
-                _text.text = "Nice we can heal ourselves with that !\nPick this item with [F]";
+                _text.text = "Nice we can heal ourselves with that !\nPick this item with [f]";
                 break;
             case 9:
                 _text.text = "Click on your bag to open the inventory\n then click on the item you just picked up and heal yourself";
