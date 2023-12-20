@@ -39,6 +39,8 @@ public class Witch : Character
             UseStamina(StaminaLoseActionOne);
 
             StartCooldownActionOne();
+
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.FireBallSpell, 0.3f);
         }
     }
 
@@ -56,6 +58,8 @@ public class Witch : Character
             UseStamina(StaminaLoseActionTwo);
 
             StartCooldownActionTwo();
+
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.InvincibilitySpell);
         }
     }
 }

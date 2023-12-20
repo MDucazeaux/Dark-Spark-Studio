@@ -15,5 +15,6 @@ public class Skeleton : Enemy
     {
         GetComponent<AIController>().Death();
         DropManager.Instance.DropItems(_dropPoint, "Skeleton");
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.SkeletonKilled);
     }
 }

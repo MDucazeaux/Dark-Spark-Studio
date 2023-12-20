@@ -5,7 +5,6 @@ public class PoisonedPotion : Throwable
     public override void SetValues(Vector3 position, Vector3 direction)
     {
         _damage = 5;
-        _speed = 5;
         _direction = direction;
         _transform.position = position;
         _startPosition = position;
@@ -16,6 +15,7 @@ public class PoisonedPotion : Throwable
         if (other.gameObject.CompareTag("Wall"))
         {
             Explode(false);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PotionBreaking);
         }
 
         if (other.gameObject.CompareTag("Enemy"))
@@ -23,6 +23,7 @@ public class PoisonedPotion : Throwable
 
             other.GetComponentInParent<Enemy>().TakeDamage(_damage);
             Explode(true);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PotionBreaking);
         }
     }
 

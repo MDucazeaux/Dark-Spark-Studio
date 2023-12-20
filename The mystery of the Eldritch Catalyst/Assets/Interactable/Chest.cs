@@ -33,6 +33,7 @@ public class Chest : Interactable
     private void OpenChest()
     {
         DropManager.Instance.DropItemsInChests(_dropPoint, _name);
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.OpeningDoor, 1);
     }
 
     public override bool CanInteract()

@@ -6,7 +6,6 @@ public class Knife : Throwable
     public override void SetValues(Vector3 position, Vector3 direction)
     {
         _damage = 15;
-        _speed = 5;
         _direction = direction;
         _transform.position = position;
         _startPosition = position;
@@ -17,6 +16,7 @@ public class Knife : Throwable
         if (other.gameObject.CompareTag("Wall"))
         {
             Explode(false);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeHitWall);
         }
 
         if (other.gameObject.CompareTag("Enemy"))
@@ -24,6 +24,7 @@ public class Knife : Throwable
 
             other.GetComponentInParent<Enemy>().TakeDamage(_damage);
             Explode(true);
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab);
         }
     }
 

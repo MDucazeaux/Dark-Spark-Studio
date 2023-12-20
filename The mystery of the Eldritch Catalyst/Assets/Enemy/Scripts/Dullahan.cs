@@ -15,5 +15,6 @@ public class Dullahan : Enemy
     {
         GetComponent<AIController>().Death();
         DropManager.Instance.DropItems(_dropPoint, "Dullahan");
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.DullahanKilled);
     }
 }

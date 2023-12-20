@@ -18,6 +18,7 @@ public class PlayerRotation : MonoBehaviour
             _bIsRotating = true;
             StartCoroutine(Rotate());
             _direction = 0;
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersRotate, 1);
         }
     }
 
