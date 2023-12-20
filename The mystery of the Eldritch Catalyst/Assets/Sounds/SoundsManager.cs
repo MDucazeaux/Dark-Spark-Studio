@@ -329,7 +329,7 @@ public class SoundsManager : MonoBehaviour
                 return _allSFX._openingDoor[Random.Range(0, _allSFX._openingDoor.Length)];
 
             case TypesOfSFX.OpeningGate:
-                return _allSFX._openingGate[Random.Range(0, _allSFX._openingDoor.Length)];
+                return _allSFX._openingGate[Random.Range(0, _allSFX._openingGate.Length)];
 
             case TypesOfSFX.SlammingDoor:
                 return _allSFX._slamingDoor[Random.Range(0, _allSFX._slamingDoor.Length)];
