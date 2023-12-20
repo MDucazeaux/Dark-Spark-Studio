@@ -100,14 +100,14 @@ MonoBehaviour:
     - {fileID: 8300000, guid: fd6e575dc04cd1c4e876055cddfaef30, type: 3}
     _knifeThrowing:
     - {fileID: 8300000, guid: ba9c66299f032da4398a8c4bd2989dc0, type: 3}
-    _pickingLock:
-    - {fileID: 8300000, guid: 2113cd14d3522c7488b7b5de4aff5307, type: 3}
-    - {fileID: 8300000, guid: 04fb23b667cb410498b58a5c8553591a, type: 3}
-    - {fileID: 8300000, guid: 5a4ee6f228c75c641812c6b169a27db5, type: 3}
     _knifeStab:
     - {fileID: 8300000, guid: f84003381a61c914f86c4c7cc18e8aef, type: 3}
     _knifeHitWall:
     - {fileID: 8300000, guid: 2e6d1231802ab51468401ee834904ceb, type: 3}
+    _pickingLock:
+    - {fileID: 8300000, guid: 2113cd14d3522c7488b7b5de4aff5307, type: 3}
+    - {fileID: 8300000, guid: 04fb23b667cb410498b58a5c8553591a, type: 3}
+    - {fileID: 8300000, guid: 5a4ee6f228c75c641812c6b169a27db5, type: 3}
     _potionThrowing:
     - {fileID: 8300000, guid: ca88439816e526244b20f14a14e04284, type: 3}
     - {fileID: 8300000, guid: 22101aa80af01384fbc7d280a1adace8, type: 3}
@@ -118,6 +118,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 6e8536083c41ee14980f650bdfb3ff8c, type: 3}
     - {fileID: 8300000, guid: 2ac5ea9b555b6eb47af1ecc8df56c6c6, type: 3}
     - {fileID: 8300000, guid: df9113a61b488d74293cfe0d42f8b53c, type: 3}
+    _poisonDamage:
+    - {fileID: 8300000, guid: 1da72c35dd425cc48a9d3606fe5babdf, type: 3}
+    - {fileID: 8300000, guid: e1e8b280d9cd0e24cb7c6d7634411ee0, type: 3}
+    - {fileID: 8300000, guid: d7a9248475663364b849819fe96cddb6, type: 3}
+    - {fileID: 8300000, guid: 87de53c155179f844bcc2e8d5530fa3a, type: 3}
+    - {fileID: 8300000, guid: fb9560fc0a3a724438debde2edcecbf6, type: 3}
     _transmutationSpell:
     - {fileID: 8300000, guid: 7b81a59a112ab1349be1380cab39f035, type: 3}
     _characterHitten:
