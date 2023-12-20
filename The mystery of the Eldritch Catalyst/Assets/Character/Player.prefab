@@ -453,6 +453,7 @@ MonoBehaviour:
   _playerRotation: {fileID: 3272287673724195968}
   _playerInteraction: {fileID: 206571251601495686}
   _menuManager: {fileID: 0}
+  _pickUpText: {fileID: 0}
 --- !u!1 &7136547116384208168
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +579,9 @@ MonoBehaviour:
   _distanceAction: 10
   _damageLight: 15
   _damageStrong: 30
+  _whiteSwoosh: {fileID: 228154944414223481, guid: 4c2713f88c350a744b2caf7206103208, type: 3}
+  _redSwoosh: {fileID: 5228714176221858076, guid: 85e5fe5c3341bf04cb931e455f9e5961, type: 3}
+  _bloodParticle: {fileID: 6334590284349246100, guid: da83f7be68e45c24691eef5dbb914390, type: 3}
 --- !u!114 &7941301532368033170
 MonoBehaviour:
   m_ObjectHideFlags: 0

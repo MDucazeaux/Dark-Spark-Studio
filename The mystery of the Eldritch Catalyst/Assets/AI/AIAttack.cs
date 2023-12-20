@@ -31,6 +31,24 @@ public class AIAttack : MonoBehaviour
         yield return new WaitForSeconds(time);
         CharacterSelection.Instance.Characters[CharacterSelection.Instance.CharactersPlacement[0]].TakeDamage(_enemy.GetDamage());
         CharacterSelection.Instance.Characters[CharacterSelection.Instance.CharactersPlacement[1]].TakeDamage(_enemy.GetDamage());
+        switch (_enemy.GetComponent<Enemy>())
+        {
+            case Rat:
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.RatAttaking);
+                break;
+            case Dullahan:
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.DullahanAttaking);
+                break;
+            case Minotaur:
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.MinotaurAttaking);
+                break;
+            case Skeleton:
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.SkeletonAttaking);
+                break;
+            case TheMysteriousBeing:
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.NormalSwordAttack);
+                break;
+        }
     }
 
     private IEnumerator AttackCooldown()

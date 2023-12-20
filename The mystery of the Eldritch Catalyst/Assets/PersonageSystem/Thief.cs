@@ -44,6 +44,8 @@ public class Thief : Character
             UseStamina(StaminaLoseActionOne);
 
             StartCooldownActionOne();
+
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeThrowing);
         }
     }
 
@@ -59,6 +61,8 @@ public class Thief : Character
                     {
                         door.Unlock();
                         Inventory.Instance.RemoveItemByName("Lock Picking Tool");
+
+                        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickingLock);
                     }
                     else
                         NarratifManager.Instance.FeedBackNoLockpick();
@@ -71,6 +75,8 @@ public class Thief : Character
                         {
                             chest.Unlock();
                             Inventory.Instance.RemoveItemByName("Lock Picking Tool");
+
+                            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickingLock);
                         }
                         else
                             NarratifManager.Instance.FeedBackNoLockpick();

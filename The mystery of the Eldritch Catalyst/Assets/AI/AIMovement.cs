@@ -14,10 +14,13 @@ public class AIMovement : MonoBehaviour
     private LayerMask _layerWall;
     private LayerMask _layerEnemy;
 
+    private Enemy _enemy;
+
     const float c_tileSize = 10;
 
     private void Awake()
     {
+        _enemy = GetComponent<Enemy>();
         _transform = transform;
         _layerWall = LayerMask.NameToLayer("Wall");
         _layerEnemy = LayerMask.NameToLayer("Enemy");
@@ -69,6 +72,26 @@ public class AIMovement : MonoBehaviour
 
     private IEnumerator MovingTo(Vector3 pos)
     {
+        switch (_enemy.GetComponent<Enemy>())
+        {
+            case Rat:
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersMoves);
+                break;
+            case Dullahan:
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersMoves, 2.5f);
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.DullahanMoving, 0.3f);
+                break;
+            case Minotaur:
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharactersMoves, 6);
+                break;
+            case Skeleton:
+                SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.SkeletonMoving);
+                break;
+            case TheMysteriousBeing:
+                //SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.)
+                break;
+        }
+
         _canMove = false;
         Vector3 _startingPos = _transform.position;
         float _elapsedTime = 0;

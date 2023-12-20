@@ -75,6 +75,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 4d736cf68131bac419424a7a28b3a9fb, type: 3}
     - {fileID: 8300000, guid: b8e0d52fe70784e448d1cbba1f766784, type: 3}
     - {fileID: 8300000, guid: 08b8658ed47a24842af3ba6595e8831c, type: 3}
+    _openingGate:
+    - {fileID: 8300000, guid: e09251a248cec41469e3a25a9da0abdf, type: 3}
+    _slamingDoor:
+    - {fileID: 8300000, guid: 1873a96211dae3845b7fcb5e5f383825, type: 3}
     _normalSwordAttack:
     - {fileID: 8300000, guid: ca88439816e526244b20f14a14e04284, type: 3}
     - {fileID: 8300000, guid: 22101aa80af01384fbc7d280a1adace8, type: 3}
@@ -87,27 +91,23 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 21390b0263117344993e989d5ef75549, type: 3}
     - {fileID: 8300000, guid: 1744d06ea66ad1e4990bd08fc9d06b82, type: 3}
     _fireBallSpell:
-    - {fileID: 8300000, guid: ca88439816e526244b20f14a14e04284, type: 3}
-    - {fileID: 8300000, guid: 22101aa80af01384fbc7d280a1adace8, type: 3}
-    - {fileID: 8300000, guid: 1cffd65f08bd91d4e8a3c0d4655c7bb1, type: 3}
-    - {fileID: 8300000, guid: e2451a7ca7c137f45a201e302817efbd, type: 3}
-    - {fileID: 8300000, guid: 3df3e802b7984bc46806c4bae8d56bd1, type: 3}
-    - {fileID: 8300000, guid: 2d746329d21cfaa43a6f0ae932c76469, type: 3}
-    - {fileID: 8300000, guid: 46174585b9797e14e981d95fe181b030, type: 3}
-    - {fileID: 8300000, guid: 5b86fa1c1664ca3429f6edbbfd2a768f, type: 3}
+    - {fileID: 8300000, guid: 864ea6e9461d3b141af562f1865bf772, type: 3}
     _fireBallFire:
     - {fileID: 8300000, guid: 49122b48218c5834aa9b2b68b2ddfdfa, type: 3}
     _fireBallExplosion:
     - {fileID: 8300000, guid: c312ffcdb1bb7194f8d842a377a7b20c, type: 3}
     _invincibilitySpell:
-    - {fileID: 8300000, guid: 46174585b9797e14e981d95fe181b030, type: 3}
+    - {fileID: 8300000, guid: fd6e575dc04cd1c4e876055cddfaef30, type: 3}
     _knifeThrowing:
     - {fileID: 8300000, guid: ba9c66299f032da4398a8c4bd2989dc0, type: 3}
     _pickingLock:
     - {fileID: 8300000, guid: 2113cd14d3522c7488b7b5de4aff5307, type: 3}
     - {fileID: 8300000, guid: 04fb23b667cb410498b58a5c8553591a, type: 3}
     - {fileID: 8300000, guid: 5a4ee6f228c75c641812c6b169a27db5, type: 3}
-    - {fileID: 8300000, guid: 55eae091bc578964d8a3dd836b5af255, type: 3}
+    _knifeStab:
+    - {fileID: 8300000, guid: f84003381a61c914f86c4c7cc18e8aef, type: 3}
+    _knifeHitWall:
+    - {fileID: 8300000, guid: 2e6d1231802ab51468401ee834904ceb, type: 3}
     _potionThrowing:
     - {fileID: 8300000, guid: ca88439816e526244b20f14a14e04284, type: 3}
     - {fileID: 8300000, guid: 22101aa80af01384fbc7d280a1adace8, type: 3}
@@ -117,16 +117,19 @@ MonoBehaviour:
     _potionBreaking:
     - {fileID: 8300000, guid: 6e8536083c41ee14980f650bdfb3ff8c, type: 3}
     - {fileID: 8300000, guid: 2ac5ea9b555b6eb47af1ecc8df56c6c6, type: 3}
-    _transmutationSpell: []
+    - {fileID: 8300000, guid: df9113a61b488d74293cfe0d42f8b53c, type: 3}
+    _transmutationSpell:
+    - {fileID: 8300000, guid: 7b81a59a112ab1349be1380cab39f035, type: 3}
     _characterHitten:
     - {fileID: 8300000, guid: 7603f6a1deb7cee43bd74bbf6221d6df, type: 3}
-    _characterKilled: []
+    _characterKilled:
+    - {fileID: 8300000, guid: dbb8ff78d3f3dd246ab5d839a23cb52b, type: 3}
     _ratIdle:
     - {fileID: 8300000, guid: 30807a03bcbc1da4889588ceab46a6a0, type: 3}
     _ratMoving:
     - {fileID: 8300000, guid: 083adeac1a1cba64c98a9a082ad9ac97, type: 3}
     _ratAttaking:
-    - {fileID: 8300000, guid: 13d33c498c2ff2e44a0a2c2da4743bd2, type: 3}
+    - {fileID: 8300000, guid: 9b32ddbaf8152a24798cdac1dbb51c0f, type: 3}
     _ratHitten:
     - {fileID: 8300000, guid: 5612696d02f11ab49b51516e31e27759, type: 3}
     - {fileID: 8300000, guid: f2cb15d3f6af0934db5cd714ff6c70f1, type: 3}
@@ -179,6 +182,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: ab205adb04630f947b7fd3e47ef727eb, type: 3}
     - {fileID: 8300000, guid: 5f7a9045b13740c45a9c9304d82ef8b1, type: 3}
     _whispers: []
+    _buttonHover:
+    - {fileID: 8300000, guid: 2929bbc1e5d13b9438b5a6d2914a2b3b, type: 3}
+    _buttonPressed:
+    - {fileID: 8300000, guid: 41f8bb37abaf3b04ea4c082f7582ae32, type: 3}
 --- !u!1 &3698390827710894465
 GameObject:
   m_ObjectHideFlags: 0

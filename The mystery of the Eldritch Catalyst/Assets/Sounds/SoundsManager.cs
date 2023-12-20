@@ -40,6 +40,8 @@ public class SoundsManager : MonoBehaviour
         CharactersRotate,
         PickupItem,
         OpeningDoor,
+        OpeningGate,
+        SlammingDoor,
         #endregion
 
         #region Character's moves
@@ -56,10 +58,13 @@ public class SoundsManager : MonoBehaviour
         // Thief
         KnifeThrowing,
         PickingLock,
+        KnifeHitWall,
+        KnifeStab,
 
         // Alchemist
         PotionThrowing,
         TransmutationSpell,
+        PotionBreaking,
         #endregion
 
         #region Character Damaged
@@ -107,6 +112,8 @@ public class SoundsManager : MonoBehaviour
         #region Environment
         WaterDrop,
         Whispers,
+        ButtonHover,
+        ButtonClick,
         #endregion
     }
     #endregion
@@ -136,6 +143,8 @@ public class SoundsManager : MonoBehaviour
         public AudioClip[] _charactersRotate;
         public AudioClip[] _pickupItem;
         public AudioClip[] _openingDoor;
+        public AudioClip[] _openingGate;
+        public AudioClip[] _slamingDoor;
         #endregion
 
         #region Character's moves
@@ -152,6 +161,8 @@ public class SoundsManager : MonoBehaviour
         [Header("Thief moves :")]
         public AudioClip[] _knifeThrowing;
         public AudioClip[] _pickingLock;
+        public AudioClip[] _knifeStab;
+        public AudioClip[] _knifeHitWall;
 
         [Header("Alchemist moves :")]
         public AudioClip[] _potionThrowing;
@@ -206,6 +217,8 @@ public class SoundsManager : MonoBehaviour
         [Header("Environment :")]
         public AudioClip[] _waterDrop;
         public AudioClip[] _whispers;
+        public AudioClip[] _buttonHover;
+        public AudioClip[] _buttonPressed;
         #endregion
     }
     #endregion
@@ -301,150 +314,165 @@ public class SoundsManager : MonoBehaviour
         {
             #region Player's actions
             case TypesOfSFX.CharactersMoves:
-                return _allSFX._charactersMoves[Random.Range(0, _allSFX._charactersMoves.Length - 1)];
+                return _allSFX._charactersMoves[Random.Range(0, _allSFX._charactersMoves.Length)];
 
             case TypesOfSFX.CharactersRotate:
-                return _allSFX._charactersRotate[Random.Range(0, _allSFX._charactersRotate.Length - 1)];
+                return _allSFX._charactersRotate[Random.Range(0, _allSFX._charactersRotate.Length)];
 
             case TypesOfSFX.PickupItem:
-                return _allSFX._pickupItem[Random.Range(0, _allSFX._pickupItem.Length - 1)];
+                return _allSFX._pickupItem[Random.Range(0, _allSFX._pickupItem.Length)];
 
             case TypesOfSFX.OpeningDoor:
-                return _allSFX._openingDoor[Random.Range(0, _allSFX._openingDoor.Length - 1)];
+                return _allSFX._openingDoor[Random.Range(0, _allSFX._openingDoor.Length)];
             #endregion
 
             #region Character's moves
             // Brut
             case TypesOfSFX.NormalSwordAttack:
-                return _allSFX._normalSwordAttack[Random.Range(0, _allSFX._normalSwordAttack.Length - 1)];
+                return _allSFX._normalSwordAttack[Random.Range(0, _allSFX._normalSwordAttack.Length)];
 
             case TypesOfSFX.HeavySwordAttack:
-                return _allSFX._heavySwordAttack[Random.Range(0, _allSFX._heavySwordAttack.Length - 1)];
+                return _allSFX._heavySwordAttack[Random.Range(0, _allSFX._heavySwordAttack.Length)];
 
             // Witch
             case TypesOfSFX.FireBallSpell:
-                return _allSFX._fireBallSpell[Random.Range(0, _allSFX._fireBallSpell.Length - 1)];
+                return _allSFX._fireBallSpell[Random.Range(0, _allSFX._fireBallSpell.Length)];
 
             case TypesOfSFX.FireBallFire:
-                return _allSFX._fireBallFire[Random.Range(0, _allSFX._fireBallFire.Length - 1)];
+                return _allSFX._fireBallFire[Random.Range(0, _allSFX._fireBallFire.Length)];
 
             case TypesOfSFX.FireBallExplosion:
-                return _allSFX._fireBallExplosion[Random.Range(0, _allSFX._fireBallExplosion.Length - 1)];
+                return _allSFX._fireBallExplosion[Random.Range(0, _allSFX._fireBallExplosion.Length)];
 
             case TypesOfSFX.InvincibilitySpell:
-                return _allSFX._invincibilitySpell[Random.Range(0, _allSFX._invincibilitySpell.Length - 1)];
+                return _allSFX._invincibilitySpell[Random.Range(0, _allSFX._invincibilitySpell.Length)];
 
             // Thief
             case TypesOfSFX.KnifeThrowing:
-                return _allSFX._knifeThrowing[Random.Range(0, _allSFX._knifeThrowing.Length - 1)];
+                return _allSFX._knifeThrowing[Random.Range(0, _allSFX._knifeThrowing.Length)];
 
             case TypesOfSFX.PickingLock:
-                return _allSFX._pickingLock[Random.Range(0, _allSFX._pickingLock.Length - 1)];
+                return _allSFX._pickingLock[Random.Range(0, _allSFX._pickingLock.Length)];
 
             // Alchimist
             case TypesOfSFX.PotionThrowing:
-                return _allSFX._potionThrowing[Random.Range(0, _allSFX._potionThrowing.Length - 1)];
+                return _allSFX._potionThrowing[Random.Range(0, _allSFX._potionThrowing.Length)];
 
             case TypesOfSFX.TransmutationSpell:
-                return _allSFX._transmutationSpell[Random.Range(0, _allSFX._transmutationSpell.Length - 1)];
+                return _allSFX._transmutationSpell[Random.Range(0, _allSFX._transmutationSpell.Length)];
             #endregion
 
             #region Character damaged
             case TypesOfSFX.CharacterHitten:
-                return _allSFX._characterHitten[Random.Range(0, _allSFX._characterHitten.Length - 1)];
+                return _allSFX._characterHitten[Random.Range(0, _allSFX._characterHitten.Length)];
 
             case TypesOfSFX.CharacterKilled:
-                return _allSFX._characterKilled[Random.Range(0, _allSFX._characterKilled.Length - 1)];
+                return _allSFX._characterKilled[Random.Range(0, _allSFX._characterKilled.Length)];
+            case TypesOfSFX.OpeningGate:
+                return _allSFX._openingGate[0];
+            case TypesOfSFX.SlammingDoor:
+                return _allSFX._slamingDoor[0];
+            case TypesOfSFX.KnifeHitWall:
+                return _allSFX._knifeHitWall[0];
+            case TypesOfSFX.KnifeStab:
+                return _allSFX._knifeStab[0];
+            case TypesOfSFX.PotionBreaking:
+                return _allSFX._potionBreaking[Random.Range(0, _allSFX._potionBreaking.Length)];
             #endregion
             
             #region Enemies
             // Rat
             case TypesOfSFX.RatIdle:
-                return _allSFX._ratIdle[Random.Range(0, _allSFX._ratIdle.Length - 1)];
+                return _allSFX._ratIdle[Random.Range(0, _allSFX._ratIdle.Length)];
 
             case TypesOfSFX.RatMoving:
-                return _allSFX._ratMoving[Random.Range(0, _allSFX._ratMoving.Length - 1)];
+                return _allSFX._ratMoving[Random.Range(0, _allSFX._ratMoving.Length)];
 
             case TypesOfSFX.RatAttaking:
-                return _allSFX._ratAttaking[Random.Range(0, _allSFX._ratAttaking.Length - 1)];
+                return _allSFX._ratAttaking[Random.Range(0, _allSFX._ratAttaking.Length)];
 
             case TypesOfSFX.RatHitten:
-                return _allSFX._ratHitten[Random.Range(0, _allSFX._ratHitten.Length - 1)];
+                return _allSFX._ratHitten[Random.Range(0, _allSFX._ratHitten.Length)];
 
             case TypesOfSFX.RatKilled:
-                return _allSFX._ratKilled[Random.Range(0, _allSFX._ratKilled.Length - 1)];
+                return _allSFX._ratKilled[Random.Range(0, _allSFX._ratKilled.Length)];
 
             // Skeleton
             case TypesOfSFX.SkeletonIdle:
-                return _allSFX._skeletonIdle[Random.Range(0, _allSFX._skeletonIdle.Length - 1)];
+                return _allSFX._skeletonIdle[Random.Range(0, _allSFX._skeletonIdle.Length)];
 
             case TypesOfSFX.SkeletonMoving:
-                return _allSFX._skeletonMoving[Random.Range(0, _allSFX._skeletonMoving.Length - 1)];
+                return _allSFX._skeletonMoving[Random.Range(0, _allSFX._skeletonMoving.Length)];
 
             case TypesOfSFX.SkeletonAttaking:
-                return _allSFX._skeletonAttaking[Random.Range(0, _allSFX._skeletonAttaking.Length - 1)];
+                return _allSFX._skeletonAttaking[Random.Range(0, _allSFX._skeletonAttaking.Length)];
 
             case TypesOfSFX.SkeletonHitten:
-                return _allSFX._skeletonHitten[Random.Range(0, _allSFX._skeletonHitten.Length - 1)];
+                return _allSFX._skeletonHitten[Random.Range(0, _allSFX._skeletonHitten.Length)];
 
             case TypesOfSFX.SkeletonKilled:
-                return _allSFX._skeletonKilled[Random.Range(0, _allSFX._skeletonKilled.Length - 1)];
+                return _allSFX._skeletonKilled[Random.Range(0, _allSFX._skeletonKilled.Length)];
 
             // Dullahan
             case TypesOfSFX.DullahanIdle:
-                return _allSFX._skeletonIdle[Random.Range(0, _allSFX._skeletonIdle.Length - 1)];
+                return _allSFX._dullahanIdle[Random.Range(0, _allSFX._dullahanIdle.Length)];
 
             case TypesOfSFX.DullahanMoving:
-                return _allSFX._dullahanMoving[Random.Range(0, _allSFX._dullahanMoving.Length - 1)];
+                return _allSFX._dullahanMoving[Random.Range(0, _allSFX._dullahanMoving.Length)];
 
             case TypesOfSFX.DullahanAttaking:
-                return _allSFX._dullahanAttaking[Random.Range(0, _allSFX._dullahanAttaking.Length - 1)];
+                return _allSFX._dullahanAttaking[Random.Range(0, _allSFX._dullahanAttaking.Length)];
 
             case TypesOfSFX.DullahanHitten:
-                return _allSFX._dullahanHitten[Random.Range(0, _allSFX._dullahanHitten.Length - 1)];
+                return _allSFX._dullahanHitten[Random.Range(0, _allSFX._dullahanHitten.Length)];
 
             case TypesOfSFX.DullahanKilled:
-                return _allSFX._dullahanKilled[Random.Range(0, _allSFX._dullahanKilled.Length - 1)];
+                return _allSFX._dullahanKilled[Random.Range(0, _allSFX._dullahanKilled.Length)];
 
             // Minotaur
             case TypesOfSFX.MinotaurIdle:
-                return _allSFX._minotaurIdle[Random.Range(0, _allSFX._minotaurIdle.Length - 1)];
+                return _allSFX._minotaurIdle[Random.Range(0, _allSFX._minotaurIdle.Length)];
 
             case TypesOfSFX.MinotaurMoving:
-                return _allSFX._minotaurMoving[Random.Range(0, _allSFX._minotaurMoving.Length - 1)];
+                return _allSFX._minotaurMoving[Random.Range(0, _allSFX._minotaurMoving.Length)];
 
             case TypesOfSFX.MinotaurAttaking:
-                return _allSFX._minotaurAttaking[Random.Range(0, _allSFX._minotaurAttaking.Length - 1)];
+                return _allSFX._minotaurAttaking[Random.Range(0, _allSFX._minotaurAttaking.Length)];
 
             case TypesOfSFX.MinotaurHitten:
-                return _allSFX._minotaurHitten[Random.Range(0, _allSFX._minotaurHitten.Length - 1)];
+                return _allSFX._minotaurHitten[Random.Range(0, _allSFX._minotaurHitten.Length)];
 
             case TypesOfSFX.MinotaurKilled:
-                return _allSFX._minotaurKilled[Random.Range(0, _allSFX._minotaurKilled.Length - 1)];
+                return _allSFX._minotaurKilled[Random.Range(0, _allSFX._minotaurKilled.Length)];
 
             // Evil Wizard
             case TypesOfSFX.EvilWizardIdle:
-                return _allSFX._evilWizardIdle[Random.Range(0, _allSFX._evilWizardIdle.Length - 1)];
+                return _allSFX._evilWizardIdle[Random.Range(0, _allSFX._evilWizardIdle.Length)];
 
             case TypesOfSFX.EvilWizardMoving:
-                return _allSFX._evilWizardMoving[Random.Range(0, _allSFX._evilWizardMoving.Length - 1)];
+                return _allSFX._evilWizardMoving[Random.Range(0, _allSFX._evilWizardMoving.Length)];
 
             case TypesOfSFX.EvilWizardAttaking:
-                return _allSFX._evilWizardAttaking[Random.Range(0, _allSFX._evilWizardAttaking.Length - 1)];
+                return _allSFX._evilWizardAttaking[Random.Range(0, _allSFX._evilWizardAttaking.Length)];
 
             case TypesOfSFX.EvilWizardHitten:
-                return _allSFX._evilWizardHitten[Random.Range(0, _allSFX._evilWizardHitten.Length - 1)];
+                return _allSFX._evilWizardHitten[Random.Range(0, _allSFX._evilWizardHitten.Length)];
 
             case TypesOfSFX.EvilWizardKilled:
-                return _allSFX._evilWizardKilled[Random.Range(0, _allSFX._evilWizardKilled.Length - 1)];
+                return _allSFX._evilWizardKilled[Random.Range(0, _allSFX._evilWizardKilled.Length)];
             #endregion
+
+            case TypesOfSFX.ButtonHover:
+                return _allSFX._buttonHover[0];
+            case TypesOfSFX.ButtonClick:
+                return _allSFX._buttonPressed[0];
 
             #region Environment
             case TypesOfSFX.WaterDrop:
-                return _allSFX._waterDrop[Random.Range(0, _allSFX._waterDrop.Length - 1)];
+                return _allSFX._waterDrop[Random.Range(0, _allSFX._waterDrop.Length)];
 
             case TypesOfSFX.Whispers:
-                return _allSFX._whispers[Random.Range(0, _allSFX._whispers.Length - 1)];
+                return _allSFX._whispers[Random.Range(0, _allSFX._whispers.Length)];
             #endregion
 
             default:

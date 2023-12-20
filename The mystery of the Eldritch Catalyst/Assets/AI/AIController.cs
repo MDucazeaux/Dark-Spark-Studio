@@ -90,7 +90,7 @@ public class AIController : MonoBehaviour
             case STATES.DEAD:
                 if (_aiAnimation.AnimatorGetBool("Dead"))
                 {
-                    Destroy(gameObject, 0.31f);
+                    Destroy(gameObject, 0.35f);
                 }
                 _aiAnimation.AnimatorSetBool("Dead", true);
                 break;

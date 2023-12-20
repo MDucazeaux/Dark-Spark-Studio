@@ -22,6 +22,7 @@ public class HealChoicePortrait : MonoBehaviour, IPointerEnterHandler, IPointerE
         Inventory.Instance.RefreshContent();
         HealChoicePanel.Instance.CloseHealChoicePanel();
         ItemActionSystem.Instance.CloseActionPanel();
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickupItem, 4);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

@@ -45,6 +45,8 @@ public class Alchemist : Character
             UseStamina(StaminaLoseActionOne);
 
             StartCooldownActionOne();
+
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PotionThrowing);
         }
     }
 
@@ -60,6 +62,8 @@ public class Alchemist : Character
             UseStamina(StaminaLoseActionTwo);
 
             StartCooldownActionTwo();
+
+            SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.TransmutationSpell, 0.6f);
         }
     }
 }

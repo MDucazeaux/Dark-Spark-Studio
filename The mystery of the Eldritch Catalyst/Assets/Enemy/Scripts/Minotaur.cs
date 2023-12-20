@@ -15,5 +15,6 @@ public class Minotaur : Enemy
     {
         GetComponent<AIController>().Death();
         DropManager.Instance.DropItems(_dropPoint, "Minotaur");
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.MinotaurKilled);
     }
 }

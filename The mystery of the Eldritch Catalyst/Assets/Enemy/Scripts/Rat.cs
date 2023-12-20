@@ -17,5 +17,6 @@ public class Rat : Enemy
     {
         GetComponent<AIController>().Death();
         DropManager.Instance.DropItems(_dropPoint, "Rat");
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.RatKilled);
     }
 }

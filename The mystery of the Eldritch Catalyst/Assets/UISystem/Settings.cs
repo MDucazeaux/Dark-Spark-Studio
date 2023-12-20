@@ -19,9 +19,9 @@ public class Settings : MonoBehaviour
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
     [SerializeField] private Toggle _fullscreenToggle;
 
-    private float _mainVolume;
-    private float _sfxVolume;
-    private float _musicVolume;
+    private float _mainVolume = 1;
+    private float _sfxVolume = 1;
+    private float _musicVolume = 1;
 
     private void Awake()
     {
