@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public class MenuManager : MonoBehaviour
 {
+    
     #region Variables
     public static MenuManager Instance;
 
@@ -23,11 +24,15 @@ public class MenuManager : MonoBehaviour
         public GameObject LoseMenuSelectedButton;
     }
 
+    [SerializeField]
+    private GameObject _settingsMenu;
+
     public enum MenuEnum
     {
         PauseMenu,
         WinMenu,
-        LoseMenu
+        LoseMenu,
+        SettingsMenu
     }
     #endregion
 
@@ -62,6 +67,13 @@ public class MenuManager : MonoBehaviour
                     return true;
                 else
                     return false;
+            case MenuEnum.SettingsMenu:
+                if (_settingsMenu.activeSelf == true)
+                    return true;
+                else
+                    return false;
+
+            
 
             default:
                 Debug.LogError($"ERROR ! The {menu} is not planned in the switch statement.");
@@ -77,6 +89,8 @@ public class MenuManager : MonoBehaviour
         else if (_menuStruct.WinMenu.activeSelf == true)
             return true;
         else if (_menuStruct.LoseMenu.activeSelf == true)
+            return true;
+        else if (_settingsMenu.activeSelf == true)
             return true;
         else
         {
@@ -140,11 +154,19 @@ public class MenuManager : MonoBehaviour
             case MenuEnum.LoseMenu:
                 _menuStruct.LoseMenu.SetActive(false);
                 return;
-
             default:
                 Debug.LogError($"ERROR ! The {menu} is not planned in the switch statement.");
                 return;
         }
+    }
+
+    public void CloseAllMenu()
+    {
+        Time.timeScale = 1f;
+        _menuStruct.PauseMenu.SetActive(false);
+        _menuStruct.WinMenu.SetActive(false);
+        _menuStruct.LoseMenu.SetActive(false);
+        _settingsMenu.SetActive(false);
     }
     #endregion
 }

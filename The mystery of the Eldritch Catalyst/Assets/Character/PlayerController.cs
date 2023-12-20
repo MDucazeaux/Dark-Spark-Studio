@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
     public void OnPausing(InputAction.CallbackContext context)
     {
         // If the Pause menu is already open, we close it.
-        if (context.started && _menuManager.IsMenuOpen(MenuManager.MenuEnum.PauseMenu))
+        if (context.started && _menuManager.IsMenuOpen(MenuManager.MenuEnum.PauseMenu) && !_menuManager.IsMenuOpen(MenuManager.MenuEnum.SettingsMenu))
         {
             _menuManager.CloseMenu(MenuManager.MenuEnum.PauseMenu);
         }
