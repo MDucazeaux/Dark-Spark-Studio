@@ -31,6 +31,15 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     continue;
                 }
+
+                Vector3 pPosition = PlayerMovement.Instance.transform.position;
+                Vector3 deltaPosition = colliders[i].transform.position - pPosition;
+                float dir = Vector3.Dot(PlayerMovement.Instance.transform.forward.normalized, deltaPosition.normalized);
+                if (!(dir > 0.5)) 
+                {
+                    continue;
+                }
+
                 if (colliders[i].TryGetComponent(out Button button))
                 {
                     if (button.CanInteract())

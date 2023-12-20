@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
+
     [SerializeField] private Transform _collisionTransform;
 
     private Transform _transform;
@@ -15,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
         _transform = transform;
         _layerWall = LayerMask.NameToLayer("Wall");
         _layerEnemy = LayerMask.NameToLayer("Enemy");

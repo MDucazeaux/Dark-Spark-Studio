@@ -9,7 +9,7 @@ public class GateTrigger : MonoBehaviour
     private bool _bisActive = true;
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player") && !_bisActive)
+        if (collision.CompareTag("Player") && _bisActive)
         {
             for (int i =0; i < _gates.Count; i++)
             {
