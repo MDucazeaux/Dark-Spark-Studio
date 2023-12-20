@@ -13,6 +13,7 @@ public class Item : MonoBehaviour
         ItemsOnFloor.Instance.AddItemOnTheFloor(this);
         _camera = Camera.main;
         _transform = transform;
+        LookAtCamera();
     }
 
     private void Update()

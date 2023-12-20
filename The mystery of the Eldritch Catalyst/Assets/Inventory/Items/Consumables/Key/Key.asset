@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Key
   _description: Can open all doors
-  _icon: {fileID: 21300000, guid: 570a33e5b5cfe1b40900a6cc62378d6a, type: 3}
+  _icon: {fileID: 21300000, guid: 6f66173cf882c3f449735cc34d31040a, type: 3}
   _prefab: {fileID: 1640438158358617317, guid: c0fb56f8de9603940b04a99fa47958b4, type: 3}
   _itemType: 4
   _healing: 0
