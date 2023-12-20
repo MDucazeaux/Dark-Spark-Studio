@@ -30,9 +30,16 @@ public class Chest : Interactable
     }
 
 
-    private void OpenChest()
+    private void OpenChest(bool breaking = false)
     {
-        DropManager.Instance.DropItemsInChests(_dropPoint, _name);
+        if (!breaking)
+        {
+            DropManager.Instance.DropItemsInChests(_dropPoint, _name);
+        }
+        else
+        {
+            DropManager.Instance.DropItemsToLootInChests(_dropPoint, _name);
+        }
         SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.OpeningDoor, 1);
     }
 
@@ -49,7 +56,7 @@ public class Chest : Interactable
     public override void BreakInteractable()
     {
         _bIsOpened = true;
-        OpenChest();
+        OpenChest(true);
         if (_breakParticles)
         {
             Instantiate(_breakParticles, transform.position, transform.rotation);

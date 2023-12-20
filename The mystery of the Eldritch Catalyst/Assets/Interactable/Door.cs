@@ -27,6 +27,10 @@ public class Door : Interactable
 
     public IEnumerator Open()
     {
+        for (int i = 0; i < colliders.Count; i++)
+        {
+            colliders[i].enabled = false;
+        }
         SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.OpeningDoor, 1);
         _bIsOpened = true;
         float _startRotation = _parentTransform.rotation.eulerAngles.y;
@@ -61,6 +65,11 @@ public class Door : Interactable
         if (_breakParticles)
         {
             Instantiate(_breakParticles, _parentTransform.position, _parentTransform.rotation);
+        }
+
+        for (int i = 0; i < colliders.Count; i++)
+        {
+            colliders[i].enabled = false;
         }
 
         float _startRotation = _parentTransform.rotation.eulerAngles.x;

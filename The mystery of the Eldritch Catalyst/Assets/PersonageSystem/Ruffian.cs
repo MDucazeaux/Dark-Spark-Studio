@@ -81,6 +81,11 @@ public class Ruffian : Character
                     Instantiate(_bloodParticle, hitInfo.transform.position, Quaternion.identity);
                     SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab, 1);
                 }
+                else if (hitInfo.transform.TryGetComponent(out Chest chest))
+                {
+                    chest.BreakInteractable();
+                    SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.SlammingDoor);
+                }
             }
 
             UseStamina(StaminaLoseActionTwo);
