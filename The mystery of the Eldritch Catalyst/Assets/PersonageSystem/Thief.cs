@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Thief : Character
@@ -70,6 +71,9 @@ public class Thief : Character
 
                         SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickingLock);
                     }
+                    else if (!door.IsLocked)
+                    {
+                    }
                     else
                         NarratifManager.Instance.FeedBackNoLockpick();
                 }
@@ -81,6 +85,9 @@ public class Thief : Character
                         Inventory.Instance.RemoveItemByName("Lock Picking Tool");
 
                         SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.PickingLock);
+                    }
+                    else if (!door.IsLocked)
+                    {
                     }
                     else
                         NarratifManager.Instance.FeedBackNoLockpick();
