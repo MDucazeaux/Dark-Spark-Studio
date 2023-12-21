@@ -587,6 +587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheatCodeManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7470645070491545101, guid: eaefd0075e71ce94fb83cfec1f83f8e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5481,6 +5485,18 @@ PrefabInstance:
     - target: {fileID: 5131261049764094232, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_Name
       value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 8834565196311151871, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8834565196311151871, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8834565196311151871, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
