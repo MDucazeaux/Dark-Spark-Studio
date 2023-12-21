@@ -22,7 +22,7 @@ public class ActionOnDeath : MonoBehaviour
                 {
                     if (!_gates[i].IsOpened)
                     {
-                        StartCoroutine(_gates[i].Open());
+                        _gates[i].OpenWithTrigger();
                     }
                 }
                 break;

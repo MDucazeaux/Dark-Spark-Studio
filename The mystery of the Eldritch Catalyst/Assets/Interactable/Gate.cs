@@ -24,6 +24,12 @@ public class Gate : Interactable
     {
         return !_bIsOpened;
     }
+
+    public void OpenWithTrigger()
+    {
+        StartCoroutine(Open());
+    }
+
     public IEnumerator Open()
     {
         SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.OpeningGate, 0.25f);

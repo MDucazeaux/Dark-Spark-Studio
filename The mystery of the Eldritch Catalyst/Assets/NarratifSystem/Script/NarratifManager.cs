@@ -159,6 +159,8 @@ public class NarratifManager : MonoBehaviour
                         _text.text = _badEndTexts[_index++];
                     }
                     break;
+                case GameManager.NaratifPhase.None:
+                    break;
 
                 default:
                     Debug.Log("Error GameManager.NaratifPhase");

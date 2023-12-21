@@ -31,6 +31,100 @@ Transform:
   m_Children: []
   m_Father: {fileID: 642320313393710410}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2623626303785476743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5020023198125567212}
+  - component: {fileID: 253344985563037697}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &5020023198125567212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623626303785476743}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.14999999, y: 0.14999999, z: 0.14999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 642320313393710410}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &253344985563037697
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623626303785476743}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.59607846, b: 0, a: 1}
+  m_Intensity: 6.87
+  m_Range: 15
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &3010730493942949107
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 3010730493942949107}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.15, z: 0}
+  m_LocalPosition: {x: 0, y: 0.24999997, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -179,6 +273,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 5020023198125567212}
   - {fileID: 6218211993013009409}
   - {fileID: 4104283864157196454}
   - {fileID: 7665633370944894304}
@@ -524,6 +619,7 @@ GameObject:
   - component: {fileID: 4605462909816670672}
   - component: {fileID: 6553583753733995578}
   - component: {fileID: 6398739417030826348}
+  - component: {fileID: 2162356701180652822}
   m_Layer: 0
   m_Name: Characters
   m_TagString: Untagged
@@ -558,7 +654,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104ca50abad2cd24182f228b8c653149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _charactersList: []
+  _charactersList:
+  - {fileID: 4055355927798810077}
+  - {fileID: 7941301532368033170}
+  - {fileID: 4605462909816670672}
+  - {fileID: 6553583753733995578}
   _armorSlot: {fileID: 0}
   _weaponSlot: {fileID: 0}
   _characterPortraitInInventory: {fileID: 0}
@@ -574,11 +674,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c62e9d969ffff4caef3935a82aeffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Life: 0
   _playerMovement: {fileID: 2057167433952793979}
   _playerRotation: {fileID: 3272287673724195968}
   _distanceAction: 10
   _damageLight: 15
-  _damageStrong: 30
+  _damageStrong: 50
   _whiteSwoosh: {fileID: 228154944414223481, guid: 4c2713f88c350a744b2caf7206103208, type: 3}
   _redSwoosh: {fileID: 5228714176221858076, guid: 85e5fe5c3341bf04cb931e455f9e5961, type: 3}
   _bloodParticle: {fileID: 6334590284349246100, guid: da83f7be68e45c24691eef5dbb914390, type: 3}
@@ -594,6 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783d9a26c699fa04fbd97d1bcb2e0016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Life: 0
   _fireBall: {fileID: 5979253051142448836, guid: f60d0758a8d7bf64d9338b0713466942, type: 3}
   _playerMovement: {fileID: 2057167433952793979}
   _playerRotation: {fileID: 3272287673724195968}
@@ -610,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d052719e56363c478cdaaaea65e5bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Life: 0
   _potion: {fileID: 5625110827337815292, guid: 1fc5bf3a4e623834ea80ea4dec6848ca, type: 3}
   _playerMovement: {fileID: 2057167433952793979}
   _playerRotation: {fileID: 3272287673724195968}
@@ -627,6 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce880eb01c6c2843a3b491051b170e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Life: 0
   _knife: {fileID: 7618008464428678204, guid: c9e3be9690887b94184e472ee0d5e99e, type: 3}
   _playerMovement: {fileID: 2057167433952793979}
   _playerRotation: {fileID: 3272287673724195968}
@@ -643,3 +747,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e71b919bf747614fb8acfb4678c2b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2162356701180652822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895189151308559217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8f20deadf4de940865efd84d4eaccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeBetweenEnemySteal: 10
+  _energyStolen: 1
