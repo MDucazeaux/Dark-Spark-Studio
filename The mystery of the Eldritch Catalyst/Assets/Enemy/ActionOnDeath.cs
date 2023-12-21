@@ -27,7 +27,7 @@ public class ActionOnDeath : MonoBehaviour
                 }
                 break;
             case ACTIONS.END_CINEMATIC:
-
+                MenuManager.Instance.OpenMenu(MenuManager.MenuEnum.WinMenu);
                 break;
         }
     }
