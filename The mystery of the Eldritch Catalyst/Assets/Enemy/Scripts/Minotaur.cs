@@ -5,7 +5,7 @@ public class Minotaur : Enemy
         MaxLife = 200;
         Life = MaxLife;
 
-        _originDamage = 30;
+        _originDamage = 20;
         _damage = _originDamage;
 
         _cooldownAttack = 1.5f;

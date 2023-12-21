@@ -10,12 +10,14 @@ public abstract class Enemy : Entity
     protected float _originDamage = 0;
     protected float _damage = 0;
 
+    private float _timeTransmutation = 5;
+
     protected float _cooldownAttack = 0;
 
     private Coroutine _poisonCoroutine = null;
     private float _waitPoison = 1;
     private float _allTimePoison = 10;
-    private float _poisonDamage = 2;
+    private float _poisonDamage = 4;
 
     public void StartTransmutation()
     {
@@ -26,7 +28,7 @@ public abstract class Enemy : Entity
     {
         _damage -= _damage * 20 / 100;
 
-        yield return new WaitForSeconds(_damage);
+        yield return new WaitForSeconds(_timeTransmutation);
 
         _damage = _originDamage;
     }

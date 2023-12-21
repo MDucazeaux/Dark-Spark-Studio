@@ -7,7 +7,7 @@ public class Rat : Enemy
         MaxLife = 50;
         Life = MaxLife;
 
-        _originDamage = 10;
+        _originDamage = 5;
         _damage = _originDamage;
 
         _cooldownAttack = 1;

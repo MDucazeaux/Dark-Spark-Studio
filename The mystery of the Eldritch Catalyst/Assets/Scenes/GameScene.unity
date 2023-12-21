@@ -1330,17 +1330,20 @@ MonoBehaviour:
     ItemsToLoot: []
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 0a000000
+      dropPercentages: 5a000000
       maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+      dropPercentages: 0a000000
+      maxQuantity: 25
     ChestQuantity: 0
   - EnemyType: Dullahan
     ItemsToLoot: []
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+    - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
       dropPercentages: 19000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 0f000000
+      dropPercentages: 4b000000
       maxQuantity: 1
     ChestQuantity: 0
   - EnemyType: Minotaur
@@ -1354,7 +1357,10 @@ MonoBehaviour:
     ItemsToLoot: []
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 28000000
+      maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+      dropPercentages: 4b000000
       maxQuantity: 1
     ChestQuantity: 0
   - EnemyType: TutoChest
@@ -1380,13 +1386,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 14000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 23000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 28000000
+      dropPercentages: 2d000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest2
@@ -1396,13 +1402,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 14000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 23000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 28000000
+      dropPercentages: 2d000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest3
@@ -1412,13 +1418,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 14000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 23000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 28000000
+      dropPercentages: 2d000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest4
@@ -1428,13 +1434,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 14000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 23000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 28000000
+      dropPercentages: 2d000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest5
@@ -1444,13 +1450,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 14000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 23000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 28000000
+      dropPercentages: 2d000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest6
@@ -1460,13 +1466,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 14000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 23000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 28000000
+      dropPercentages: 2d000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest7
@@ -1476,13 +1482,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 14000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 1e000000
+      dropPercentages: 23000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 28000000
+      dropPercentages: 2d000000
       maxQuantity: 1
     ChestQuantity: 3
 --- !u!114 &268578085
@@ -9922,7 +9928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8f20deadf4de940865efd84d4eaccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeBetweenEnemySteal: 5
+  _timeBetweenEnemySteal: 10
   _energyStolen: 1
 --- !u!1 &1898804469
 GameObject:

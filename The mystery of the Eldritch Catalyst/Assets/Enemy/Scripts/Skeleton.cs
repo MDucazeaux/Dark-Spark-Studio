@@ -5,7 +5,7 @@ public class Skeleton : Enemy
         MaxLife = 100;
         Life = MaxLife;
 
-        _originDamage = 20;
+        _originDamage = 15;
         _damage = _originDamage;
 
         _cooldownAttack = 1.5f;

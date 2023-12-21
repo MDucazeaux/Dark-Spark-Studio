@@ -6,8 +6,8 @@ public class Ruffian : Character
     [SerializeField] private PlayerRotation _playerRotation;
 
     [SerializeField] private float _distanceAction = 10;
-    [SerializeField] private float _damageLight = 20;
-    [SerializeField] private float _damageStrong = 45;
+    [SerializeField] private float _damageLight = 15;
+    [SerializeField] private float _damageStrong = 50;
     private LayerMask _enemyLayer;
 
     [SerializeField] private GameObject _whiteSwoosh;
@@ -23,7 +23,7 @@ public class Ruffian : Character
         MaxStamina = 100;
         Stamina = 100;
 
-        StaminaLoseActionOne = 25;
+        StaminaLoseActionOne = 0;
         StaminaLoseActionTwo = 30;
 
         ArmorMultiplier = 1.25f;

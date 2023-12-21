@@ -21,8 +21,8 @@ public class Alchemist : Character
         MaxStamina = 100;
         Stamina = MaxStamina;
 
-        StaminaLoseActionOne = 25;
-        StaminaLoseActionTwo = 30;
+        StaminaLoseActionOne = 35;
+        StaminaLoseActionTwo = 25;
 
         ArmorMultiplier = 1f;
         StrengthMultiplier = 1f;

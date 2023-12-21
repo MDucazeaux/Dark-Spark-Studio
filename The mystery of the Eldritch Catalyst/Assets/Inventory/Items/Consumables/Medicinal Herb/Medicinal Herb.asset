@@ -18,7 +18,7 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 9b3acc134df357645816b25d830c95b9, type: 3}
   _prefab: {fileID: 6671984306648387596, guid: a12c87402aa21b04e84eda348682e471, type: 3}
   _itemType: 3
-  _healing: 35
+  _healing: 40
   _staminaStats: 0
   _armorStats: 0
   _physicalStrengthStats: 0

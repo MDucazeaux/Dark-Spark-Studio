@@ -17,8 +17,8 @@ public class Witch : Character
         MaxStamina = 100;
         Stamina = 100;
 
-        StaminaLoseActionOne = 10;
-        StaminaLoseActionTwo = 30;
+        StaminaLoseActionOne = 15;
+        StaminaLoseActionTwo = 0;
 
         ArmorMultiplier = 1f;
         StrengthMultiplier = 0.75f;

@@ -19,7 +19,7 @@ MonoBehaviour:
   _prefab: {fileID: 5549466461819993002, guid: e5e26c2a1964e4e4e869d555f735e370, type: 3}
   _itemType: 2
   _healing: 0
-  _staminaStats: 100000
+  _staminaStats: 45
   _armorStats: 0
   _physicalStrengthStats: 0
   _magicalStrengthStats: 0

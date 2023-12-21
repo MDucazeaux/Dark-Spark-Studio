@@ -34,7 +34,7 @@ public class FireBall : Throwable
 
     public override void SetValues(Vector3 position, Vector3 direction)
     {
-        _damage = 25;
+        _damage = 30;
         _direction = direction;
         _transform.position = position;
         _startPosition = position;
