@@ -5933,6 +5933,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3322569024270583176, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: _doAttackAnimation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3343455580475977659, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: _name
       value: Chest6
@@ -6015,6 +6019,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4531070110101778664, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611908115987420586, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: _doAttackAnimation
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4654948220856279637, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}

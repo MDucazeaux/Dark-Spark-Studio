@@ -8,6 +8,8 @@ public class AIAttack : MonoBehaviour
 
     private bool _canAttack = true;
 
+    [SerializeField] bool _doAttackAnimation = true;
+
     private float _cooldown = 1;
 
     private void Start()
@@ -22,7 +24,10 @@ public class AIAttack : MonoBehaviour
         {
             StartCoroutine(WaitForDamage(_cooldown*0.4f));
             StartCoroutine(AttackCooldown());
-            StartCoroutine(_aiAnimation.DoAttackAnimation((_cooldown-0.1f) * 0.85f));
+            if (_doAttackAnimation)
+            {
+                StartCoroutine(_aiAnimation.DoAttackAnimation((_cooldown - 0.1f) * 0.85f));
+            }
         }
     }
 

@@ -345,6 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _aiAnimation: {fileID: 5380416079548505309}
+  _doAttackAnimation: 0
 --- !u!114 &5380416079548505309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d269f28a7979fcc4c808d2edb267b9e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Life: 0
   _poisonParticle: {fileID: 6671111231025494226, guid: b0ba057c511493641886c5be6f447513, type: 3}
   _dropPoint: {fileID: 2584593657424549619}
 --- !u!1 &7282320331561269214
