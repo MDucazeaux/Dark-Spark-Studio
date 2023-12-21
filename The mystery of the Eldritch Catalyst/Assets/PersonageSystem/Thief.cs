@@ -102,8 +102,6 @@ public class Thief : Character
                 }
             }
 
-            UseStamina(StaminaLoseActionTwo);
-
             StartCooldownActionTwo();
         }
     }

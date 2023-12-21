@@ -68,7 +68,7 @@ public class Gate : Interactable
 
     public bool IsOpened { get { return _bIsOpened;  } }
 
-    public override void BreakInteractable()
+    public override void BreakInteractable(bool reverse)
     {
     }
 }

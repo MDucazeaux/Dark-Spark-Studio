@@ -50,15 +50,15 @@ public class Door : Interactable
         _parentTransform.rotation = Quaternion.Euler(_parentTransform.rotation.eulerAngles.x, _endRotation, _parentTransform.rotation.eulerAngles.z);
     }
 
-    public override void BreakInteractable()
+    public override void BreakInteractable(bool reverse = false)
     {
         _bIsOpened = true;
         transform.GetComponent<MeshCollider>().enabled = false;
         StopAllCoroutines();
-        StartCoroutine(BreakAnimation());
+        StartCoroutine(BreakAnimation(reverse));
     }
 
-    private IEnumerator BreakAnimation()
+    private IEnumerator BreakAnimation(bool reverse = false)
     {
         SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.SlammingDoor);
 
@@ -74,6 +74,10 @@ public class Door : Interactable
 
         float _startRotation = _parentTransform.rotation.eulerAngles.x;
         float _endRotation = _startRotation - 90;
+        if (reverse)
+        {
+            _endRotation = _startRotation + 90; 
+        }
         float time = 0.25f;
         float _elapsedTime = 0;
         Vector3 offsetpos = _parentTransform.position;

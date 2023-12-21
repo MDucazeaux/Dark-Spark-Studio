@@ -6,8 +6,8 @@ public class Ruffian : Character
     [SerializeField] private PlayerRotation _playerRotation;
 
     [SerializeField] private float _distanceAction = 10;
-    [SerializeField] private float _damageLight = 15;
-    [SerializeField] private float _damageStrong = 30;
+    [SerializeField] private float _damageLight = 20;
+    [SerializeField] private float _damageStrong = 45;
     private LayerMask _enemyLayer;
 
     [SerializeField] private GameObject _whiteSwoosh;
@@ -63,8 +63,6 @@ public class Ruffian : Character
                 }
             }
 
-            UseStamina(StaminaLoseActionOne);
-
             StartCooldownActionOne();
         }
     }
@@ -81,9 +79,13 @@ public class Ruffian : Character
                 {
                     door.BreakInteractable();
                 }
+                else if (hitInfo.transform.parent.TryGetComponent(out Door door2))
+                {
+                    door2.BreakInteractable(true);
+                }
                 else if (hitInfo.transform.CompareTag("Enemy"))
                 {
-                    hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageLight);
+                    hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageStrong);
                     Instantiate(_bloodParticle, hitInfo.transform.position, Quaternion.identity);
                     SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.KnifeStab, 1);
                 }

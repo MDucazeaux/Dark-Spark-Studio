@@ -6332,6 +6332,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1571216836511489325, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1035059868}
+    - targetCorrespondingSourceObject: {fileID: 3453546799523195075, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1661728429}
   m_SourcePrefab: {fileID: 100100000, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
 --- !u!1001 &1003144842
 PrefabInstance:
@@ -8846,6 +8849,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3453546799523195075, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
   m_PrefabInstance: {fileID: 949918757}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1661728429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661728419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2327916c6177014fbb6e4a916c1a5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doWhat: 1
+  _gates: []
 --- !u!224 &1696305122 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3221249592931896161, guid: 54fc293e939ea394291430362008e69a, type: 3}
@@ -10621,6 +10638,14 @@ PrefabInstance:
       propertyPath: _charactersList.Array.data[3]
       value: 
       objectReference: {fileID: 365864763}
+    - target: {fileID: 4055355927798810077, guid: 745b75963c564454d93ac75dc5704afe, type: 3}
+      propertyPath: _damageLight
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4055355927798810077, guid: 745b75963c564454d93ac75dc5704afe, type: 3}
+      propertyPath: _damageStrong
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 4104283864157196454, guid: 745b75963c564454d93ac75dc5704afe, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.24999997

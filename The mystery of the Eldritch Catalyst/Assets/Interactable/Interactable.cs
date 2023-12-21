@@ -6,5 +6,5 @@ public abstract class Interactable : MonoBehaviour
 
     public abstract bool CanInteract();
 
-    public abstract void BreakInteractable();
+    public abstract void BreakInteractable(bool alternate = false);
 }

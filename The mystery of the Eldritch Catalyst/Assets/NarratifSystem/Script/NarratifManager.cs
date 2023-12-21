@@ -343,7 +343,7 @@ public class NarratifManager : MonoBehaviour
         _feedbackText.enabled = true;
         _feedbackText.color = Color.white;
 
-        _feedbackText.text = "je n'ai pas de clé pour l'ouvrir mais ça a l'air fragile";
+        _feedbackText.text = "The door is locked, and I don't have a key to open it, but it seems fragile.";
         _feedbackTime = Time.time + _feedbackWait;
 
         if (_fadeFeedBack != null)
@@ -357,7 +357,7 @@ public class NarratifManager : MonoBehaviour
         _feedbackText.enabled = true;
         _feedbackText.color = Color.white;
 
-        _feedbackText.text = "je n'ai pas de crochet pour l'ouvrir mais ça a l'air fragile";
+        _feedbackText.text = "The door is locked, and I don't have a lock pick to pick it, but it seems fragile.";
         _feedbackTime = Time.time + _feedbackWait;
 
         if (_fadeFeedBack != null)

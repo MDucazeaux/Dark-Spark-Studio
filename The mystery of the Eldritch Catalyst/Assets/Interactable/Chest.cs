@@ -53,7 +53,7 @@ public class Chest : Interactable
     public void Unlock()
     { _bIsLocked = false; }
 
-    public override void BreakInteractable()
+    public override void BreakInteractable(bool alternate = false)
     {
         _bIsOpened = true;
         OpenChest(true);
