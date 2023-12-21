@@ -82,9 +82,9 @@ public class CharacterSelection : MonoBehaviour
                 else if (CharacterPlacementIsAlive(2))
                 { SwitchCharacters(1, 2); }
                 break;
-
             default: break;
         }
+        ActionButton.Instance.ChangeSpriteActions();
     }
 
     private int GetCharacterPlacement(string character)

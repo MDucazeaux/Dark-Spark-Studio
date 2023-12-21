@@ -359,7 +359,21 @@ public class NarratifManager : MonoBehaviour
         _feedbackText.enabled = true;
         _feedbackText.color = Color.white;
 
-        _feedbackText.text = "The door is locked, and I don't have a lock pick to pick it, but it seems fragile.";
+        _feedbackText.text = "The door is locked, and I don't have a lock pick to lockpick it, but it seems fragile.";
+        _feedbackTime = Time.time + _feedbackWait;
+
+        if (_fadeFeedBack != null)
+            StopCoroutine(_fadeFeedBack);
+
+        _fadeFeedBack = StartCoroutine(FadeFeedBack());
+    }
+
+    public void FeedBackChestLocked()
+    {
+        _feedbackText.enabled = true;
+        _feedbackText.color = Color.white;
+
+        _feedbackText.text = "The chest is locked, maybe we can lockpick it... Or smash it";
         _feedbackTime = Time.time + _feedbackWait;
 
         if (_fadeFeedBack != null)
