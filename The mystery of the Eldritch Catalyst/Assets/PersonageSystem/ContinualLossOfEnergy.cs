@@ -35,7 +35,10 @@ public class ContinualLossOfEnergy : MonoBehaviour
 
             foreach (Character character in CharacterSelection.Instance.CharactersList())
             {
-                character.UseStamina(energyStolen);
+                if (character.GetStamina() > 0)
+                    character.UseStamina(energyStolen);
+                else 
+                    character.TakeDamage(energyStolen);
             }
         }
     }

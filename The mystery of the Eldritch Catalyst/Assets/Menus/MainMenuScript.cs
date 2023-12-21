@@ -30,6 +30,8 @@ public class MainMenuScript : MonoBehaviour
     private void Start()
     {
         _cameraTransform = Camera.main.transform;
+
+        StartCoroutine(SoundsManager.Instance.PlayMusicEndlessly(SoundsManager.TypesOfMusics.MainMenu));
     }
 
     private void Update()
