@@ -77,15 +77,8 @@ public class PlayerInteraction : MonoBehaviour
                     }
                     else
                     {
-                        if (Inventory.Instance.IsInInventory("Key"))
                         {
-                            chest.Interaction();
-                            Inventory.Instance.RemoveItemByName("Key");
-                            break;
-                        }
-                        else
-                        {
-                            NarratifManager.Instance.FeedBackNoKey();
+                            NarratifManager.Instance.FeedBackChestLocked();
                             break;
                         }
                     }
