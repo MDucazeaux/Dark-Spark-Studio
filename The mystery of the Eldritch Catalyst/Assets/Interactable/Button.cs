@@ -49,7 +49,7 @@ public class Button : Interactable
         yield return null;
     }
 
-    public override void BreakInteractable()
+    public override void BreakInteractable(bool alternate = false)
     {
     }
 

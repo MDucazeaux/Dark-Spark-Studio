@@ -81,6 +81,10 @@ public class Ruffian : Character
                 {
                     door.BreakInteractable();
                 }
+                else if (hitInfo.transform.parent.TryGetComponent(out Door door2))
+                {
+                    door2.BreakInteractable(true);
+                }
                 else if (hitInfo.transform.CompareTag("Enemy"))
                 {
                     hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageLight);
