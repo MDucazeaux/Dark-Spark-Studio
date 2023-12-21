@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -101,6 +102,18 @@ public class MenuManager : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void OpenWinAfterTimer(float time = 1)
+    {
+        StartCoroutine(WaitBeforeWin(time));
+    }
+
+    private IEnumerator WaitBeforeWin(float time = 1)
+    {
+        yield return new WaitForSeconds(time);
+        OpenMenu(MenuEnum.WinMenu);
+        yield return null;
     }
 
     /// <summary> Open the given menu </summary>
