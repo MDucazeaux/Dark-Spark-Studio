@@ -41,6 +41,12 @@ public class SelectionUICharacter : MonoBehaviour
                 return;
             }
             _select2 = portraitID;
+            if (_characterSelection.Characters[_characterSelection.CharactersPlacement[_select1]].IsDead 
+                || _characterSelection.Characters[_characterSelection.CharactersPlacement[_select2]].IsDead)
+            {
+                UnselectAll();
+                return;
+            }
             _characterSelection.SwitchCharacters(_select1, _select2);
             _characterSelection.SelectCharacter(_select2);
             UnselectAll();

@@ -5997,6 +5997,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3908916507935709011, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908916507935709011, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}

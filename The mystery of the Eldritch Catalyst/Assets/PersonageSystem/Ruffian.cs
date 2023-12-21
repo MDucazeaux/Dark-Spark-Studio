@@ -54,7 +54,6 @@ public class Ruffian : Character
             SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.NormalSwordAttack, 2);
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _distanceAction, _enemyLayer))
             {
-                
                 if (hitInfo.transform.CompareTag("Enemy"))
                 {
                     hitInfo.transform.GetComponentInParent<Enemy>().TakeDamage(_damageLight);
