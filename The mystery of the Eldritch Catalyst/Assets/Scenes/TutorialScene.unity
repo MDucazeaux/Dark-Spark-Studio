@@ -6081,6 +6081,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1151471928}
+  _infoContiueNarratif: {fileID: 0}
+  _infoContiueDialogue: {fileID: 0}
   _dialogue: {fileID: 1885758588}
   _character: {fileID: 1360272510}
   _feedbackText: {fileID: 0}
@@ -6788,7 +6790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7139655139794436649, guid: aef3e18e7bc162c4bba39793c8df7a82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 7139655139794436649, guid: aef3e18e7bc162c4bba39793c8df7a82, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11723,6 +11725,7 @@ MonoBehaviour:
   _content:
   - {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
   - {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+  - {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
   _itemActionSystem: {fileID: 268578081}
   _inventoryBackground: {fileID: 289955716}
   _inventorySlotsParent: {fileID: 1399940690}
@@ -13007,6 +13010,10 @@ PrefabInstance:
       propertyPath: _charactersList.Array.data[3]
       value: 
       objectReference: {fileID: 365864763}
+    - target: {fileID: 4104283864157196454, guid: 745b75963c564454d93ac75dc5704afe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4916530746108233017, guid: 745b75963c564454d93ac75dc5704afe, type: 3}
       propertyPath: m_Name
       value: Player
