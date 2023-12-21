@@ -45,7 +45,7 @@ public class Chest : Interactable
 
     public override bool CanInteract()
     {
-        return !_bIsOpened;
+        return (!_bIsOpened && !_bIsLocked);
     }
 
     public bool IsLocked { get { return _bIsLocked; } set { _bIsLocked = value; } }

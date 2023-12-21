@@ -77,10 +77,8 @@ public class PlayerInteraction : MonoBehaviour
                     }
                     else
                     {
-                        {
-                            NarratifManager.Instance.FeedBackChestLocked();
-                            break;
-                        }
+                        NarratifManager.Instance.FeedBackChestLocked();
+                        break;
                     }
                 }
                 
