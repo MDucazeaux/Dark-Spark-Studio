@@ -1330,8 +1330,8 @@ MonoBehaviour:
     ItemsToLoot: []
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 5a000000
-      maxQuantity: 1
+      dropPercentages: 6400000064000000
+      maxQuantity: 2
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
       dropPercentages: 0a000000
       maxQuantity: 1
@@ -1352,12 +1352,15 @@ MonoBehaviour:
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 64000000
       maxQuantity: 1
+    - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+      dropPercentages: 640000006400000064000000
+      maxQuantity: 3
     ChestQuantity: 0
   - EnemyType: Skeleton
     ItemsToLoot: []
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 28000000
+      dropPercentages: 46000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 4b000000
@@ -1386,13 +1389,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 0f000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 23000000
+      dropPercentages: 14000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 2d000000
+      dropPercentages: 3c000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest2
@@ -1402,13 +1405,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 0f000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 23000000
+      dropPercentages: 19000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 2d000000
+      dropPercentages: 3c000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest3
@@ -1418,13 +1421,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 0f000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 23000000
+      dropPercentages: 19000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 2d000000
+      dropPercentages: 3c000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest4
@@ -1434,13 +1437,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 0f000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 23000000
+      dropPercentages: 19000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 2d000000
+      dropPercentages: 3c000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest5
@@ -1450,13 +1453,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 0f000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 23000000
+      dropPercentages: 19000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 2d000000
+      dropPercentages: 3c000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest6
@@ -1466,13 +1469,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 0f000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 23000000
+      dropPercentages: 19000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 2d000000
+      dropPercentages: 3c000000
       maxQuantity: 1
     ChestQuantity: 3
   - EnemyType: Chest7
@@ -1482,13 +1485,13 @@ MonoBehaviour:
       maxQuantity: 1
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 0f000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
-      dropPercentages: 23000000
+      dropPercentages: 19000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 2d000000
+      dropPercentages: 3c000000
       maxQuantity: 1
     ChestQuantity: 3
 --- !u!114 &268578085
@@ -5861,6 +5864,10 @@ PrefabInstance:
       propertyPath: _name
       value: Chest3
       objectReference: {fileID: 0}
+    - target: {fileID: 1686568572580741918, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: _bIsLocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1718519490402029407, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -5893,6 +5900,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 4.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2542187556121466287, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: _bIsLocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2671726320487783789, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -5908,6 +5919,10 @@ PrefabInstance:
     - target: {fileID: 2921856403214086857, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: _name
       value: Chest7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921856403214086857, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: _bIsLocked
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3038356590886189790, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5940,6 +5955,10 @@ PrefabInstance:
     - target: {fileID: 3343455580475977659, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: _name
       value: Chest6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3343455580475977659, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: _bIsLocked
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3365257182263029307, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6052,6 +6071,10 @@ PrefabInstance:
     - target: {fileID: 4724219660222062638, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: _name
       value: Chest4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724219660222062638, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      propertyPath: _bIsLocked
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4888575013536316238, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6277,6 +6300,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 4723514350218960227, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
     - {fileID: 1327505944087970909, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+    - {fileID: 3777043080697797580, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 180272148243668593, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       insertIndex: -1
@@ -6287,6 +6311,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 285924042907473029, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       insertIndex: 7
       addedObject: {fileID: 612910553}
+    - targetCorrespondingSourceObject: {fileID: 8095878059344294930, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1647902851}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8409275642518314936, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
       insertIndex: -1
@@ -6295,6 +6322,11 @@ PrefabInstance:
       insertIndex: 3
       addedObject: {fileID: 1661728429}
   m_SourcePrefab: {fileID: 100100000, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+--- !u!4 &949918758 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8095878059344294930, guid: bc814414fa40c1a45be883cbfedb2d2f, type: 3}
+  m_PrefabInstance: {fileID: 949918757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1003144842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8697,6 +8729,68 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1054192676157443100, guid: 307f1036429537546b3639a7b8542088, type: 3}
   m_PrefabInstance: {fileID: 1625098645}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1647902850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 949918758}
+    m_Modifications:
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 310
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767129410186665062, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+      propertyPath: m_Name
+      value: Lock Picking Tool
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+--- !u!4 &1647902851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2217085761913432184, guid: bc097f91283436044ac829af3dbd57e2, type: 3}
+  m_PrefabInstance: {fileID: 1647902850}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1657198997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9609,6 +9703,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 393a205467cc4544893836303de7ed9e, type: 2}
   - {fileID: 11400000, guid: 393a205467cc4544893836303de7ed9e, type: 2}
   - {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
+  - {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+  - {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
+  - {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+  - {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
+  - {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
   _itemActionSystem: {fileID: 268578081}
   _inventoryBackground: {fileID: 289955716}
   _inventorySlotsParent: {fileID: 1399940690}
