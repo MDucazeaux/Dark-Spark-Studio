@@ -7,6 +7,7 @@ public class ActionInfoPanel : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        gameObject.SetActive(false);
     }
 
     public void OpenInfo()
