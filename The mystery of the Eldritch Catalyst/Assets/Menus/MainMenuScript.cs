@@ -31,7 +31,8 @@ public class MainMenuScript : MonoBehaviour
     {
         _cameraTransform = Camera.main.transform;
 
-        StartCoroutine(SoundsManager.Instance.PlayMusicEndlessly(SoundsManager.TypesOfMusics.MainMenu));
+        SoundsManager.Instance.StopMusic();
+        StartCoroutine(SoundsManager.Instance.PlayMusicEndlessly(SoundsManager.TypesOfMusics.MainMenu, 0.2f));
     }
 
     private void Update()
@@ -66,6 +67,7 @@ public class MainMenuScript : MonoBehaviour
             _elapsedTime += Time.deltaTime;
             yield return null;
         }
+        SoundsManager.Instance.StopMusic();
         SceneManager.LoadSceneAsync(scene);
         yield return null;
     }
