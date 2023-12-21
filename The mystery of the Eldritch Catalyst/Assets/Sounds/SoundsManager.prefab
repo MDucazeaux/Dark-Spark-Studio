@@ -49,7 +49,8 @@ MonoBehaviour:
   _musicsPlayerAudioSource: {fileID: 8548836905627033555}
   _SFXPlayerAudioSource: {fileID: 5939982108133395595}
   _allMusics:
-    _mainMenu: []
+    _mainMenu:
+    - {fileID: 8300000, guid: ca88d831376bdad4eb57c5c2a861f421, type: 3}
     _startCinematic: []
     _victoryCinematic: []
     _donjonThemes: []
