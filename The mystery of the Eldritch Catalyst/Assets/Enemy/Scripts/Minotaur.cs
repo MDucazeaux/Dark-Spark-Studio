@@ -2,7 +2,7 @@ public class Minotaur : Enemy
 {
     private void Awake()
     {
-        MaxLife = 300;
+        MaxLife = 250;
         Life = MaxLife;
 
         _originDamage = 30;
