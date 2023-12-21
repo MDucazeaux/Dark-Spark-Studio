@@ -141,6 +141,7 @@ public class Inventory : MonoBehaviour
             {
                 _content.Remove(_content[i]);
                 RefreshContent();
+                break;
             }
         }
     }
