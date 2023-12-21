@@ -1356,9 +1356,6 @@ MonoBehaviour:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
       dropPercentages: 14000000
       maxQuantity: 1
-    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     ChestQuantity: 0
   - EnemyType: TutoChest
     ItemsToLoot:
@@ -1366,11 +1363,8 @@ MonoBehaviour:
       dropPercentages: 
       maxQuantity: 1
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 1e000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 1e000000
@@ -1385,11 +1379,8 @@ MonoBehaviour:
       dropPercentages: 
       maxQuantity: 1
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 1e000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 1e000000
@@ -1404,11 +1395,8 @@ MonoBehaviour:
       dropPercentages: 
       maxQuantity: 1
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 1e000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 1e000000
@@ -1423,11 +1411,8 @@ MonoBehaviour:
       dropPercentages: 
       maxQuantity: 1
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 1e000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 1e000000
@@ -1442,11 +1427,8 @@ MonoBehaviour:
       dropPercentages: 
       maxQuantity: 1
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 1e000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 1e000000
@@ -1461,11 +1443,8 @@ MonoBehaviour:
       dropPercentages: 
       maxQuantity: 1
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 1e000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 1e000000
@@ -1480,11 +1459,8 @@ MonoBehaviour:
       dropPercentages: 
       maxQuantity: 1
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 1e000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 1e000000
@@ -1499,11 +1475,8 @@ MonoBehaviour:
       dropPercentages: 
       maxQuantity: 1
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: 273db323c9dc68d49a7f20acba055726, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 14000000
+      dropPercentages: 1e000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 1e000000
