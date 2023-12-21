@@ -25,6 +25,8 @@ public class TutorialScript : MonoBehaviour
 
     private bool _bisEnding = false;
 
+    private List<string> _savedPlacement = new List<string>();
+
     private void Awake()
     {
         UpdateText();
@@ -127,6 +129,10 @@ public class TutorialScript : MonoBehaviour
                 }
                 if (currentHealthTotal > _savedHealth)
                 {
+                    for (int i = 0; i < CharacterSelection.Instance.CharactersPlacement.Count; i++)
+                    {
+                        _savedPlacement.Add(CharacterSelection.Instance.CharactersPlacement[i]);
+                    }
                     NextTutorial();
                     break;
                 }
@@ -136,6 +142,27 @@ public class TutorialScript : MonoBehaviour
                 }
                 break;
             case 10:
+                if (SelectionUICharacter.Instance._select1 != -1)
+                {
+                    NextTutorial();
+                }
+                break;
+            case 11:
+                for (int i = 0; i < _savedPlacement.Count; i++)
+                {
+                    if (_savedPlacement[i] != CharacterSelection.Instance.CharactersPlacement[i])
+                    {
+                        NextTutorial();
+                        return;
+                    }
+                }
+                if (SelectionUICharacter.Instance._select1 == -1)
+                {
+                    PreviousTutorial();
+                    break;
+                }
+                break;
+            case 12:
                 if (!_bisEnding)
                 {
                     _bisEnding = true;
@@ -148,6 +175,7 @@ public class TutorialScript : MonoBehaviour
 
     private IEnumerator GoBackToMenu()
     {
+        ActionInfoPanel.Instance.Hide();
         while (_fadePanel.color.a < 1)
         {
             _fadePanel.color = new Color(0, 0, 0, _fadePanel.color.a + 0.25f * Time.deltaTime);
@@ -198,9 +226,15 @@ public class TutorialScript : MonoBehaviour
                 _text.text = "Nice we can heal ourselves with that !\nWalk on the item then pick it with [f]";
                 break;
             case 9:
-                _text.text = "Click on your bag to open the inventory\n then click on the item you just picked up and heal yourself";
+                _text.text = "Click on your bag to open the inventory\nthen click on the item you just picked up and heal yourself";
                 break;
             case 10:
+                _text.text = "Before leaving we should change our placement\nOnly the two character on the front row take damages\nStart by click an already selected character";
+                break;
+            case 11:
+                _text.text = "Now click on another character to switch them with the already selected character";
+                break;
+            case 12:
                 _text.text = "The tutorial is finished, now the real adventure can begin";
                 break;
         }

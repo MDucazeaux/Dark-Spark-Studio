@@ -88,7 +88,7 @@ public class Settings : MonoBehaviour
     public void OnMusicVolumeChanged()
     {
         _musicVolume = _musicVolSlider.value;
-        SoundsManager.Instance.MusicsPlayerAudioSource.volume = _mainVolume * _musicVolume;
+        SoundsManager.Instance.MusicVolume = _mainVolume * _musicVolume;
     }
 
     public float MainVolume { get { return _mainVolume; } }

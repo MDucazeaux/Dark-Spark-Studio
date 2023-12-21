@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class SoundsManager : MonoBehaviour
 {
+    public float MusicVolume = 1f;
+
     #region Variables
     public static SoundsManager Instance;
 
@@ -273,8 +275,15 @@ public class SoundsManager : MonoBehaviour
         }
     }
 
+    public void StopMusic()
+    {
+        StopAllCoroutines();
+        _musicsPlayerAudioSource.Stop();
+    }
+
     /// <summary> Randomize the music list given and play it endlessly /!\ It's a Coroutine /!\ </summary>
-    public IEnumerator PlayMusicEndlessly(TypesOfMusics typesOfMusics)
+    /// 
+    public IEnumerator PlayMusicEndlessly(TypesOfMusics typesOfMusics, float musicVolume = 1)
     {
         List<AudioClip> musicList = ReturnMusic(typesOfMusics);
 
@@ -299,6 +308,8 @@ public class SoundsManager : MonoBehaviour
                 _musicsPlayerAudioSource.clip = musicList[i];
 
                 _musicsPlayerAudioSource.Play();
+
+                _musicsPlayerAudioSource.volume = MusicVolume * musicVolume;
 
                 yield return new WaitForSecondsRealtime(musicList[i].length);
             }
