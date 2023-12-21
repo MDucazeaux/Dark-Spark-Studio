@@ -117,7 +117,7 @@ public class CheatCodeManager : MonoBehaviour
             }
         }
 
-        ShowCheatCode(CheatCodes.GiveItems);
+        StartCoroutine (ShowCheatCode(CheatCodes.GiveItems));
     }
 
     void ChangeInvisibily(bool isEnable)
