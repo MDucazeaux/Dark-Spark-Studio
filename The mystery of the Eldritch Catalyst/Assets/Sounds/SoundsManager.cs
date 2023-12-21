@@ -388,7 +388,7 @@ public class SoundsManager : MonoBehaviour
                 return _allSFX._characterHitten[Random.Range(0, _allSFX._characterHitten.Length)];
 
             case TypesOfSFX.CharacterKilled:
-                return _allSFX._knifeStab[Random.Range(0, _allSFX._knifeStab.Length)];
+                return _allSFX._characterKilled[Random.Range(0, _allSFX._characterKilled.Length)];
             #endregion
 
             #region Enemies

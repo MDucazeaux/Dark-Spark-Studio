@@ -5,19 +5,6 @@ public class FireBall : Throwable
 {
     private bool _bisEnemySeen = false;
     private float _enemyDist;
-    private void Start()
-    {
-        StartCoroutine(FireSounds());
-    }
-
-    private IEnumerator FireSounds()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-        }
-        yield return null;
-    }
 
     public override void Update()
     {

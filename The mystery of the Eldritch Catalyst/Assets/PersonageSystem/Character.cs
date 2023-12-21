@@ -148,7 +148,7 @@ public abstract class Character : Entity
         // Checking if all characters are dead
         CharacterDeathManager.Instance.AreAllCharactersDead();
 
-        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharacterKilled);
+        SoundsManager.Instance.PlaySFX(SoundsManager.TypesOfSFX.CharacterKilled, 0.8f);
     }
 
     public bool IsDead { get { return _isDead; } }
