@@ -2,10 +2,10 @@ public class Dullahan : Enemy
 {
     private void Awake()
     {
-        MaxLife = 300;
+        MaxLife = 500;
         Life = MaxLife;
 
-        _originDamage = 10;
+        _originDamage = 15;
         _damage = _originDamage;
 
         _cooldownAttack = 2;

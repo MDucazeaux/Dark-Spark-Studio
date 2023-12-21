@@ -1330,18 +1330,12 @@ MonoBehaviour:
     ItemsToLoot: []
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: 1eb9234173621a44f9a0f6df06a4f850, type: 2}
-      dropPercentages: 6400000064000000
+      dropPercentages: 6400000032000000
       maxQuantity: 2
-    - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 0a000000
-      maxQuantity: 1
     ChestQuantity: 0
   - EnemyType: Dullahan
     ItemsToLoot: []
     LootTable:
-    - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 19000000
-      maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 4b000000
       maxQuantity: 1
@@ -1360,7 +1354,7 @@ MonoBehaviour:
     ItemsToLoot: []
     LootTable:
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
-      dropPercentages: 46000000
+      dropPercentages: 32000000
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: abf3ec27e4868de43897bd33f0473e1f, type: 2}
       dropPercentages: 4b000000
