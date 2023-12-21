@@ -27,10 +27,7 @@ public class CharacterSelection : MonoBehaviour
         _placement.Add("Thief");
         _placement.Add("Witch");
         _placement.Add("Alchemist");
-    }
 
-    private void Start()
-    {
         for (int i = 0; i < _charactersList.Count; i++)
         {
             switch (_charactersList[i].GetName())

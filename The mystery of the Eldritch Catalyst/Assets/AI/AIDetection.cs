@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AIDetection : MonoBehaviour
 {
@@ -29,7 +30,8 @@ public class AIDetection : MonoBehaviour
     }
     public bool CanSeePlayer()
     {
-        if (Vector3.Distance(_playerTransform.position, _transform.position) > _detectionRange)
+        float dist = Vector3.Distance(_playerTransform.position, _transform.position);
+        if (dist > _detectionRange)
         {
             return false; //to optimize performance
         }
