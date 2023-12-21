@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class Entity : MonoBehaviour
 {
     protected float MaxLife;
+    [SerializeField]
     protected float Life;
 
     protected float ArmorMultiplier = 1;

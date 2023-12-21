@@ -1334,7 +1334,7 @@ MonoBehaviour:
       maxQuantity: 1
     - itemCanDropped: {fileID: 11400000, guid: b88c79d76eeab1147aa6ceb6b1440a27, type: 2}
       dropPercentages: 0a000000
-      maxQuantity: 25
+      maxQuantity: 1
     ChestQuantity: 0
   - EnemyType: Dullahan
     ItemsToLoot: []
@@ -10623,11 +10623,11 @@ PrefabInstance:
       objectReference: {fileID: 365864763}
     - target: {fileID: 4055355927798810077, guid: 745b75963c564454d93ac75dc5704afe, type: 3}
       propertyPath: _damageLight
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4055355927798810077, guid: 745b75963c564454d93ac75dc5704afe, type: 3}
       propertyPath: _damageStrong
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4104283864157196454, guid: 745b75963c564454d93ac75dc5704afe, type: 3}
       propertyPath: m_LocalPosition.y
