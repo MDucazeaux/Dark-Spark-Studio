@@ -199,31 +199,33 @@ public class TutorialScript : MonoBehaviour
         switch (_tutorialId)
         {
             case 0:
-                _text.text = "Welcome to The Mystery of the Eldritch Catalyst\r\nTo begin your adventure open this door with [r]\nMove with [z q s d]";
+                _text.text = "Welcome to The Mystery of the Eldritch Catalyst\r\nTo begin your adventure open this door with [r]/<color=\"green\">[A]</color>\nMove with [z q s d]";
                 break;
             case 1:
-                _text.text = "Hmm, it seems like we can't open this\nTry going back and check for a button [a or e], then interact with [r]";
+                _text.text = "Hmm, it seems like we can't open this\nTry going back and check for a button [a or e]/[Left/Right Shoulder]" +
+                    ", then interact with [r]/<color=\"green\">[A]</color>\n";
                 break;
             case 2:
                 _text.text = "The path has been cleared, let's continue your adventure";
                 break;
             case 3:
-                _text.text = "This door is locked, click on the Thief portrait to select her";
+                _text.text = "This door is locked, click on the Thief portrait to select her\nIf you have a gamepad you can move the mouse with the right joystick and " +
+                    "click with <color=\"blue\">[X]</color>\n";
                 break;
             case 4:
-                _text.text = "Great ! Now that the Thief is Selected\nUse her special action with [é] to lockpick the door";
+                _text.text = "Great ! Now that the Thief is Selected\nUse her special action with [é]/[Left trigger] to lockpick the door";
                 break;
             case 5:
-                _text.text = "Now you only have to open the door with [r]";
+                _text.text = "Now you only have to open the door with [r]/<color=\"green\">[A]</color>\n";
                 break;
             case 6:
-                _text.text = "Kill this rat now !\nPress [&] or [é] to use your actions";
+                _text.text = "Kill this rat now !\nPress [&]/[Right trigger] or [é]/[Left trigger] to use your actions";
                 break;
             case 7:
-                _text.text = "Okay that could have gotten worse\nLet's lockpick that chest with the thief and then open it with [r]";
+                _text.text = "Okay that could have gotten worse\nLet's lockpick that chest with the thief and then open it with [r]/<color=\"green\">[A]</color>\n";
                 break;
             case 8:
-                _text.text = "Nice we can heal ourselves with that !\nWalk on the item then pick it with [f]";
+                _text.text = "Nice we can heal ourselves with that !\nWalk on the item then pick it with [f]/<color=\"red\">[B]</color>\n";
                 break;
             case 9:
                 _text.text = "Click on your bag to open the inventory\nthen click on the item you just picked up and heal yourself";

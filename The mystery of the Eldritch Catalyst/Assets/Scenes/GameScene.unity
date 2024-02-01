@@ -4043,7 +4043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4508,7 +4508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press Space to contnue
+  m_text: 'Press Space/<color="green">A</color> to contnue
 
 '
   m_isRightToLeft: 0
@@ -4825,7 +4825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press Space to contnue
+  m_text: 'Press Space/<color="green">A</color> to contnue
 
 '
   m_isRightToLeft: 0
@@ -5047,6 +5047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 868405856}
   - component: {fileID: 868405857}
+  - component: {fileID: 868405858}
   m_Layer: 5
   m_Name: NarratifManager
   m_TagString: Untagged
@@ -5103,6 +5104,88 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6227f9a57f3908d4c930f2b244c43c8a, type: 3}
   - {fileID: 21300000, guid: 8d3ac57df115cea40a496b7d02407b0c, type: 3}
   _phase: 0
+--- !u!114 &868405858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868405855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 7df5d29c61fd53949a31c19ce8fc8b2c, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: da62edff-e7c2-4bc1-82ba-b9f1ef592c9d
+    m_ActionName: PlayerMap/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 97ab1bcc-4981-493d-87fc-b354a66fc06b
+    m_ActionName: PlayerMap/Rotate[/Keyboard/q,/Keyboard/e,/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eac75de6-a5c3-4dd0-b8c7-d39bd2c3b520
+    m_ActionName: PlayerMap/ActionOne[/Keyboard/1,/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2006a76-8a10-4774-afe5-3065a7e50f89
+    m_ActionName: PlayerMap/ActionTwo[/Keyboard/2,/XInputControllerWindows/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2bf5af48-b09d-4042-9a81-019bdc13af4d
+    m_ActionName: PlayerMap/Interaction[/Keyboard/r,/Keyboard/enter,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 492098ae-35c9-46ba-8d1c-600c8c53de01
+    m_ActionName: PlayerMap/PickUp[/Keyboard/f,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 871d997c-8ba5-4516-bb49-a96bc3b2b149
+    m_ActionName: PlayerMap/Pausing[/Keyboard/escape,/XInputControllerWindows/start,/XInputControllerWindows/select]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d2e4fc49-8cfc-4d83-9b4f-c27504f0c1eb
+    m_ActionName: PlayerMap/MoveMouse[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 000a2e7f-c358-4c92-8a26-ed296e843a81
+    m_ActionName: PlayerMap/ClickMouse[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 868405857}
+        m_TargetAssemblyTypeName: NarratifManager, Assembly-CSharp
+        m_MethodName: OnNextNarratif
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 07f8fe74-ba8f-492e-8a96-e72b524e91d0
+    m_ActionName: PlayerMap/NextNarratif[/Keyboard/space,/XInputControllerWindows/buttonSouth]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerMap
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &887460164
 GameObject:
   m_ObjectHideFlags: 0
@@ -6045,6 +6128,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8054187624328578464, guid: ebd67032b7f30f84e9045e210ef59496, type: 3}
+      propertyPath: m_SubmitAction
+      value: 
+      objectReference: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+    - target: {fileID: 8054187624328578464, guid: ebd67032b7f30f84e9045e210ef59496, type: 3}
+      propertyPath: m_LeftClickAction
+      value: 
+      objectReference: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5954301263726907917, guid: ebd67032b7f30f84e9045e210ef59496, type: 3}
