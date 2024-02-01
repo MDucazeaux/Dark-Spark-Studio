@@ -19,7 +19,7 @@ public class GamepadManager : StandaloneInputModule
     {
         if (rightStickValue != Vector2.zero)
         {
-            Mouse.current.WarpCursorPosition(new Vector2(Input.mousePosition.x + rightStickValue.x * 1200 * Time.deltaTime, Input.mousePosition.y + rightStickValue.y * 1200 * Time.deltaTime));
+            Mouse.current.WarpCursorPosition(new Vector2(Input.mousePosition.x + rightStickValue.x * 1200 * Time.unscaledDeltaTime, Input.mousePosition.y + rightStickValue.y * 1200 * Time.unscaledDeltaTime));
         }
     }
 
