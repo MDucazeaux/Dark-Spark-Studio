@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class NarratifManager : MonoBehaviour
@@ -103,9 +104,9 @@ public class NarratifManager : MonoBehaviour
         _text.text = _introTexts[_index++];
     }
 
-    private void Update()
+    public void OnNextNarratif(InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _canPassText)
+        if (context.started && _canPassText)
         {
             switch (_phase)
             {
@@ -167,6 +168,10 @@ public class NarratifManager : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private void Update()
+    {
 
         if (Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.P))
         {
